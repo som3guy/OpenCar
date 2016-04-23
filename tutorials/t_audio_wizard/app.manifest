@@ -1,0 +1,11 @@
+{
+    "id"          : "com.opencar.sdk.tutorial.audio_wizard",
+    "name"        : "Tutorial Audio Wizard",
+    "view"        : "$TEMPLATE_PATH/1.1/audio/view.js",
+    "controller"  : "$TEMPLATE_PATH/1.1/audio/controller.js",
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-05-02",
+    "version"     : "1.0.0",
+    "permissions" : [ "unstoppable", "AudioManager.ALWAYS", "GPSLocationSupplier.WHEN_ACTIVE" ],
+    "screens"     : "screens.json"
+}

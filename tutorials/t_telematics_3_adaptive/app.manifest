@@ -1,0 +1,12 @@
+{
+    "id"          : "com.opencar.sdk.tutorial.telematics_3_adaptive",
+    "name"        : "Tutorial Telematics 3 - Adaptive",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  "Telematics.WHEN_ACTIVE" ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

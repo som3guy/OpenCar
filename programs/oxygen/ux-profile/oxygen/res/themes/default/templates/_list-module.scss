@@ -1,0 +1,70 @@
+@import "../scss/base";
+/* List Module Styles */
+
+.#{$theme} {
+    .default-list-wrapper .back-button {
+        /* TODO this will be put back in once we implement the new Hydrogen back button styles */
+        display: none;
+    }
+
+    .oc-list-view-container.default-list-view ul.oc-list-view.oc-list-view-plain{
+        -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+    .default-list-wrapper .oc-textview-title{
+        opacity: 0;
+        -webkit-transition: opacity .4s, -webkit-transform .4s;
+    }
+    .default-list-wrapper .oc-textview-title.fade-in{
+        opacity: 1;
+    }
+    .default-list-view ul:first-child.move-in{
+        -webkit-transform: translateX(0);
+    }
+    .default-list-view ul + ul.move-out{
+        -webkit-transform: translateX(-100%);
+    }
+
+    .default-list-wrapper{
+        width: 100%;
+        height: 100%;
+        padding-left: 0px;
+    }
+    .default-list-wrapper .oc-list-view-container{
+        z-index: 8;
+    }
+    .default-list-wrapper .oc-textview-title.has-text + .oc-list-view-container{
+        height: 337px;
+        z-index: 8;
+    }
+    .default-list-wrapper .oc-textview-title{
+        /*
+        background: rgb(51,51,51) url(../../images/ui/list-module/list-row-rule.png) bottom center no-repeat;
+        */
+        border: none;
+        padding: 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+        text-indent: 20px;
+        vertical-align: bottom;
+        -webkit-box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        /* these seem to cause problem -- leave out unless spec says otherwise
+        height: 65px;
+        line-height: 71px;
+        */
+    }
+    .default-list-wrapper .default-list-view li.oc-listitemview{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        min-width: 500px;
+    }
+    .oc-listitemview .item-text {
+        width: 653px;
+    }
+}
+

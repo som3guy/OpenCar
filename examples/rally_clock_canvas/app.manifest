@@ -1,0 +1,12 @@
+{
+    "id"          : "com.opencar.sdk.sample.rally_clock_canvas",
+    "name"        : "Rally Clock - Canvas",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-08-28",
+    "version"     : "1.0.0"
+}

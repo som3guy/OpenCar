@@ -1,0 +1,15 @@
+@import "base";
+
+.#{$theme} {
+    %oc-textview {
+        color: $active;
+        display: inline-block;
+        font: #{$minimum-font-size}/60px $font-family-light;
+        font-weight: 200;
+        white-space: pre-wrap;
+    }
+
+    [data-oc-control="TextView"] {
+        @extend %oc-textview;
+    }
+}

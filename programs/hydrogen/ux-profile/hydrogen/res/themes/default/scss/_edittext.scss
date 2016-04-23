@@ -1,0 +1,50 @@
+@import "base";
+@import "compass/css3/border-radius";
+
+@keyframes caret {
+    50% {
+        opacity: 0.1;
+        transform: scaleY(0.8);
+    }
+}
+
+@-webkit-keyframes caret {
+    50% {
+        opacity: 0.1;
+        -webkit-transform: scaleY(0.8);
+    }
+}
+
+$edit-text-padding: 12px;
+/* Edit Text Styles */
+.#{$theme} {
+    %oc-edit-text {
+        outline: none;
+        box-sizing: border-box;
+        background: none;
+        border: none;
+        color: $color;
+        font: #{$minimum-font-size}/60px $font-family-light;
+        height: 60px;
+        padding: 0 $edit-text-padding;
+    }
+    .oc-edit-text {
+        outline: none;
+        box-sizing: border-box;
+        background: none;
+        border: none;
+        color: $color;
+        font: #{$minimum-font-size}/60px $font-family-light;
+        height: 60px;
+        padding: 0 $edit-text-padding;
+    }
+
+    .oc-edit-text:focus:not(:disabled),
+    .oc-edit-text:hover:not(:disabled) {
+        background: $regular;
+    }
+
+    .oc-edit-text-multi {
+        resize: none;
+    }
+}

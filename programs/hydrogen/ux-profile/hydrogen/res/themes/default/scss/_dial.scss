@@ -1,0 +1,55 @@
+@import "base";
+/* Dial Styles */
+
+.#{$theme}{
+  .oc-dial-container {
+      background-color: rgba(255, 255, 255, .2);
+      border: 1px solid rgba(255, 255, 255, .35);
+      border-radius: 50%;
+      display: inline-block;
+      padding: 22px;
+      position: relative;
+      text-align: center;
+  }
+
+  .oc-dial-container:hover:not(:disabled), .oc-dial-container:focus:not(:disabled) {
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-dial-knob {
+      background: url(/ui/res/common/images/dial-handle.png) 0 0 / 100% 100% no-repeat;
+      border-radius: 50%;
+      height: 150px;
+      position: relative;
+      width: 150px;
+      -webkit-transition: -webkit-transform 180ms linear;
+      z-index: 1;
+  }
+
+  .oc-dial-container .oc-dial-canvas {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+
+      .oc-dial-tick {
+          display: inline-block;
+          height: 16px;
+          opacity: 0;
+          position: absolute;
+          width: 3px;
+          -webkit-transform-origin: 1.5px 91px;
+          -webkit-transition-property: opacity;
+          -webkit-transition-duration: 180ms;
+          -webkit-transition-timing: cubic-bezier(0.500, -0.500, 1.000, 0.000);
+
+          &.on {
+              opacity: 1;
+              -webkit-transition-timing: cubic-bezier(0.000, 1.000, 0.500, 1.500);
+          }
+      }
+  }
+}

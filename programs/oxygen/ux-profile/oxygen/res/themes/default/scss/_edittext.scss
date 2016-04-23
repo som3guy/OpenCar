@@ -1,0 +1,56 @@
+@import "base";
+@import "compass/css3/border-radius";
+
+@keyframes caret {
+    50% {
+        opacity: 0.1;
+        transform: scaleY(0.8);
+    }
+}
+
+@-webkit-keyframes caret {
+    50% {
+        opacity: 0.1;
+        -webkit-transform: scaleY(0.8);
+    }
+}
+
+$edit-text-padding: 12px;
+/* Edit Text Styles */
+.#{$theme}{
+    %oc-edit-text {
+        outline: none;
+        box-sizing: border-box;
+        background: url(../../images/edit.png) no-repeat right center;
+        border-radius: 80px;
+        border: 1px solid #aaaaac;
+        color: $color;
+        font: #{$minimum-font-size}/80px $font-family-light;
+        height: 80px;
+        padding: 0 80px 0 30px;
+    }
+  .oc-edit-text {
+      outline: none;
+      box-sizing: border-box;
+      background: url(../../images/edit.png) no-repeat right center;
+      border-radius: 80px;
+      border: 1px solid #aaaaac;
+      color: $color;
+      font: #{$minimum-font-size}/80px $font-family-light;
+      height: 80px;
+      padding: 0 80px 0 30px;
+  }
+
+  .oc-edit-text:focus:not(:disabled),
+  .oc-edit-text:hover:not(:disabled) {
+      color: $color;
+      -webkit-box-shadow: 0px 1px 8px rgb(190,222,255), 0px 1px 10px rgb(190,222,255);
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-edit-text-multi {
+      resize: none;
+  }
+}
+

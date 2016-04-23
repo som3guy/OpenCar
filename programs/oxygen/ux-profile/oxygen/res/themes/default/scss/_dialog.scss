@@ -1,0 +1,109 @@
+@import "base";
+@import "susy";
+@import "box-sizing";
+/* Dialog and Toast Styles */
+
+.#{$theme}{
+    @import '../../../../../../../src/common/templates/dialog/dialog';
+
+    .dialog-content-body{
+        text-align: left;
+        padding: 20px;
+    }
+    .dialog-content-body > img{
+        vertical-align: top;
+        margin-right: 20px;
+        width: 166px;
+        height: 166px;
+    }
+    .dialog-content-body > span {
+        display: inline-block;
+        max-height: 228px;
+        overflow: hidden;
+    }
+    .dialog-content-body img + span {
+        width: calc(100% - 190px);
+    }
+    .oc-dialog-content .oc-dialog-title + .dialog-content-body > span {
+        max-height: 161px;
+    }
+
+    .oc-dialog,
+    .oc-dialog-modal-overlay {
+        position: absolute;
+        //visibility: hidden;
+        display: none;
+        @include box-sizing(border-box);
+    }
+
+  /* Dialog */
+
+  .oc-dialog {
+      top: 20px;
+      margin: 10px;
+      outline: none;
+      background: rgba(0,0,0, 0.9);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 12px 3px rgba(190, 222, 255, 0.7);
+      z-index: 10501;
+      color: $color;
+      & .footer--columns_1 button {
+        min-width: 60%;
+      }
+  }
+
+  .oc-dialog .oc-dialog-button-close,
+  .oc-dialog .oc-dialog-button-close:hover,
+  .oc-dialog .oc-dialog-button-close:focus {
+      box-shadow: none;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      padding: 0 6px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 18px;
+      height: 20px;
+      font-weight: normal;
+      border-raidus: 10px;
+      border: none;
+      background: transparent;
+  }
+
+  .oc-dialog-modal-overlay {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.3;
+      z-index: 10500;
+  }
+
+  .oc-dialog-button-container,
+  .oc-dialog-button-container li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .oc-dialog-button-container {
+      float: right;
+      margin-top: 10px;
+  }
+
+  .oc-dialog-button-container li {
+      margin: 0 5px;
+      display: inline-block;
+  }
+
+  .oc-dialog-button-container li:first-child {
+      margin-left: 0;
+  }
+
+  .oc-dialog-button-container li:last-child {
+      margin-right: 0;
+  }
+}
+

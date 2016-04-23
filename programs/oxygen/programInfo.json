@@ -1,0 +1,12 @@
+{
+    "uid": "oxygen",
+    "display": "OpenCar Oxygen",
+    "description": "Oxygen",
+    "capabilities": "Touch Directional",
+    "profile": "oxygen",
+    "plugins": [
+       "oxygen-bezel",
+       "oxygen-commander",
+       "oxygen-tmx"
+    ]
+}

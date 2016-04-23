@@ -1,0 +1,55 @@
+<!--
+    Use this HTML template file to define the layout of your application.
+    You may also choose to declare elements in the code.
+    See the SDK documentation for more information.
+-->
+
+<!-- 
+    Left side of the screen contains the lap times list and lap time stopwatch.
+    OpenCar controls are created in the code.
+-->
+<div class="leftPanel">
+    
+    <!-- The lap time list -->
+
+    <div id="lapListContainer" class="lapTimeList" ></div>
+    
+    <!-- The lap time digital stopwatch -->
+
+    <div class="lapTimeContainer">
+        <div                class="floatLeft" data-oc-control="TextView">Lap:</div>
+        <div id="lapTime"   class="floatRight"></div>
+    </div>     
+</div>
+
+<!--
+    Right side of the screen contains the two analog clocks and the digital stopwatch
+    with it's buttons.
+-->
+<div class="rightPanel">
+
+    <!-- Canvas elements for the two timepieces. -->
+
+    <div id="heuerTimepiece">
+        <canvas id="mountingBack" class="floatLeft"></canvas>
+        <div id="heuerContainer">
+            <canvas id="clock" class="floatLeft"></canvas>
+            <canvas id="stopwatch" class="floatRight"></canvas>
+        </div>
+    </div>
+
+    <!-- The elapsed time digital stopwatch -->
+   
+    <div class="elapsedTimeContainer">
+        <div                    class="floatLeft" data-oc-control="TextView">Elapsed:</div>
+        <div id="elapsedTime"   class="floatRight"></div>
+    </div>
+
+    <!-- Stop and Reset buttons for the digital stopwatch -->
+    
+    <div class="buttonContainer">
+        <button id="startButton" data-oc-control="Button" autofocus>Start</button>
+        <button id="resetButton" data-oc-control="Button">Reset</button>
+    </div>
+</div>
+

@@ -1,0 +1,8 @@
+{
+    "id"         : "com.opencar.sdk.sample.autofocus",
+    "name"       : "Sample Designated Autofocus",
+    "template"   : "template.html",
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

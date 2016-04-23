@@ -1,0 +1,240 @@
+@import "base";
+
+/* List View Styles -- HORIZONTAL AT BOTTOM */
+
+.#{$theme} #oc-orbital-menu {
+    .oc-listview-container {
+        position: relative;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .oc-listview-container ul {
+        box-sizing: border-box;
+        height: 300px;
+        list-style: none;
+        margin: -150px 0 0 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+    .oc-listview-container ul.oc-listview.oc-listview-plain {
+        top: 0;
+        margin: 0;
+        height: auto;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+    .oc-listview-container.vertical ul {
+        -webkit-mask-image: url(/ui/res/common/images/slv-mask.png);
+        -webkit-mask-size: 100% 100%;
+    }
+    .oc-listview-container.vertical ul.oc-listview.oc-listview-plain {
+        -webkit-mask-image: none;
+    }
+
+    .oc-listview-container ul li {
+        position: absolute;
+    }
+    .oc-listview-container ul.oc-listview.oc-listview-plain li {
+        position: static;
+        line-height: $listview_li_line_height;
+        font-size: $minimum-font-size;
+        height: $listview_li_height;
+        padding: 0;
+        text-indent: 30px;
+    }
+
+    .ease-out {
+        transition: -webkit-transform 0.05s ease-out;
+        -moz-transition: -webkit-transform 0.05s ease-out;
+        -webkit-transition: -webkit-transform 0.05s ease-out;
+        -o-transition: -webkit-transform 0.05s ease-out;
+    }
+
+    #oc-ui-listview-nav-wrapper {
+        top: 29px;
+        position: relative;
+        -webkit-box-orient: horizontal;
+
+        display: flex;
+        box-orient: horizontal;
+    }
+
+    .navHeader {
+        margin: 0;
+        font-size: 1.2em;
+        opacity: 0.5;
+        font-size: 30px;
+    }
+
+    ul.listview .dimmed, ul.sublistivew .dimmed {
+        color: gray;
+    }
+
+    .bright {
+        color: $color;
+    }
+
+    ul.listview {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+        /*
+        height: 328px;
+        background-color: #483d8b;
+        width: 377px;
+        border: 1px solid #555;
+        */
+    }
+
+    ul.sublistview {
+        list-style: none;
+        border-left: 34px solid transparent;
+        padding-left: 0;
+        margin-left: 0;
+        position: relative;
+        left: -8px;
+        display: none;
+    }
+
+    ul.listview .makeRoomForChildren {
+        height: auto;
+        background-position-y: 10px;
+        padding-bottom: 0
+    }
+
+    .listview li, .sublistview li {
+        -webkit-transition: all 0.05s ease-in-out;
+        -o-transition: all 0.05s ease-in-out;
+        -moz-transition: all 0.05s ease-in-out;
+        transition: all 0.05s ease-in-out;
+        padding: 10px;
+        vertical-align: middle;
+        color: $color;
+        /*border-bottom: 2px solid #a89ddb;
+        background-color: #483d8b;
+        font-weight: bold;
+         */
+        position: relative;
+        height: 20px;
+    }
+
+    .listview li p, .sublistview li p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sublistview li {
+
+    }
+
+    .listview li.is-radio {
+        /*#483d8b
+         *
+        background: url('images/radio.png') no-repeat 10px center;
+        text-indent: 66px;
+         */
+    }
+
+    .listview li.is-album {
+        /*
+        background: url('images/album.png') no-repeat 10px center;
+        text-indent: 66px;
+        */
+    }
+
+    .listview li.is-artist {
+        /*
+        background: url('images/artist.png') no-repeat 10px center;
+        text-indent: 66px;
+        */
+    }
+
+    .listview li.is-track {
+        /*
+        background: url('images/track.png') no-repeat 10px center;
+        text-indent: 66px;
+        */
+    }
+
+    .listview li.is-playlist {
+        /*
+        background: url('images/playlist.png') no-repeat 10px center;
+        text-indent: 66px;
+        */
+    }
+
+    .listviewItem:active {
+        background: #ccc;
+    }
+
+    .listview > li.selected, .sublistview > li.selected, .navHeader.selected {
+        font-weight: bold;
+        opacity: 1;
+        /*
+        text-decoration: underline;
+        background-color: #800000;
+        -webkit-animation: selected-launcher 1500ms infinite ease-in-out;
+        */
+    }
+
+    .list-spinner {
+        text-indent: 0;
+        left: 21px;
+        top: 20px;
+        margin: 0;
+        position: absolute;
+    }
+
+    /* Horizontal ListView */
+
+    .oc-listview-container ul.oc-horizontal-listview li {
+        display: inline-block;
+        min-width: 0;
+    }
+
+    .oc-listitemview .item-status {
+        position: absolute;
+        right: 31px;
+        font-size: 0.7em;
+    }
+    .oc-listitemview .item-text {
+        display: inline-block;
+        width: 477px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .oc-listitemview .item-downloading {
+        font-size: 0.5em;
+        line-height: 41px;
+        height: 67px;
+        text-indent: 0;
+        width: 133px;
+    }
+    .oc-listitemview .item-progress:after {
+        content: "";
+        display: block;
+        width: 129px;
+        height: 17px;
+        border: 1px solid #535353;
+    }
+    .oc-listitemview .item-progress {
+        background: url(../../images/ui/listview/list-focus-focused.png) left center no-repeat;
+        display: block;
+        width: 129px;
+        height: 18px;
+    }
+}

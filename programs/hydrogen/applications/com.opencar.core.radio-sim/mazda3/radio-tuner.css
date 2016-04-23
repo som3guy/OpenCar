@@ -1,0 +1,134 @@
+#streaming-indicator {
+    bottom: 130px;
+}
+
+#image-view-back-old {
+    background-image: url("mc-icon-back_s10.png");
+}
+
+#display-hd {
+    position: absolute;
+    left: 615px;
+    top: 4px;
+    width: 29px;
+    height: 30px;
+    background-image: url("icon-hd-radio-small.png");
+    background-size: cover;
+    display: none;
+}
+
+#display-hd-1,#display-hd-2,#display-hd-3,#display-hd-4 {
+    position: absolute;
+    top: 6px;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    width: 25px;
+    text-align: center;
+    font-size: 22px;
+}
+
+#display-hd-1 {
+    left: 645px;
+    color: white;
+}
+
+#display-hd-2 {
+    left: 660px;
+    color: white;
+}
+
+#display-hd-3 {
+    left: 675px;
+    color: white;
+}
+
+#display-hd-4 {
+    left: 690px;
+    color: white;
+}
+
+#display-hd-1.on,#display-hd-2.on,#display-hd-3.on,#display-hd-4.on {
+    color: orange;
+}
+
+#btn-memory  .bb-button-icon{
+    background-image: url("mc-icon-auto-memory.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-favorite .bb-button-icon {
+    background-image: url("mc-icon-fav.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-favorite.on .bb-button-icon {
+    background-image: url("mc-icon-fav-on.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-hd .bb-button-icon {
+    background-image: url("mc-icon-hd.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px; // otherwise icon gets cropped
+}
+
+#btn-hd.on .bb-button-icon {
+    background-image: url("mc-icon-hd-on.png");
+}
+
+#btn-scan .bb-button-icon {
+    background-image: url("mc-icon-scan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-scan.on .bb-button-icon {
+    background-image: url("mc-icon-scan-on.png");
+}
+
+#btn-play-pause .bb-button-icon {
+    background-image: url("mc-icon-play.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-play-pause.on .bb-button-icon {
+    background-image: url("mc-icon-stop.png");
+}
+
+#btn-tune .bb-button-icon {
+    background-image: url("mc-icon-tuner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous .bb-button-icon {
+    background-image: url("mc-icon-previous.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous.on .bb-button-icon {
+    background-image: url("mc-icon-previous-on.png");
+}
+
+#btn-seek-next .bb-button-icon {
+    background-image: url("mc-icon-next.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-next.on .bb-button-icon {
+    background-image: url("mc-icon-next-on.png");
+}
+
+#btn-audio-settings .bb-button-icon {
+    background-image: url("mc-icon-audio-settings.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}

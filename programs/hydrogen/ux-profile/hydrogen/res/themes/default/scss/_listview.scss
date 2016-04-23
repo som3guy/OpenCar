@@ -1,0 +1,414 @@
+@import "base";
+
+/* List View Styles -- HORIZONTAL AT BOTTOM */
+
+$listitemview-control-width: 44px;
+$listitemview-text-width: 708px;
+$listitemview-text-width-with-3-icons: 370px;
+$listitemview-text-width-with-2-icons: 634px;
+$listitemview-text-width-with-1-icons: 683px;
+$listitemview-status-width: 291px;
+
+$listview_li_padding_right: 47px;
+
+.#{$theme} {
+    .oc-list-view-container {
+        position: relative;
+        height: 100%;
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        // hydrogen differ than mazda
+        min-height: 60px;
+        // end
+
+        overflow: hidden;
+
+        &[disabled] {
+            opacity: 0.3;
+        }
+
+        &.vertical ul {
+            list-style: none;
+            position: absolute;
+            width: 100%;
+
+            // hydrogen differ than mazda
+            padding: 0;
+            overflow: hidden;
+            // end
+            top: 0;
+            margin: 0;
+            height: auto;
+            -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+            -webkit-mask-size: 100% 100%;
+
+            &.oc-list-view--15  {
+                li {
+                    padding: 0 $listview_li_padding_right 0 0;
+
+                    &[disabled] {
+                        opacity: .2 !important;
+                    }
+
+                    /** NEW LIST ITEM CONTROLS **/
+                    .oc-listitemview-control {
+                        position: absolute;
+                        left: 19px;
+                        display: block;
+                        width: $listitemview-control-width;
+                        height: 100%;
+
+                        oc-icon {
+                            &.icon-font {
+                                position: relative;
+                                i {
+                                    position: absolute;
+                                }
+                            }
+                            display: block;
+                            position: relative;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .oc-listitemview-text {
+                        display: inline-block;
+                        width: $listitemview-text-width;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-left: $listview_li_padding_left;
+                    }
+
+                    .oc-listitemview-control ~ .oc-listitemview-text {
+                        margin-left: $listitemview-control-width + $listview_li_padding_left + $listview_li_padding_left;
+                        width: $listitemview-text-width-with-1-icons;
+                    }
+                    .oc-listitemview-subtext {
+                        position: absolute;
+                        right: 70px;
+                        top: 0;
+                        width: $listitemview-status-width;
+                        display: inline-block;
+                        text-align: right;
+
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .oc-listitemview-control1,
+                    .oc-listitemview-control2,
+                    .oc-listitemview-control3 {
+                        position: absolute;
+                        right: 46px;
+                        top: 0;
+                    }
+                    .oc-listitemview-control2 {
+                        right: 100px;
+                    }
+                    .oc-listitemview-control3 {
+                        right: 157px;
+                    }
+                    .oc-listitemview-text--small {
+                        display: block;
+                        line-height: 34px;
+                        font-size: 0.7em;
+                    }
+                    .oc-listitemview-subtext--small {
+                        line-height: 34px;
+                        font-size: 0.7em;
+                        position: absolute;
+                        right: 46px;
+                        top: 0;
+                    }
+                    .oc-listitemview-subtext--small:nth-last-of-type(1){
+                        top: 34px;
+                    }
+
+
+                    &.selected .oc-listitemview-text{
+                        color: $color-active;
+                    }
+
+                    &.has-status {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons - $listitemview-control-width - $listview_li_padding_left - $listview_li_padding_right - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-1 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-1-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-1-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-2 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-2-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-2-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-3 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                }
+
+            }
+
+            li {
+                line-height: $listview_li_line_height;
+                font-size: $minimum-font-size;
+                height: $listview_li_height;
+                padding: 0;
+                position: relative;
+
+                -webkit-box-sizing: border-box;
+
+                .item-icon + .item-text{
+                    left: 86px;
+                }
+
+                .item-text{
+                    left: 17px;
+                    position: relative;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .default-list-wrapper .oc-list-view-container:not(.fancy){
+        ul {
+            li {
+                .oc-listitemview-text {
+                    width: $listitemview-text-width - $list-with-title-left-offset - $listview_li_padding_left;
+                }
+            }
+        }
+
+    }
+
+    /*
+    .ease-out {
+        transition: -webkit-transform 0.05s ease-out;
+        -moz-transition: -webkit-transform 0.05s ease-out;
+        -webkit-transition: -webkit-transform 0.05s ease-out;
+        -o-transition: -webkit-transform 0.05s ease-out;
+    }
+
+    #oc-ui-listview-nav-wrapper {
+        top: 29px;
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+
+        display: box;
+        box-orient: horizontal;
+    }
+
+    .navHeader {
+        margin: 0;
+        font-size: 1.2em;
+        opacity: 0.5;
+        font-size: 30px;
+    }
+
+    ul.listview .dimmed, ul.sublistivew .dimmed {
+        color: gray;
+    }
+
+    .bright {
+        color: $color;
+    }
+
+    ul.listview {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+    }
+
+    ul.sublistview {
+        list-style: none;
+        border-left: 34px solid transparent;
+        padding-left: 0;
+        margin-left: 0;
+        position: relative;
+        left: -8px;
+        display: none;
+    }
+
+    ul.listview .makeRoomForChildren {
+        height: auto;
+        background-position-y: 10px;
+        padding-bottom: 0
+    }
+
+    .listview li, .sublistview li {
+        -webkit-transition: all 0.05s ease-in-out;
+        -o-transition: all 0.05s ease-in-out;
+        -moz-transition: all 0.05s ease-in-out;
+        transition: all 0.05s ease-in-out;
+        padding: 10px;
+        vertical-align: middle;
+        color: $color;
+        position: relative;
+        height: 20px;
+    }
+
+    .listview li p, .sublistview li p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .listviewItem:active {
+        background: #ccc;
+    }
+
+    .listview > li.selected, .sublistview > li.selected, .navHeader.selected {
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    .list-spinner {
+        text-indent: 0;
+        left: 21px;
+        top: 20px;
+        margin: 0;
+        position: absolute;
+    }
+
+    // Horizontal ListView
+
+    .oc-list-view-container ul.oc-horizontal-listview li {
+        display: inline-block;
+        min-width: 0;
+    }
+    */
+
+    .oc-listitemview .item-status {
+        position: absolute;
+        right: 31px;
+        font-size: 0.7em;
+    }
+    .oc-listitemview .item-text {
+        display: inline-block;
+        width: 477px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .oc-listitemview .item-downloading {
+        font-size: 0.5em;
+        line-height: 41px;
+        height: 67px;
+        text-indent: 0;
+        width: 133px;
+    }
+    .oc-listitemview .item-progress:after {
+        content: "";
+        display: block;
+        width: 129px;
+        height: 17px;
+        border: 1px solid #535353;
+    }
+    .oc-listitemview .item-progress {
+        background: url(../../images/ui/listview/list-focus-focused.png) left center no-repeat;
+        display: block;
+        width: 129px;
+        height: 18px;
+    }
+    .oc-listitemview .item-checkbox{
+        position: absolute;
+        left: 7px;
+        top: -4px;
+    }
+
+    .oc-list-view-container.vertical li.selected.oc-listitemview-branch:after {
+        color: $color-active;
+    }
+
+    .grid li.oc-listitemview-branch:after {
+      display:none;
+    }
+
+    .oc-list-view-container.vertical li.oc-listitemview-branch:after {
+        content: '>';
+        color: $color;
+        font-size: $smaller-font-size;
+        margin-top: -30px;
+        position: absolute;
+        top: 50%;
+    }
+    .default-scroll-bar[visibility^="hidden"] ~ .oc-list-view-container.vertical li.oc-listitemview-branch:after {
+        right: 92px;
+    }
+
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-icon{
+        display: block;
+        position: absolute;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-icon{
+        width: 35px;
+        height: 35px;
+        left: 7px;
+        top: 14px;
+    }
+
+    .oc-list-view-container.vertical:focus li.selected .item-text{
+        color: $color-active;
+    }
+    .oc-list-view-container.vertical:focus ul.oc-list-view li.selected:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: #0a1f3b;
+        background: -moz-linear-gradient(left,  #0a1f3b 0%, #0f2a51 0%, #0f294e 1%, #0d2547 9%, #0b213c 25%, #08182e 41%, #071729 48%, #061427 50%, #061220 60%, #040f1b 67%, #040d19 67%, #030d17 72%, #02060d 83%, #01050a 90%, #010507 90%, #010306 91%, #000101 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0a1f3b), color-stop(0%,#0f2a51), color-stop(1%,#0f294e), color-stop(9%,#0d2547), color-stop(25%,#0b213c), color-stop(41%,#08182e), color-stop(48%,#071729), color-stop(50%,#061427), color-stop(60%,#061220), color-stop(67%,#040f1b), color-stop(67%,#040d19), color-stop(72%,#030d17), color-stop(83%,#02060d), color-stop(90%,#01050a), color-stop(90%,#010507), color-stop(91%,#010306), color-stop(100%,#000101));
+        background: -webkit-linear-gradient(left,  #0a1f3b 0%,#0f2a51 0%,#0f294e 1%,#0d2547 9%,#0b213c 25%,#08182e 41%,#071729 48%,#061427 50%,#061220 60%,#040f1b 67%,#040d19 67%,#030d17 72%,#02060d 83%,#01050a 90%,#010507 90%,#010306 91%,#000101 100%);
+        background: -o-linear-gradient(left,  #0a1f3b 0%,#0f2a51 0%,#0f294e 1%,#0d2547 9%,#0b213c 25%,#08182e 41%,#071729 48%,#061427 50%,#061220 60%,#040f1b 67%,#040d19 67%,#030d17 72%,#02060d 83%,#01050a 90%,#010507 90%,#010306 91%,#000101 100%);
+        background: -ms-linear-gradient(left,  #0a1f3b 0%,#0f2a51 0%,#0f294e 1%,#0d2547 9%,#0b213c 25%,#08182e 41%,#071729 48%,#061427 50%,#061220 60%,#040f1b 67%,#040d19 67%,#030d17 72%,#02060d 83%,#01050a 90%,#010507 90%,#010306 91%,#000101 100%);
+        background: linear-gradient(to right, rgba(10, 31, 59, 0.96) 0%, rgba(15, 42, 81, 0.95) 0%, rgba(15, 41, 78, 0.95) 1%, rgba(13, 37, 71, 0.94) 9%, rgba(11, 33, 60, 0.95) 25%, rgba(8, 24, 46, 0.92) 41%, rgba(7, 23, 41, 0.85) 48%, rgba(6, 20, 39, 0.73) 50%, rgba(6, 18, 32, 0.52) 60%, rgba(4, 15, 27, 0.53) 67%, rgba(4, 13, 25, 0.51) 67%, rgba(3, 13, 23, 0.51) 72%, rgba(2, 6, 13, 0.52) 83%, rgba(1, 5, 10, 0.51) 90%, rgba(1, 5, 7, 0.46) 90%, rgba(1, 3, 6, 0.5) 91%, rgba(0, 1, 1, 0.49) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a1f3b', endColorstr='#000101',GradientType=1 );
+    }
+
+    .item-icon.small-icon{
+        width: 0;
+        height: 0;
+    }
+    .item-icon.animate{
+        -webkit-transition: width 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995), height 0.5s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+    .item-text.animate{
+        -webkit-transition: opacity 1s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+}

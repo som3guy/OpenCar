@@ -1,0 +1,15 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : true,
+    "hasStartChoiceModule"      : false,
+
+    "singleStreamStart" : {
+        "text"          : " ",
+        "stationName"   : " ",
+        "trackTitle"    : " ",
+        "fromTitle"     : " "
+    }
+}

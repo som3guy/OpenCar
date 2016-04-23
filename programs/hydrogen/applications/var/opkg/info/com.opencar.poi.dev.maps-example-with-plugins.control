@@ -1,0 +1,10 @@
+Package: com.opencar.poi.dev.maps-example-with-plugins
+Version: 2.0.115.2457420.2329861
+Description: Description goes here.
+Section: media
+Priority: optional
+Maintainer: OpenCar
+Architecture: all
+Homepage: http://www.opencar.com/
+Source:
+Depends:

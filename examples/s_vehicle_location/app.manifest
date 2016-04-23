@@ -1,0 +1,13 @@
+{
+    "id"          : "com.opencar.sdk.sample.vehicle_location",
+    "name"        : "Sample Vehicle Location",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2015-08-05",
+    "version"     : "1.0.0",
+    "permissions" : [ "Telematics.WHEN_ACTIVE", "VehicleLocation.WHEN_ACTIVE" ]
+}

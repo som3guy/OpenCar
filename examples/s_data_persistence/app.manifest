@@ -1,0 +1,11 @@
+{
+    "id"         : "com.opencar.sdk.sample.data_persistence",
+    "name"       : "Sample Data Persistence",
+    "css"        : [ "css/base.css" ],
+    "template"   : "persist.html",
+    "controller" : "Controller.js",
+    "view"       : "View.js",
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

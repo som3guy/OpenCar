@@ -1,0 +1,17 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-wtop.jpg",
+    "defaultContentImage"       : "logo-wtop.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio WTOP",
+        "stationName" : "WTOP Radio",
+        "trackUrl" : "http://playerservices.streamtheworld.com/api/livestream-redirect/WTOPFM.mp3"
+    }
+    
+}

@@ -1,0 +1,12 @@
+{
+    "id"          : "sdk.user.myapplication",
+    "name"        : "Tutorial My Application",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2015-10-26",
+    "version"     : "1.0.0"
+}

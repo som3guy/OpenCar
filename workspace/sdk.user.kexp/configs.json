@@ -1,0 +1,16 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    
+    "singleStreamStart" : {
+        "text" : "KEXP",
+        "stationName" : "KEXP",
+        "trackUrl" : "http://live-mp3-128.kexp.org:8000/listen.pls",
+        "trackTitle" : "Where the music matters"
+    }
+    
+}

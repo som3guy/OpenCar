@@ -1,0 +1,9 @@
+{
+    "id"         : "com.opencar.sdk.tutorial.hello_4_css_layout",
+    "name"       : "Tutorial Hello 4 - CSS Layout",
+    "view"       : "view.js",
+    "css"        : ["css/appstyle.css"],
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

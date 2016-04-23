@@ -1,0 +1,9 @@
+{
+    "id"          : "com.opencar.sdk.sample.control_gallery",
+    "name"        : "Control Gallery",
+    "css"         : ["css/kitchensink.css"],
+    "view"        : "view.js",
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

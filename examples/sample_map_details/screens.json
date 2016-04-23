@@ -1,0 +1,13 @@
+[
+  {
+    "id":"map-detail-screen",
+    "chambers":[
+      {
+        "id":"map-detail-chamber",
+        "js":"Chamber-MapDetail.js",
+        "autorun": true,
+        "focus": true
+      }
+    ]
+  }
+]

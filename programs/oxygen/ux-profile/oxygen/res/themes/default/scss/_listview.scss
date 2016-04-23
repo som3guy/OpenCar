@@ -1,0 +1,436 @@
+@import "base";
+
+/* List View Styles -- HORIZONTAL AT BOTTOM */
+
+$listitemview-control-width: 44px;
+$listitemview-text-width: 738px;
+$listitemview-text-width-with-3-icons: 442px;
+$listitemview-text-width-with-2-icons: 634px;
+$listitemview-text-width-with-1-icons: 683px;
+$listitemview-status-width: 291px;
+$listview_li_padding_left_offset: 70px;
+
+$listview_li_padding_right: 47px;
+
+.#{$theme} {
+    //TODO: remove temp hack
+    //.locale-switcher .oc-list-view-container {
+    //    height: $keyboard-full-height - 20px;
+    //}
+    .oc-list-view-container {
+        position: relative;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        &[disabled] {
+            opacity: 0.3;
+        }
+
+        &.vertical.centered {
+            -webkit-mask-image: url(/ui/res/common/images/slv-mask.png);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 87%;
+            -webkit-mask-position-y: 31px;
+
+            &:before {
+                color: white;
+                //content: "\25BA";
+                content: "";
+                display: block;
+                font-family: ding;
+                font-size: 33px;
+                height: 66px;
+                left: -8px;
+                line-height: 66px;
+                position: absolute;
+                text-shadow: 0 0 12px rgba(191, 223, 255, 0.4), 0 0 12px rgba(191, 223, 255, 0.4);
+                top: 50%;
+                margin-top: -33px;
+                width: 800px;
+                background: url('../../images/list-bkg-selected.png') no-repeat;
+            }
+
+            ul {
+                box-sizing: border-box;
+                list-style: none;
+                padding: 0;
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                margin: 0;
+                height: auto;
+                -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+
+                li {
+                    -webkit-transition: font-size 0.3s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+                    -webkit-backface-visibility: hidden;
+                    line-height: $listview_li_line_height;
+                    height: $listview_li_height;
+                    padding: 0;
+                    position: relative;
+                    padding-left: 70px;
+                    //font-size: $smaller-font-size;
+
+                    &.selected {
+                        .oc-listitemview-text {
+                            color: #fff;
+                            text-shadow: 0 0 18px rgba(191, 223, 255, 0.4), 0 0 18px rgba(191, 223, 255, 0.4);
+                            font-size: larger;
+                        }
+                    }
+                }
+
+                &.oc-list-view--15 li {
+                    padding: 0 47px 0 0;
+
+                    &[disabled] {
+                        opacity: .2 !important;
+                    }
+
+                    /** NEW LIST ITEM CONTROLS **/
+                    .oc-listitemview-control {
+                        position: absolute;
+                        left: 19px;
+                        display: block;
+                        width: $listitemview-control-width;
+                        //height: 47px;
+                        height: 100%;
+
+
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+
+                        oc-icon {
+                            display: block;
+                            &.icon-font {
+                                position: relative;
+                                i {
+                                    position: absolute;
+                                }
+                            }
+                            position: relative;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .oc-listitemview-text {
+                        display: inline-block;
+                        width: $listitemview-text-width;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-left: $listview_li_padding_left_offset;
+                    }
+
+                    .oc-listitemview-control ~ .oc-listitemview-text {
+                        margin-left: $listitemview-control-width + $listview_li_padding_left + $listview_li_padding_left;
+                        width: $listitemview-text-width-with-1-icons;
+                    }
+                    .oc-listitemview-subtext {
+                        position: absolute;
+                        right: 47px;
+                        top: 0;
+                        width: $listitemview-status-width;
+                        display: inline-block;
+                        text-align: right;
+
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .oc-listitemview-control1,
+                    .oc-listitemview-control2,
+                    .oc-listitemview-control3 {
+                        position: absolute;
+                        right: 46px;
+                        top: 0;
+                    }
+                    .oc-listitemview-control2 {
+                        right: 100px;
+                    }
+                    .oc-listitemview-control3 {
+                        right: 157px;
+                    }
+                    .oc-listitemview-text--small {
+                        display: block;
+                        line-height: 34px;
+                        font-size: 0.7em;
+                    }
+                    .oc-listitemview-subtext--small {
+                        line-height: 34px;
+                        font-size: 0.7em;
+                        position: absolute;
+                        right: 46px;
+                        top: 0;
+                    }
+                    .oc-listitemview-subtext--small:nth-last-of-type(1){
+                        top: 34px;
+                    }
+
+
+                    &.selected .oc-listitemview-text{
+                        color: $color-active;
+                    }
+
+                    &.has-status {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons - $listitemview-control-width - $listview_li_padding_left - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-1 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-1-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-1-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-2 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-2-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-2-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                    &.has-icon-3 {
+                        .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons;
+                        }
+
+                        .oc-listitemview-control ~ .oc-listitemview-text {
+                            width: $listitemview-text-width-with-3-icons - $listitemview-control-width - $listview_li_padding_left;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    /*
+    .ease-out {
+        transition: -webkit-transform 0.05s ease-out;
+        -moz-transition: -webkit-transform 0.05s ease-out;
+        -webkit-transition: -webkit-transform 0.05s ease-out;
+        -o-transition: -webkit-transform 0.05s ease-out;
+    }
+
+    #oc-ui-listview-nav-wrapper {
+        top: 29px;
+        position: relative;
+        -webkit-box-orient: horizontal;
+
+        display: flex;
+        box-orient: horizontal;
+    }
+
+    .navHeader {
+        margin: 0;
+        font-size: 1.2em;
+        opacity: 0.5;
+        font-size: 30px;
+    }
+
+    ul.listview .dimmed, ul.sublistivew .dimmed {
+        color: gray;
+    }
+
+    .bright {
+        color: $color;
+    }
+
+    ul.listview {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+    }
+
+    ul.sublistview {
+        list-style: none;
+        border-left: 34px solid transparent;
+        padding-left: 0;
+        margin-left: 0;
+        position: relative;
+        left: -8px;
+        display: none;
+    }
+
+    ul.listview .makeRoomForChildren {
+        height: auto;
+        background-position-y: 10px;
+        padding-bottom: 0
+    }
+
+    .listview li, .sublistview li {
+        -webkit-transition: all 0.05s ease-in-out;
+        -o-transition: all 0.05s ease-in-out;
+        -moz-transition: all 0.05s ease-in-out;
+        transition: all 0.05s ease-in-out;
+        padding: 10px;
+        vertical-align: middle;
+        color: $color;
+        position: relative;
+        height: 20px;
+    }
+
+    .listview li p, .sublistview li p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sublistview li {
+
+    }
+
+
+    .listview > li.selected, .sublistview > li.selected, .navHeader.selected {
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    .list-spinner {
+        text-indent: 0;
+        left: 21px;
+        top: 20px;
+        margin: 0;
+        position: absolute;
+    }
+
+    // Horizontal ListView
+
+    .oc-list-view-container ul.oc-horizontal-listview li {
+        display: inline-block;
+        min-width: 0;
+    }
+    */
+
+    .oc-listitemview .item-status {
+        position: absolute;
+        right: 31px;
+        font-size: 0.7em;
+    }
+    .oc-listitemview .item-text {
+        display: inline-block;
+        width: 477px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    .oc-listitemview .item-downloading {
+        font-size: 0.5em;
+        line-height: 41px;
+        height: 59px;
+        text-indent: 0;
+        width: 133px;
+    }
+    .oc-listitemview .item-progress:after {
+        content: "";
+        display: block;
+        width: 129px;
+        height: 17px;
+        border: 1px solid #535353;
+    }
+    .oc-listitemview .item-progress {
+        background: url(../../images/ui/listview/list-focus-focused.png) left center no-repeat;
+        display: block;
+        width: 129px;
+        height: 18px;
+    }
+    .oc-listitemview .item-checkbox{
+        position: absolute;
+        right: 36px;
+        top: 1px;
+    }
+
+    .oc-list-view-container.vertical li.selected.oc-listitemview-branch:after {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s cubic-bezier(0.08, 0.905, 0.04, 0.995) 0.2s;
+    }
+
+    .oc-list-view-container.vertical li.oc-listitemview-branch:after {
+    }
+
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-text,
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-checkbox{
+        opacity: 0;
+        -webkit-transition: opacity 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+
+    }
+    .oc-list-view-container.vertical.centered ul.oc-list-view li.oc-listitemview .item-text,
+    .oc-list-view-container.vertical.centered ul.oc-list-view li.oc-listitemview .item-checkbox{
+        opacity: 1;
+        -webkit-transition: opacity 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-icon{
+        opacity: 0;
+        display: block;
+        position: absolute;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-icon{
+        width: 35px;
+        height: 35px;
+        left: 7px;
+        top: 14px;
+    }
+
+    .oc-list-view-container.vertical:focus li.selected .item-text{
+        color: #fff;
+        font-size: larger;
+        text-shadow: 0 0 18px rgba(191, 223, 255, 0.4), 0 0 18px rgba(191, 223, 255, 0.4);
+    }
+    .oc-list-view-container.vertical:focus ul.oc-list-view li.selected:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .oc-list-view-container.vertical li > span.selectable.active {
+      background-color: #ccc;
+      line-height: $minimum-font-size;
+      width: initial;
+      height: initial;
+      border-radius: 10px;
+    }
+
+  .default .oc-list-view-container.vertical li > span.selectable {
+    padding: 8px;
+  }
+
+  .item-icon.small-icon{
+        width: 0;
+        height: 0;
+    }
+    .item-icon.animate{
+        -webkit-transition: width 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995) , height 0.5s cubic-bezier(0.08, 0.905, 0.04, 0.995), opacity 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995),
+        -webkit-transform 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+    .item-text.animate{
+        -webkit-transition: opacity 1s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+}

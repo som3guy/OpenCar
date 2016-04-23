@@ -1,0 +1,33 @@
+/* GM Modifications */
+
+.default .oc-list-view-container.vertical ul.oc-list-view li, .default .oc-list-view-container.vertical ul.oc-list-view li, .default .oc-list-view-container.vertical ul.oc-list-view li.selected, .oc-list-view li {
+    color: #f0f0f0;
+}
+
+
+/* focused row */
+.default .oc-list-view-container.vertical:focus UL LI.selected .item-text {
+xfont-size: initial;
+}
+
+
+
+
+.default .oc-listitemview .item-quantity {
+    vertical-align: middle;
+}
+
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-status {
+    background: #000;
+    xborder-color: #298eff;
+    border-radius: 15px;
+    vertical-align: top;
+    top: 13px;
+    width: 32%;
+}
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-progress {
+    xbackground: #298eff;
+    border-radius: 15px;
+}

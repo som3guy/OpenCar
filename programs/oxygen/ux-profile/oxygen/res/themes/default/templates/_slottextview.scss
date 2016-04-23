@@ -1,0 +1,28 @@
+@import "../scss/base";
+/* SlotTextView Styles */
+
+.#{$theme}{
+  .oc-slottextview {
+      position: relative;
+  }
+
+  .oc-slottextview .oc-slottextview-actual-text{
+      visibility: hidden;
+  }
+
+  .oc-slottextview p{
+      margin:0;
+      padding:0;
+      display:inline-block;
+      position: relative;
+      transition: top 1.3s ease-in-out;
+      -moz-transition: top 1.3s ease-in-out;
+      -o-transition: top 1.3s ease-in-out;
+      -webkit-transition: top 1.3s ease-in-out;
+  }
+
+  .oc-slottextview-slot-container{
+      position: absolute;
+      top: 0;
+  }
+}

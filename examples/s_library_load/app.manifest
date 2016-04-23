@@ -1,0 +1,12 @@
+{
+    "id"          : "com.opencar.sdk.sample.library_load",
+    "name"        : "Sample Library Load",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-08-20",
+    "version"     : "1.0.0"
+}

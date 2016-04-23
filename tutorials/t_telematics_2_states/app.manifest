@@ -1,0 +1,12 @@
+{
+    "id"          : "com.opencar.sdk.tutorial.telematics_2_states",
+    "name"        : "Tutorial Telematics 2 - States",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  "Telematics.WHEN_ACTIVE" ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

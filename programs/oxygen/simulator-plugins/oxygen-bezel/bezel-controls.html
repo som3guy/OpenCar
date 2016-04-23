@@ -1,0 +1,82 @@
+<!-- **************************************************
+OPENCAR SIMULATOR BEZEL-CONTROL PLUGIN
+
+Required files for a complete Bezel-Control Simulator plugin:
+bezel-controls.html 
+bezel-controls.css
+bezel-controls.js
+plugin.json
+************************************************** -->
+<!-- The following HTML gets injected into #bezel. What goes in here is up to you. -->
+<div id="oxygen-blue-side-buttons" class="show">
+    <div id="bezel-buttons-left" class="bezel-side-buttons">
+        <a href="#" id="side-button-1">Eco</a>
+        <a href="#" id="side-button-2">Nav</a>
+        <a href="#" id="side-button-3">Back</a>
+    </div>
+    <div id="bezel-buttons-right" class="bezel-side-buttons">
+        <a href="#" id="side-button-4">Menu</a>
+        <a href="#" id="side-button-5">Radio</a>
+        <a href="#" id="side-button-6">Phone</a>
+    </div>
+ </div>
+ <div id="oxygen-blue-bottom-buttons" class="show">
+    <a href="#" id="bottom-button-1" class="bottom-buttons">1</a>
+    <a href="#" id="bottom-button-2" class="bottom-buttons">2</a>
+    <a href="#" id="bottom-button-3" class="bottom-buttons">3</a>
+    <a href="#" id="bottom-button-4" class="bottom-buttons">4</a>
+    <a href="#" id="bottom-button-5" class="bottom-buttons">5</a>
+    <a href="#" id="bottom-button-6" class="bottom-buttons">6</a>
+</div>
+
+<!-- **************************************************
+THE OPENCAR SIMULATOR:
+This will help you to understand how the OpenCar Simulator is constructed and where Simulator plugins are loaded.
+---------------------------------------------------------------------------------------------
+|  OpenCar                                           |  Launch App  |  Program Picker   |   |
+---------------------------------------------------------------------------------------------
+|                                                                   |                   |   |
+|                                                                   |                   |   |
+|         -------------------------------------------------         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |  Vehicle Data     |   |
+|         |                                               |         |  plugin type      |   |
+|         |                                               |         |  defines what     |   |
+|         |                                               |         |  loads here       |   |
+|         |                                               |         |                   |   |
+|         |                     #screen                   |         |                   |   |
+|         |                                               |         |     TMX icons --\>|   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                     ------------------  |                   |   |
+|         |                                     |                |  |                   |   |
+|         |                                     |                |  |                   |   |
+|         --------------------------------------|     Floater    |  |                   |---|
+|                                               |     Control    |  |  Bezel & Floater  |   |
+|                                               |                |  |  control icons    |   |
+|    #bezel                                     |                |  |     load here --\>|   |
+|    Bezel Controls                             |                |  |                   |   |
+|                                               ------------------  |                   |   |
+|                                                                   |                   |   |
+---------------------------------------------------------------------------------------------
+|    Drive Play files load here                                     |         Legal         |
+---------------------------------------------------------------------------------------------
+
+SIMULATOR PLUGIN TYPES:
+
+Bezel-Art
+A bezel-art plugin defines the art surrounding the IVI #screen.
+
+Vehicle-Data
+Telematics data that defines what events load in the Simulators telematics sidebar.
+
+Bezel-Controls
+Your playground for adding emulated hardware controls/buttons that surround the screen.
+
+Floater-Controls
+Floating dialogs that contain emulated hardware controls/buttons.  
+
+Drive-Play
+Real-world data captured (telematics and video) and played back to simulate real-time telematics events.
+************************************************** -->

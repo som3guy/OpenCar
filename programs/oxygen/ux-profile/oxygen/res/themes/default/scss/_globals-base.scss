@@ -1,0 +1,11 @@
+@import "base";
+
+.#{$theme}{
+    position: relative;
+    color: #FFF;
+    font-family: $font-family-light;
+    font-size: $minimum-font-size;
+    -webkit-transform: translate(0, 0) scale(1, 1);
+    margin: 0;
+    @include body-bg();
+}

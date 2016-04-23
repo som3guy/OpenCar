@@ -1,0 +1,68 @@
+.default [data-oc-control="Button"]:not(.no-style), .default button[is="oc-button"] {
+    padding: 10px 20px;
+}
+
+#image-view-hd-indicator {
+	position: absolute;
+	z-index: 20;
+	top: 357px;
+	left: 235px;
+}
+
+#button-preset-1,#button-preset-2,#button-preset-3,#button-preset-4 {
+    z-index: 20;
+    top: -65px;
+    left: 35px;
+}
+
+#button-preset-1.on,#button-preset-2.on,#button-preset-3.on,#button-preset-4.on {
+    color: orange;
+}
+
+.oc-radio-dialer {
+	margin-left: 88px;
+	z-index: 10;
+	pointer-events: none;
+}
+
+#button-seek-previous,
+#button-seek-next {
+	position: absolute;
+	top: 0px;
+	width: 384px;
+	margin: 0;
+	padding: 0;
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 57px;
+	border-radius: 0;
+    color: transparent;
+}
+
+#button-seek-previous {
+	left: 16px;
+}
+
+#button-seek-next {
+	right: 16px;
+}
+
+#button-seek-previous {
+	background-image: url("TunerCtrl_Button2.png");
+}
+
+#button-seek-next {
+	background-image: url("TunerCtrl_Button3.png");
+}
+
+#button-seek-previous:focus {
+	background-image: url("TunerCtrl_ButtonFocus2.png");
+}
+
+#button-seek-next:focus {
+	background-image: url("TunerCtrl_ButtonFocus3.png");
+}
+
+#container-back-button {
+    border-right: 0px;
+}

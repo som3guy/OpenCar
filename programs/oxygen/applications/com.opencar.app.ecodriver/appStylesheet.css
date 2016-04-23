@@ -1,0 +1,464 @@
+/*  Default profile */
+.default .detail-block {
+    width: 100%;
+}
+.default .info-screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.default .half-width {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+
+.default .half-width.separated {
+    width: 50%;
+}
+.default .hidden {
+    display: none;
+}
+.half-width.separated:before {
+    content: '';
+    width: 2px;
+    height: 250px;
+    background-image: -webkit-linear-gradient(top, transparent 0%, #8E8E8E 25%, transparent 100%);
+    position: absolute;
+}
+
+.info-block {
+    padding: 5px 0 49px 60px;
+    white-space: nowrap;
+}
+
+.info-block .info-block-data {
+    height: 57px;
+    line-height: 50px;
+    font-size: 58px;
+}
+.info-block .info-block-unit {
+    font-size: 30px;
+}
+.info-block .info-block-label {
+    font-size: 30px;
+    line-height: 16px;
+    height: 16px;
+    color: #999999;
+}
+
+.info-block.small {
+    padding: 0 0 40px 60px;
+}
+
+.info-block.small .info-block-data {
+    font-size: 55px;
+    line-height: 55px;
+    height: 55px;
+}
+
+.info-block.large {
+    padding: 4px 0 15px 60px;
+}
+
+.info-block.large .info-block-data {
+    font-size: 70px;
+    line-height: 70px;
+    height: 70px;
+}
+
+.fuel-economy-bar {
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 80px;
+    width: 320px;
+    background: url(images/scale-bar.png);
+    position: relative;
+    overflow: hidden;
+}
+
+.fuel-economy-bar .best-result {
+    height: 67px;
+    width: 25px;
+    top: 6px;
+    margin-left: 5px;
+    background: url(images/scale-max.png);
+    position: absolute;
+}
+
+.fuel-economy-bar .current-result {
+    height: 45px;
+    top: 17px;
+    left: 17px;
+    box-shadow: -2px 0 2px #ab0e0d, 0 -2px 2px #ab0e0d, 0 2px 2px #810904, inset 0 -10px 10px #810904;
+    position: absolute;
+    background: #ab0e0d;
+}
+
+
+.fuel-economy-info {
+    position: relative;
+    height: 337px;
+    width: 663px;
+    margin: -12px auto;
+}
+.fuel-economy-info .scale-bar-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 151px;
+    height: 337px;
+    background: url(images/scale-bar-vertical.png) 0 0 no-repeat;
+}
+.fuel-economy-info .scale-bar-vertical.left {
+    left: 138px;
+}
+.fuel-economy-info .scale-bar-vertical-numbers {
+    position: absolute;
+    top: 0;
+    left: 289px;
+    height: 281px;
+    width: 85px;
+    background: url(images/scale-bar-vertical-numbers.png) 0 0 no-repeat;
+}
+.fuel-economy-info .scale-bar-vertical.right{
+    left: 374px;
+}
+.fuel-economy-info .scale-bar-vertical .label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #858586;
+    font-size: 32px;
+    text-align: center;
+}
+.fuel-economy-info .scale-bar-vertical .current-result-data {
+    position: absolute;
+    left: 11px;
+    top: 185px;
+    width: 129px;
+    height: 84px;
+    text-align: center;
+    color: #ffffff;
+}
+.fuel-economy-info .scale-bar-vertical .current-result-data .info-block-value {
+    font-size: 42px;
+    height: 54px;
+    line-height: 70px;
+}
+.fuel-economy-info .scale-bar-vertical .current-result-data .info-block-unit {
+    font-size: 24px;
+    line-height: 24px;
+}
+.fuel-economy-info .scale-bar-vertical .current-result {
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    right: 13px;
+    height: 163px;
+}
+.fuel-economy-info .scale-bar-vertical .current-result .current-result-progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 3px #ab0e0d, inset -3px -3px 5px #810904;
+    background: #ab0e0d;
+}
+
+.fuel-economy-info .scale-bar-vertical .best-result,
+.fuel-economy-info .scale-bar-vertical .worst-result {
+    position: absolute;
+    left: -54px;
+    width: 21px;
+    height: 21px;
+    margin-bottom: -10px;
+    bottom: 0;
+}
+.fuel-economy-info .scale-bar-vertical .best-result {
+    background: url(images/marker-green.png) 0 0 no-repeat;
+}
+.fuel-economy-info .scale-bar-vertical .worst-result {
+    background: url(images/marker-grey.png) 0 0 no-repeat;
+}
+.fuel-economy-info .scale-bar-vertical .best-result:after,
+.fuel-economy-info .scale-bar-vertical .worst-result:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    left: 21px;
+    margin-top: 9px;
+    background: #777777;
+}
+
+.fuel-economy-info .scale-bar-vertical.right .best-result,
+.fuel-economy-info .scale-bar-vertical.right .worst-result {
+    left: auto;
+    right: -58px;
+}
+.fuel-economy-info .scale-bar-vertical.right .best-result:after,
+.fuel-economy-info .scale-bar-vertical.right .worst-result:after {
+    width: 24px;
+    left: -24px;
+}
+
+.fuel-economy-info .scale-bar-vertical .best-result-data,
+.fuel-economy-info .scale-bar-vertical .worst-result-data {
+    position: absolute;
+    width: 93px;
+    height: 70px;
+    margin-bottom: -35px;
+    left: -138px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.fuel-economy-info .scale-bar-vertical .best-result-data .info-block-value,
+.fuel-economy-info .scale-bar-vertical .worst-result-data .info-block-value {
+    font-size: 32px;
+    height: 32px;
+}
+.fuel-economy-info .scale-bar-vertical.right .best-result-data,
+.fuel-economy-info .scale-bar-vertical.right .worst-result-data {
+    left: auto;
+    right: -150px;
+}
+
+.hbb-container {
+    overflow: visible;
+    display: block;
+}
+.hbb-container .hbb-bar-hidden {
+    display: none;
+    /* To fix the vertical positioning bug: */
+    -webkit-transform: none;
+}
+.scale-bar-horizontal {
+    position: relative;
+    top: 10px;
+    left: 48px;
+    width: 322px;
+    height: 91px;
+    /*background: url(images/scale-bar.png) 0 0 no-repeat;*/
+}
+.scale-bar-horizontal:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: block;
+    position: absolute;
+    background: url(images/scale-bar.png) 0 0 no-repeat;
+    z-index: 2;
+}
+.scale-bar-horizontal .current-result {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    width: 294px;
+    height: 52px;
+    z-index: 1;
+}
+.scale-bar-horizontal .current-result .current-result-progress {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 3px #ab0e0d, inset -3px -3px 5px #810904;
+    background: #ab0e0d;
+}
+
+.scale-bar-horizontal .best-result {
+    position: absolute;
+    width: 23px;
+    height: 61px;
+    top: 10px;
+    left: 0px;
+    margin-left: 7px;
+    background: url(images/scale-max.png) 0 0 no-repeat;
+    z-index: 3;
+}
+.default [data-oc-control="Button"]:not(.no-style).focused:not(:disabled),
+.default [data-oc-control="Button"]:not(.no-style) {
+    display: block;
+    width: 80px; height: 80px;
+    border-radius: 7px;
+    border: 6px solid white;
+    background-color: rgba(255,255,255,.8);
+    padding: 0;
+}
+.default .bb-exit-button .bb-button-icon {
+    background-image: url(apps-common/images/icon-apps.png);
+}
+.default .bb-settings-button .bb-button-icon {
+    background-image: url(apps-common/images/settings.png);
+}
+
+.default .info-screen .title {
+    margin-left: 60px; /* 80 */
+    height: 60px;
+    padding-top: 15px;
+    font-size: 44px;
+}
+.default .restore-bar-pane {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.default .restore-bar-pane.active { display: block; }
+.default .data { padding-top: 10px; }
+.default .bb-pane-body {
+    background-color: rgba(0,0,0,.9);
+}
+
+/*  Oxygen profile  */
+.default.oxygen .data { padding-top: 0; }
+.default.oxygen .bb-pane-body {
+    background-color: transparent;
+}
+
+.default.oxygen .bb-this-drive-button .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-this-drive.png);
+}
+.default.oxygen .bb-fuel-economy-button .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-economy.png);
+}
+.default.oxygen .bb-fuel-usage-button .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-usage.png);
+}
+.default.oxygen .bb-carbon-footprint-button .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-carbon.png);
+}
+.default.oxygen .bb-fuel-cost-button .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-fuel.png);
+}
+/* focus states */
+.default.oxygen .bb-this-drive-button.bb-button-focus .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-this-drive-focus.png);
+}
+.default.oxygen .bb-fuel-economy-button.bb-button-focus .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-economy-focus.png);
+}
+.default.oxygen .bb-fuel-usage-button.bb-button-focus .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-usage-focus.png);
+}
+.default.oxygen .bb-carbon-footprint-button.bb-button-focus .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-carbon-focus.png);
+}
+.default.oxygen .bb-fuel-cost-button.bb-button-focus .bb-button-icon {
+    background-image: url(images/oxygen/oxygen-icon-fuel-focus.png);
+}
+/* other */
+.default.oxygen .info-screen {
+    padding-top: 10px;
+}
+.default.oxygen .info-screen .title {
+    margin: 0;
+    height: 50px;
+    font-size: 44px;
+    position: absolute;
+    top: -65px;
+    left: 231px;
+    font-size: 30px;
+    padding: 0;
+}
+
+.default.oxygen .np-horiz-rule {
+    display: none;
+}
+
+.default.oxygen .half-width .info-block {
+    display: none;
+}
+.default.oxygen .half-width .info-block:nth-child(1),
+.default.oxygen .half-width .info-block:nth-child(2) {
+    display: block;
+}
+
+.default.oxygen .half-width.separated:before {
+    margin-left: 20px;
+    margin-top: -19px;
+    height: 261px;
+}
+
+.default.oxygen .info-block .info-block-data {
+    height: 58px;
+    line-height: 58px;
+    font-size: 58px;
+}
+.default.oxygen .info-block .info-block-unit {
+    font-size: 28px;
+}
+.default.oxygen .info-block .info-block-label {
+    font-size: 27px;
+    line-height: 28px;
+    height: 28px;
+}
+
+.default.oxygen .info-block.small .info-block-data {
+    font-size: 34px;
+    line-height: 55px;
+    height: 55px;
+}
+
+.default.oxygen .info-block.large {
+    padding-top: 10px;
+    padding-left: 53px;
+}
+
+.default.oxygen .info-block.large .info-block-data {
+    font-size: 80px;
+    line-height: 80px;
+    height: 80px;
+}
+
+.default.oxygen .info-block.large .info-block-label {
+    padding-left: 6px;
+    margin-top: 10px;
+}
+
+.default.oxygen .info-block.large .info-block-unit {
+    font-family: Roboto-light;
+}
+
+.default.oxygen .info-block.small {
+    padding-top: 14px;
+    padding-bottom: 18px;
+    padding-left: 65px;
+}
+
+.default.oxygen .info-block.small .info-block-data {
+    font-size: 50px;
+    line-height: 50px;
+    height: 51px;
+}
+
+.default.oxygen .info-block.small .info-block-label {
+    padding-left: 3px;
+}
+
+.default.oxygen .fuel-economy-info .scale-bar-vertical .label {
+    color: #858586;
+    font-size: 28px;
+}
+.default.oxygen .fuel-economy-info .scale-bar-vertical .current-result-data .info-block-value {
+    font-size: 42px;
+    height: 54px;
+    line-height: 70px;
+}
+.default.oxygen .fuel-economy-info .scale-bar-vertical .current-result-data .info-block-unit {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.default.oxygen .fuel-economy-info .scale-bar-vertical .best-result-data .info-block-value,
+.default.oxygen .fuel-economy-info .scale-bar-vertical .worst-result-data .info-block-value {
+    font-size: 34px;
+    height: 34px;
+}
+

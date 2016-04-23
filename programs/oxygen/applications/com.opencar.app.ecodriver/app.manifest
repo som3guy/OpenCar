@@ -1,0 +1,14 @@
+{
+    "id"          : "com.opencar.app.ecodriver",
+    "name"        : "Eco Driver",
+    "css"         : [ "appStylesheet.css", "apps-common/css/splash.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  "Telematics.WHEN_ACTIVE" ],
+    "categoryId"  : "DRIVING",
+    "logo"        : "images/preloader.png",
+    "date"        : "2015-02-11",
+    "version"     : "2.1.0",
+    "screens"     : "screens.json" 
+}

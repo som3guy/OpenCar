@@ -1,0 +1,268 @@
+/* Dial pad styles */
+
+/*
+#chamber-dial-pad .back-button {
+	display: none;
+}
+*/
+
+#container-dial-pad-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 47px;
+}
+
+#container-dial-pad {
+	text-align: right;
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	left: 45%;
+}
+
+#container-misc-dial-pad {
+	width: 20%;
+	height: 100%;
+	left: 80%;
+	position: absolute;
+}
+
+#container-dial-pad-display {
+	width: 45%;
+	height: 100%;
+	position: absolute;
+}
+
+#container-dial-pad-main .dial-button {
+	width: 60px;
+	height: 60px;
+	margin: 8px 11px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#container-dial-pad-main .dial-button .item-text {
+	display: none;
+}
+
+#container-dial-pad-main #dial-key-call.dial-button .item-text,
+#container-dial-pad-main #dial-key-backspace.dial-button .item-text {
+	display: initial;
+}
+
+#container-dial-pad-main #dial-key-backspace {
+	width: 125px;
+	height: 60px;
+	margin-top: 162px;
+	font-size: 24px;
+}
+
+#container-dial-pad-main #dial-key-call {
+	width: 125px;
+	height: 60px;
+	margin-top: 8px;
+}
+
+#dial-key-contacts {
+	display: none;
+}
+
+#container-dial-pad-main #text-view-phone-number {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	text-align: right;
+	font-size: 40px;
+	color: gray;
+}
+
+#text-view-phone-number.placeholder {
+	color: #0d254e;
+}
+
+#dial-key-1 {
+	background-image: url("images/hydrogen-dial-key-1.png");
+}
+
+#dial-key-1:hover,
+#dial-key-1:focus {
+	background-image: url("images/hydrogen-dial-key-1-focus.png");
+}
+
+#dial-key-2 {
+	background-image: url("images/hydrogen-dial-key-2.png");
+}
+
+#dial-key-2:hover,
+#dial-key-2:focus {
+	background-image: url("images/hydrogen-dial-key-2-focus.png");
+}
+
+#dial-key-3 {
+	background-image: url("images/hydrogen-dial-key-3.png");
+}
+
+#dial-key-3:hover,
+#dial-key-3:focus {
+	background-image: url("images/hydrogen-dial-key-3-focus.png");
+}
+
+#dial-key-4 {
+	background-image: url("images/hydrogen-dial-key-4.png");
+}
+
+#dial-key-4:hover,
+#dial-key-4:focus {
+	background-image: url("images/hydrogen-dial-key-4-focus.png");
+}
+
+#dial-key-5 {
+	background-image: url("images/hydrogen-dial-key-5.png");
+}
+
+#dial-key-5:hover,
+#dial-key-5:focus {
+	background-image: url("images/hydrogen-dial-key-5-focus.png");
+}
+
+#dial-key-6 {
+	background-image: url("images/hydrogen-dial-key-6.png");
+}
+
+#dial-key-6:hover,
+#dial-key-6:focus {
+	background-image: url("images/hydrogen-dial-key-6-focus.png");
+}
+
+#dial-key-7 {
+	background-image: url("images/hydrogen-dial-key-7.png");
+}
+
+#dial-key-7:hover,
+#dial-key-7:focus {
+	background-image: url("images/hydrogen-dial-key-7-focus.png");
+}
+
+#dial-key-8 {
+	background-image: url("images/hydrogen-dial-key-8.png");
+}
+
+#dial-key-8:hover,
+#dial-key-8:focus {
+	background-image: url("images/hydrogen-dial-key-8-focus.png");
+}
+
+#dial-key-9 {
+	background-image: url("images/hydrogen-dial-key-9.png");
+}
+
+#dial-key-9:hover,
+#dial-key-9:focus {
+	background-image: url("images/hydrogen-dial-key-9-focus.png");
+}
+
+#dial-key-star {
+	background-image: url("images/hydrogen-dial-key-star.png");
+}
+
+#dial-key-star:hover,
+#dial-key-star:focus {
+	background-image: url("images/hydrogen-dial-key-star-focus.png");
+}
+
+#dial-key-0 {
+	background-image: url("images/hydrogen-dial-key-0.png");
+}
+
+#dial-key-0:hover,
+#dial-key-0:focus {
+	background-image: url("images/hydrogen-dial-key-0-focus.png");
+}
+
+#dial-key-pound {
+	background-image: url("images/hydrogen-dial-key-pound.png");
+}
+
+#dial-key-pound:hover,
+#dial-key-pound:focus {
+	background-image: url("images/hydrogen-dial-key-pound-focus.png");
+}
+
+/* Call info */
+
+#container-call-info-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 30px;
+}
+
+#container-call-info-details {
+	position: absolute;
+	padding: 20px;
+	width: 70%;
+	left: 30%;
+	height: 100%;
+}
+
+#container-call-info-caller-image {
+	position: absolute;
+	padding: 20px;
+	text-align: right;
+	width: 30%;
+	height: 100%;
+}
+
+#container-call-info-caller-image #image-view-caller {
+	width: 200px;
+	height: 200px;
+}
+
+#text-view-call-status {
+	display: block;
+	line-height: 50px;
+}
+
+#text-view-caller-name-and-duration {
+	display: block;
+	line-height: 50px;
+}
+
+#container-call-info-main #text-view-call-status-2 {
+	position: absolute;
+	width: 100%;
+	background-color: #1A1A1A;
+	text-align: center;
+	top: 240px;
+	border-radius: 20px;
+	padding: 4px;
+}
+
+/* Button bar */
+.bb-button {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#bb-dial-pad {
+	background-image: url("images/hydrogen-dial-pad.png");
+}
+
+#bb-mute {
+	background-image: url("images/hydrogen-mute.png");
+}
+
+#bb-mute.on {
+	background-image: url("images/hydrogen-mute-on.png");
+}
+
+#bb-call {
+	background-image: url("images/hydrogen-call.png");
+}
+
+#bb-end-call {
+	background-image: url("images/hydrogen-hangup.png");
+}
+

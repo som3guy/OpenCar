@@ -1,0 +1,36 @@
+@import "base";
+.#{$theme} {
+	.aspect-image-view {
+		background-repeat: no-repeat;
+		&.fit-none {
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+		}
+		&.fit-full {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+		}
+		&.fit-crop {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+		}
+		&.fit-stretch {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+		}
+		&.fit-width {
+			width: 100%;
+			height: inherit;
+			background-size: cover;
+		}
+		&.fit-height {
+			width: inherit;
+			height: 100%;
+			background-size: contain;
+		}
+	}
+}

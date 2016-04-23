@@ -1,0 +1,9 @@
+{
+    "id": "com.opencar.sdk.sample.map_dialog",
+    "name": "Sample Map Dialog",
+    "view": "view.js",
+    "css": "style.css",
+    "categoryId": "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

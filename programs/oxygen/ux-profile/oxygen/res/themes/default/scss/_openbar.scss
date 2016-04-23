@@ -1,0 +1,165 @@
+@import "base";
+
+/*
+    Now Playing
+*/
+
+.#{$theme} {
+    #openbar {
+        bottom: 0px;
+        right: 0px;
+        box-sizing: border-box;
+        text-align: right;
+        background: transparent url(../../images/open-bar.png) no-repeat scroll 0 0;
+        z-index: 9000;
+    }
+    /* hiding these items for Oxygen only */
+    #openbar #openbar-home-button, #openbar #openbar-title, #openbar #openbar-title-icon {
+        display: none !important;
+    }
+
+    #openbar #openbar-clock {
+        position: absolute;
+        top: 8px;
+        left: 18px;
+        font-size: 34px;
+        z-index: 10000;
+    }
+
+    #openbar,
+    #openbar .openbar-toast-background,
+    #openbar .openbar-messages {
+        position: absolute;
+        width: 800px;
+        height: $openbar-height;
+        overflow: hidden;
+    }
+
+    #openbar .openbar-messages,
+    #openbar.openbar-toast-active .openbar-toasts, #openbar.openbar-alert-active .openbar-alert,
+    #openbar.openbar-queued-toast .openbar-toasts, #openbar.openbar-queued-toast .openbar-alert {
+        z-index: 9010;
+        -webkit-transition: -webkit-transform 1s .3s, opacity 3s .5s;
+    }
+
+    #openbar .openbar-toasts, #openbar .openbar-alert {
+        opacity: 0;
+        -webkit-transform: translateY(64px);
+    }
+
+    #openbar.openbar-queued-toast .openbar-toasts, #openbar.openbar-alert-active .openbar-alert {
+        -webkit-transition: -webkit-transform 1s 0.3s, opacity 0.8s;
+    }
+
+    #openbar .openbar-toast-background {
+        background: transparent url(../../images/open-bar-dark.png) no-repeat scroll 100% 0;
+        -webkit-transition: opacity 3s 0.5s, z-index 2s 0s;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    #openbar.openbar-toast-active .openbar-toast-background,
+    #openbar.openbar-alert-active .openbar-toast-background,
+    #openbar.openbar-queued-toast .openbar-toast-background {
+        opacity: 0.65;
+        -webkit-transition: opacity 2s;
+        z-index: 9009;
+    }
+
+    #openbar.openbar-toast-active:not(.openbar-alert-active) .openbar-toasts, #openbar.openbar-alert-active .openbar-alert {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+
+    #openbar.openbar-toast-active:not(.openbar-alert-active) .openbar-messages:not(.openbar-toasts),
+    #openbar.openbar-alert-active .openbar-messages:not(.openbar-alert) {
+        opacity: 0;
+        -webkit-transform: translateY(64px);
+    }
+
+    .openbar-message {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        line-height: 74px;
+        height: $openbar-height;
+        max-width: 700px;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 20px;
+        font-family: $font-family-regular;
+        -webkit-transition: opacity 0.7s, -webkit-transform 0.3s;
+        padding-right: 15px;
+    }
+
+    .openbar-alert-visible .openbar-message {
+        -webkit-transform: translateY(3px);
+    }
+
+    .openbar-message-text {
+        display: inline-block;
+        font-size: 24px;
+        float: left;
+        line-height: 75px;
+        max-width: 560px;
+        overflow: hidden;
+    }
+
+    .openbar-message-text,
+    .openbar-message-text > span {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .openbar-long-message-text .openbar-message-text {
+        -webkit-mask: url(../../images/open-bar-mask.png) right -12px center no-repeat;
+    }
+
+    .openbar-message.openbar-visible,
+    .openbar-toasts .openbar-message,
+    .openbar-alert .openbar-message {
+        opacity: 1;
+    }
+
+    .openbar-message strong {
+        font-family: $font-family-medium;
+    }
+
+    #opencar-alert-icon,
+    .openbar-message-icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin: 19px 0 19px 15px;
+        border-radius: 18px;
+        box-shadow: 0 0 4px #000;
+        opacity: .8;
+        -webkit-transition: box-shadow .2s $cubic;
+    }
+
+    #opencar-alert-icon {
+        background: url(../../images/alert.png);
+        background-size: 36px 36px;
+        margin: 19px 15px;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        -webkit-transition: box-shadow .2s $cubic, opacity 0.7s;
+        z-index: 9011;
+    }
+
+    .openbar-alert-visible #opencar-alert-icon {
+        opacity: 1;
+    }
+
+    .openbar-message:focus {
+        outline: none;
+    }
+
+    .openbar-message:focus .openbar-message-icon,
+    #opencar-alert-icon:focus {
+        opacity: 1;
+        box-shadow: 0 0 22px rgba(255, 255, 255, .7);
+    }
+}

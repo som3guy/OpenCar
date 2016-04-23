@@ -1,0 +1,13 @@
+.hello_container {
+    text-align: center;
+}
+#hello {
+    color: white;
+    padding: 20px;
+}
+#time {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100px;
+}

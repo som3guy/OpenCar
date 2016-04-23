@@ -1,0 +1,45 @@
+{
+    "id"         : "com.opencar.sdk.sample.module_list_view",
+    "name"       : "Sample Module List View",
+    "view"       : "view.js",
+    "css"        : ["styles.css"],
+    "screens"    : [
+        {
+            "id"        : "screen1",
+            "chambers"  : [
+                {
+                    "id"        : "chamber1",
+                    "js"        : "modules/Chamber1.js"
+                }
+            ]
+        },
+        {
+            "id"        :  "screen2",
+            "chambers"  : [
+                {
+                    "id"        : "chamber2a",
+                    "js"        : "modules/Chamber2a.js",
+                    "template"  : "templates/chamber2a.html"
+                },
+                {
+                    "id"        : "chamber2b",
+                    "js"        : "modules/Chamber2b.js",
+                    "template"  : "templates/chamber2b.html"
+                }
+            ]
+        },
+        {
+             "id"        :  "screen3",
+             "chambers"  : [
+                 {
+                     "id"        : "chamber3",
+                     "js"        : "modules/Chamber3.js",
+                     "template"  : "templates/chamber3.html"
+                 }
+             ]
+        }
+    ],
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

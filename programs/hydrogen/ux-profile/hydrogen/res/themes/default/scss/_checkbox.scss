@@ -1,0 +1,51 @@
+@import "base";
+
+.#{$theme} {
+    .oc-checkbox span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        color: $regular;
+        background: $regular;
+        margin: 0px auto;
+        padding: 2px;
+        position: relative;
+        border: 2px solid $active;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    .oc-checkbox span input,
+    .oc-checkbox span label {
+        display: none;
+    }
+
+    .oc-checkbox.oc-pressed span {
+        background: url(../../images/hydrogen-checkbox-x.png) 0 -22px / 22px auto no-repeat content-box, $regular;
+    }
+
+    .oc-checkbox.oc-pressed:focus span {
+        background: url(../../images/hydrogen-checkbox-x.png) 0 0 / 22px auto no-repeat content-box, $active;
+    }
+
+    .oc-checkbox span + label {
+        color: $color;
+        font-size: $item-text-font-size;
+        position: relative;
+        left: 8px;
+        vertical-align: middle;
+    }
+
+    .oc-checkbox:focus span {
+        color: $color;
+        border-color: $color;
+        background: $active;
+    }
+
+    .oc-checkbox:active span,
+    .oc-checkbox.oc-down-state:not(:disabled) span {
+        color: $color;
+        border-color: $color;
+        background: $pressed;
+    }
+}

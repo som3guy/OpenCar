@@ -1,0 +1,41 @@
+[
+  {
+    "id"        : "menu-screen",
+    "chambers"  : [
+      {
+        "id"        : "menu",
+        "js"        : "screen/main/Menu.js"
+      }
+    ]
+  },
+  {
+    "id"        :  "activity-screen",
+    "chambers"  : [
+      {
+        "id"      : "activity",
+        "js"      : "screen/install/activity/Activity.js",
+        "template": "screen/install/activity/activity.html"
+      }
+    ]
+  },
+  {
+    "id"        :  "detail-screen",
+    "chambers"  : [
+      {
+        "id": "detail",
+        "js": "screen/install/detail/Detail.js",
+        "template": "screen/install/detail/detail.html"
+      }
+    ]
+  },
+  {
+    "id"        :  "options-screen",
+    "chambers"  : [
+      {
+        "id"      : "options",
+        "js"      : "screen/install/options/Options.js",
+        "template": "screen/install/options/options.html"
+      }
+    ]
+  }
+]

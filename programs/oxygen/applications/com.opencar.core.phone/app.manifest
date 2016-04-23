@@ -1,0 +1,58 @@
+{
+    "id"          : "com.opencar.core.phone",
+    "name"        : "Phone",
+    "css"         : [ "$MODULE_PROFILE_PATH/stylesheet.css" ],
+    "controller"  : "controller.js",
+    "view"        : "view.js",
+    "screens"    : [
+        {
+            "id"        : "screen-dial-pad",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-dial-pad",
+                    "js"        : "DialPad.js",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        },
+        {
+            "id"        : "screen-call-info",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-call-info",
+                    "js"        : "CallInfo.js",
+                    "autorun"   : true,
+                    "focus"     : true,
+					"buttons": [
+						{
+							"oc-control"    : "CustomButton",
+							"from"          : "common/platform/chamber/ButtonBarChamber",
+							"label"         : "Dial Pad",
+							"id"            : "bb-dial-pad",
+							"action"        : "onDialPad"
+						},
+						{
+							"oc-control"    : "CustomButton",
+							"from"          : "common/platform/chamber/ButtonBarChamber",
+							"id"            : "bb-mute",
+							"label"         : "Mute",
+							"action"        : "onMute"
+						},
+						{
+							"oc-control"    : "CustomButton",
+							"from"          : "common/platform/chamber/ButtonBarChamber",
+							"id"            : "bb-end-call",
+							"label"         : "End Call",
+							"action"        : "onEndCall"
+						}
+					]
+                }
+            ]
+        }
+    ],
+    "permissions" : [ "application-management" ],
+    "categoryId"  : "PHONE",
+    "date"        : "2015-02-10",
+    "version"     : "1.0.0"
+}

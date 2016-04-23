@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-kexp.jpg",
+    "defaultContentImage"       : "logo-kexp.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio KEXP",
+        "stationName" : "KEXP 90.3 Seattle",
+        "trackUrl" : "http://live-mp3-128.kexp.org:8000/listen.pls",
+        "trackTitle" : "Where the music matters"
+    }
+    
+}

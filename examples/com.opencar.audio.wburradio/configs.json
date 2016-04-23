@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-wbur.jpg",
+    "defaultContentImage"       : "logo-wbur.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio WBUR",
+        "stationName" : "WBUR Radio",
+        "trackUrl" : "http://audio.wbur.org/stream/live_mp3.m3u",
+        "trackTitle" : "Boston"
+    }
+    
+}

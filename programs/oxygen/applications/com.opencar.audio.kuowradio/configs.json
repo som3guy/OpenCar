@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-kuow.jpg",
+    "defaultContentImage"       : "logo-kuow.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio KUOW",
+        "stationName" : "KUOW-FM Radio",
+        "trackUrl" : "http://www2.kuow.org/stream/kuowlb.m3u",
+        "trackTitle" : "Seattle"
+    }
+    
+}

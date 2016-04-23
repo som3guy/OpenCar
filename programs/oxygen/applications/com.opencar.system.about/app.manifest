@@ -1,0 +1,34 @@
+{
+    "id"            : "com.opencar.system.about",
+    "name"          : "About",
+    "controller"    : "controller.js",
+    "view"          : "view.js",
+    "css"           : [ "css/about.css" ],
+    "categoryId"    : "INFO",
+    "screens"       : [
+        {
+            "id"        : "menu-screen",
+            "chambers"  : [
+                {
+                    "id"        : "menu",
+                    "js"        : "Menu.js",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        },
+        {
+            "id"        : "license-screen",
+            "chambers"  : [
+                {
+                    "id"        : "license",
+                    "js"        : "LicenseText.js",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        }
+    ],
+    "date"        : "2014-01-19",
+    "version"     : "1.0.0"
+}

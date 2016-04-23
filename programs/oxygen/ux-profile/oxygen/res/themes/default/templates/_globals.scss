@@ -1,0 +1,76 @@
+@import "../scss/base";
+/*
+    Fonts
+*/
+
+@import "../scss/fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+.#{$theme}{
+  .oc-widget-view {
+    background: transparent;
+  }
+
+  /*
+      Images - use divs/spans with relative background urls so they'll change automatically when the theme changes.
+  */
+  div.image, span.image {
+    background: transparent no-repeat scroll center center;
+  }
+
+  /* warning.svg */
+  div.image.warning-svg, span.image.warning-svg {
+    background-image: url('../../images/warning.svg');
+    background-size: 50px 50px;
+  }
+
+  /*
+      Default Control Styles
+  */
+
+  /* Generic Styles */
+
+  *:disabled,
+  .oc-disabled {
+    opacity: 0.6;
+  }
+
+  #oc-sfx-audio {
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+
+.oc-module-view.#{$theme} {
+  box-sizing: border-box;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  @include body-bg();
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+.oc-screens-wrapper, .oc-screen, .oc-chamber{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.oc-chamber{
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.oc-chamber.chamber-show{
+    opacity: 1;
+    z-index: 2;
+}

@@ -1,0 +1,177 @@
+@import "base";
+/* List Module Styles */
+
+.#{$theme} {
+    .back-button-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 58px;
+      border: none;
+      border-right: 2px solid $regular;
+      z-index: 1;
+    }
+    .back-button-container.hide {
+      border-right: none;
+    }
+    .back-button {
+        background-image: url(../../images/button-bar/icon-sprite-arrow-back.png);
+        position: absolute;
+        background-position: -13px 0;
+        width: 31px;
+        height: 62px;
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        left: 14px;
+        top: 177px;
+        display: block;
+    }
+    .back-button.hide{
+        display:none;
+    }
+
+    .back-button:focus:not(:disabled) {
+        background-position: -13px -60px;
+        background-color: transparent;
+    }
+    .back-button.oc-down-state {
+        background-position: -13px 0;
+    }
+    .back-button:hover:not(:disabled){
+        background-position: -13px 0;
+    }
+    .back-button.move-back-button-in{
+        -webkit-transform: translateX(0px);
+        -o-transform: translateX(0px);
+    }
+
+    .oc-list-view-container.default-list-view ul.oc-list-view.oc-list-view-plain{
+        -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+    }
+
+    .default-list-wrapper .oc-textview-title.fade-in{
+        opacity: 1;
+    }
+    .default-list-view ul:first-child.move-in{
+        -webkit-transform: translateX(0);
+    }
+    .default-list-view ul + ul.move-out{
+        -webkit-transform: translateX(-100%);
+    }
+
+    .default-list-wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .default-list-wrapper .oc-list-view-container{
+        z-index: 8;
+    }
+    .default-list-wrapper.has-text .oc-textview-title + .oc-list-view-container{
+        height: 351px;
+        z-index: 8;
+    }
+    .default-list-wrapper .oc-textview-title{
+        /*
+        background: rgb(51,51,51) url(../../images/ui/list-module/list-row-rule.png) bottom center no-repeat;
+        */
+        display: none;
+        width: 100%;
+        text-align: left;
+        text-indent: 20px;
+        vertical-align: bottom;
+        -webkit-box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 10px 20px -5px rgba(0,0,0,0.75);
+        -webkit-transition: opacity .4s, -webkit-transform .4s;
+        position: relative;
+        left: 58px;
+    }
+    .default-list-wrapper.has-text .oc-textview-title{
+        border-bottom: 2px solid $regular;
+        padding: 10px 10px 10px 0;
+        display: block;
+    }
+    .default-list-wrapper .default-list-view li.oc-listitemview{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+//        min-width: 500px;
+    }
+    .oc-listitemview .item-text {
+        width: 83%;
+    }
+
+    .default-list-wrapper.has-text .default-scroll-bar{
+        height: 350px;
+        top: 65px;
+    }
+
+    .default-scroll-bar{
+        visibility: hidden;
+        display:block;
+        width: 62px;
+        /*
+        height: 416px;
+        */
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        border: none;
+        z-index: 9;
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        -o-transition: -o-transform 0.4s ease-in-out;
+    }
+    .default-scroll-bar-handle{
+        display:block;
+        width: 100%;
+        position: absolute;
+        border: none;
+        background-color: $regular;
+        z-index: 9;
+        clip: rect(0px,56px,100%,0px);
+        -webkit-transition: clip .5s ;
+        -o-transition: clip .5s ;
+        top: 49px;
+        height: calc(100% - 98px);
+    }
+    .default-list-wrapper.has-text .default-scroll-bar{
+        height: 350px;
+        top: 66px;
+    }
+    .default-list-wrapper.has-text .default-scroll-bar-handle{
+        top: 49px;
+        height: 252px;
+    }
+    .scroll-down-button, .scroll-up-button{
+        background-image: url(../../images/button-bar/icon-sprite-arrow-back.png);
+        border: none ;
+        background-color: transparent ;
+        margin: 0;
+        padding: 0;
+        width: 40px;
+    }
+    .scroll-up-button{
+        background-position: -13px 0;
+        position: absolute;
+        top: -2px;
+        right: 11px;
+        height: 62px;
+        border-right: 2px solid $regular;
+        -webkit-transform: rotateZ(90deg);
+    }
+    .scroll-down-button{
+        background-position: -13px 2px;
+        position: absolute;
+        bottom: -2px;
+        right: 11px;
+        height: 62px;
+        border-right: 2px solid $regular;
+        -webkit-transform: rotateZ(-90deg);
+    }
+}
+

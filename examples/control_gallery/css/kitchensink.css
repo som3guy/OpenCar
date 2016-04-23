@@ -1,0 +1,268 @@
+body.oc-module-view {
+    margin: 0;
+    height: 100%;
+    background-color: #0c0c0c;
+    padding: 0;
+}
+body.oc-module-view .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-text{
+    opacity: 1;
+    width: 100%;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    /*font-size: 18px;*/
+    color: #ccc;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+    button:focus {
+        background-color: green;
+        color: #fff;
+    }
+
+div#controlListContainer, div#controlPreview {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 416px;
+}
+
+div#controlPreview .oc-list-view-container.centered{
+    position: relative;
+    /* top: -416px; */
+}
+div#controlListContainer .oc-list-view-container ul.oc-list-view li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 40px;
+}
+
+div#controlPreview {
+    text-align: center;
+    line-height: 416px;
+}
+
+    .button-container {
+        line-height: 1;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+
+    div#controlPreview .oc-tooltip {
+        line-height: normal;
+    }
+
+    div#controlPreview .oc-decline-button, div#controlPreview .oc-disabled-button,
+    div#controlPreview .oc-confirm-button, div#controlPreview .oc-normal-button {
+        width: 178px;
+        margin-bottom: 10px;
+    }
+
+    div#controlPreview img, div#controlPreview .oc-pane {
+        vertical-align: middle;
+    }
+
+    #indicator-pane {
+        line-height: 60px;
+        position: relative;
+        top: 33%;
+    }
+    #indicator-pane button {
+        margin-bottom: 10px;
+        width: 274px;
+    }
+    #indicator {
+        display: block;
+    }
+    #indicator .item-text {
+        font-size: smaller;
+        position: relative;
+        top: -12px;
+        left: -12px;
+    }
+
+    div#controlPreview #kitchen-sink-pane {
+        display: inline-block;
+        background-color: #c36360;
+        width: 50%;
+        height: 50%;
+    }
+
+    div#controlPreview .oc-progress-bar {
+        display: inline-block;
+        width: 60%;
+        position: relative;
+        top: -109px;
+    }
+
+    .oc-dial-sample {
+        position: relative;
+        top: 86px;
+    }
+
+    .oc-button-image-bottom {
+        position: relative;
+        top: -40px;
+    }
+
+.oc-listview-container li {
+    min-width: 0;
+}
+
+.oc-dialog h1 {
+    margin-top: 0;
+    border-bottom-color: #fff;
+}
+
+.oc-indicator {
+    display: inline-block;
+}
+
+.oc-indicator-value {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.oc-indicator-step-0 .oc-indicator-value {
+    background-color: red;
+}
+
+.oc-indicator-step-1 .oc-indicator-value {
+    background-color: green;
+}
+
+.inline-container button {
+    margin-bottom: 20px;
+}
+.inline-container {
+    display: inline-block;
+    line-height: 60px;
+}
+
+.oil-color-stroke {
+    stroke: #00B300;
+}
+
+#oc-diag-oil text {
+    fill: #00B300;
+}
+
+.svg-yellow .oil-color-stroke {
+    stroke: #ffc000;
+}
+
+#oc-diag-oil.svg-yellow text {
+    fill: #ffc000;
+}
+
+.svg-red .oil-color-stroke {
+    stroke: #ff2626;
+}
+
+#oc-diag-oil.svg-red text {
+    fill: #ff2626;
+}
+
+
+/** slot text view **/
+.slot-text-view-demo{
+    text-align: center;
+}
+.slot-text-view-demo span.oc-slottextview-actual-text, .oc-slottextview li{
+    font-size: 24px;
+}
+.oc-slottextview{
+    display: inline-block;
+}
+.oc-slottextview li{
+    text-shadow: none;
+}
+.slot-text-view-demo .oc-slottextview-text-wrapper{
+    padding: 3px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.slot-text-view-demo .oc-slottextview-slot-container ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+
+    transition: transform 0.8s ease-in-out;
+    -moz-transition: -moz-transform 0.8s ease-in-out;
+    -webkit-transition: -webkit-transform 0.8s ease-in-out;
+    -o-transition: -o-transform 0.8s ease-in-out;
+}
+.slot-text-view-demo .oc-slottextview-slot-container ul li{
+    margin-bottom: 3px;
+}
+.block-button {
+    display: block;
+    width: 80%;
+}
+
+#pane-progress {
+    height: 416px;
+}
+.pane-radial-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#pane-progress-buttons button {
+    margin-bottom: 20px;
+}
+#pane-progress-buttons {
+    line-height: 40px;
+    position: absolute;
+    bottom: 20%;
+}
+
+.oc-slider {
+    margin: 48% 30%;
+}
+
+.oc-slider + canvas {
+    right: 109px;
+    position: absolute;
+    top: 80px;
+}
+
+.oc-radialgauge {
+    margin: 100px 50px;
+}
+
+.oc-radialgauge-preview {
+    padding: 100px 100px;
+}
+
+.oc-radialgauge-preview .oc-slider {
+    margin: -80px 20px;
+}
+
+/* TODO this should be ported up to the global list view styles */
+.oc-list-view-container.vertical li {
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+
+#controlListContainer .oc-list-title, #controlListContainer .oc-textview-title{
+    display: none;
+}

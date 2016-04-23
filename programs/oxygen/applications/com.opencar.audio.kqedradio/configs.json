@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-kqed.jpg",
+    "defaultContentImage"       : "logo-kqed.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio KQED",
+        "stationName" : "KQED-FM",
+        "trackUrl" : "http://streams.kqed.org/kqedradio.m3u",
+        "trackTitle" : "San Francisco"
+    }
+    
+}

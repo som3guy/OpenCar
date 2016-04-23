@@ -1,0 +1,302 @@
+body {
+	background-image: url("images/oxygen-bkg.png");
+}
+
+/* Dial pad styles */
+
+#chamber-dial-pad .back-button {
+	display: none;
+}
+
+#container-dial-pad-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+
+#container-dial-pad {
+	text-align: right;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+}
+
+#container-misc-dial-pad {
+	width: 15%;
+	height: 100%;
+	left: 40%;
+	position: absolute;
+}
+
+#container-dial-pad-display {
+	width: 45%;
+	height: 100%;
+	right: 0;
+	position: absolute;
+}
+
+#container-dial-pad-main .dial-button {
+	width: 70px;
+	height: 70px;
+	margin: 5px;
+	color: transparent;
+	border: none;
+}
+
+#container-dial-pad-main .dial-button:hover,
+#container-dial-pad-main .dial-button:focus {
+	box-shadow: none;
+}
+
+.dial-button .item-text {
+    display: none;
+}
+
+#dial-key-1 {
+	background-image: url("images/oxygen-icon-1.png");
+}
+
+#dial-key-1:hover,
+#dial-key-1:focus {
+	background-image: url("images/oxygen-icon-1-focus.png");
+}
+
+#dial-key-2 {
+	background-image: url("images/oxygen-icon-2.png");
+}
+
+#dial-key-2:hover,
+#dial-key-2:focus {
+	background-image: url("images/oxygen-icon-2-focus.png");
+}
+
+#dial-key-3 {
+	background-image: url("images/oxygen-icon-3.png");
+}
+
+#dial-key-3:hover,
+#dial-key-3:focus {
+	background-image: url("images/oxygen-icon-3-focus.png");
+}
+
+#dial-key-4 {
+	background-image: url("images/oxygen-icon-4.png");
+}
+
+#dial-key-4:hover,
+#dial-key-4:focus {
+	background-image: url("images/oxygen-icon-4-focus.png");
+}
+
+#dial-key-5 {
+	background-image: url("images/oxygen-icon-5.png");
+}
+
+#dial-key-5:hover,
+#dial-key-5:focus {
+	background-image: url("images/oxygen-icon-5-focus.png");
+}
+
+#dial-key-6 {
+	background-image: url("images/oxygen-icon-6.png");
+}
+
+#dial-key-6:hover,
+#dial-key-6:focus {
+	background-image: url("images/oxygen-icon-6-focus.png");
+}
+
+#dial-key-7 {
+	background-image: url("images/oxygen-icon-7.png");
+}
+
+#dial-key-7:hover,
+#dial-key-7:focus {
+	background-image: url("images/oxygen-icon-7-focus.png");
+}
+
+#dial-key-8 {
+	background-image: url("images/oxygen-icon-8.png");
+}
+
+#dial-key-8:hover,
+#dial-key-8:focus {
+	background-image: url("images/oxygen-icon-8-focus.png");
+}
+
+#dial-key-9 {
+	background-image: url("images/oxygen-icon-9.png");
+}
+
+#dial-key-9:hover,
+#dial-key-9:focus {
+	background-image: url("images/oxygen-icon-9-focus.png");
+}
+
+#dial-key-0 {
+	background-image: url("images/oxygen-icon-0.png");
+}
+
+#dial-key-0:hover,
+#dial-key-0:focus {
+	background-image: url("images/oxygen-icon-0-focus.png");
+}
+
+#dial-key-star {
+	background-image: url("images/oxygen-icon-star.png");
+}
+
+#dial-key-star:hover,
+#dial-key-star:focus {
+	background-image: url("images/oxygen-icon-star-focus.png");
+}
+
+#dial-key-pound {
+	background-image: url("images/oxygen-icon-pound.png");
+}
+
+#dial-key-pound:hover,
+#dial-key-pound:focus {
+	background-image: url("images/oxygen-icon-pound-focus.png");
+}
+
+#dial-key-backspace {
+	background-image: url("images/oxygen-icon-delete.png");
+}
+
+#dial-key-backspace:hover,
+#dial-key-backspace:focus {
+	background-image: url("images/oxygen-icon-delete-focus.png");
+}
+
+#dial-key-call {
+	background-image: url("images/oxygen-icon-call.png");
+}
+
+#dial-key-call:hover,
+#dial-key-call:focus {
+	background-image: url("images/oxygen-icon-call-focus.png");
+}
+
+#container-dial-pad-main #dial-key-call {
+	width: 100px;
+	height: 100px;
+	margin-top: 60px;
+}
+
+#dial-key-contacts {
+	visibility: hidden;
+}
+
+#text-view-phone-number {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	text-align: right;
+	font-size: 40px;
+}
+
+#text-view-phone-number.placeholder {
+	color: gray;
+}
+
+/* Call info */
+
+#container-call-info-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#container-call-info-details {
+	position: absolute;
+	padding: 20px;
+	text-align: right;
+	width: 60%;
+	height: 100%;
+}
+
+#container-call-info-caller-image {
+	position: absolute;
+	padding: 20px;
+	right: 0;
+	width: 40%;
+	height: 100%;
+}
+
+#image-view-caller {
+	width: 200px;
+	height: 200px;
+}
+
+#text-view-call-status {
+	display: block;
+}
+
+#text-view-caller-name-and-duration {
+	display: block;
+}
+
+#text-view-call-status-2 {
+	display: none;
+}
+
+/* Button bar */
+.bb-button {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#bb-dial-pad {
+	background-image: url("images/oxygen-icon-dial-pad.png");
+}
+
+#bb-dial-pad.bb-button-focus,
+#bb-dial-pad:hover,
+#bb-dial-pad:focus {
+	background-image: url("images/oxygen-icon-dial-pad-focus.png");
+}
+
+#bb-mute {
+	background-image: url("images/oxygen-icon-mute.png");
+}
+
+#bb-mute.bb-button-focus,
+#bb-mute:hover,
+#bb-mute:focus {
+	background-image: url("images/oxygen-icon-mute-focus.png");
+}
+
+#bb-mute.on {
+	background-image: url("images/oxygen-icon-mute-on.png");
+}
+
+#bb-mute.on.bb-button-focus,
+#bb-mute.on:hover,
+#bb-mute.on:focus {
+	background-image: url("images/oxygen-icon-mute-on-focus.png");
+}
+
+#bb-call {
+	background-image: url("images/oxygen-icon-call.png");
+}
+
+#bb-call.bb-button-focus,
+#bb-call:hover,
+#bb-call:focus {
+	background-image: url("images/oxygen-icon-call-focus.png");
+}
+
+#bb-end-call {
+	background-image: url("images/oxygen-icon-hangup.png");
+}
+
+#bb-end-call.bb-button-focus,
+#bb-end-call:hover,
+#bb-end-call:focus {
+	background-image: url("images/oxygen-icon-hangup-focus.png");
+}
+

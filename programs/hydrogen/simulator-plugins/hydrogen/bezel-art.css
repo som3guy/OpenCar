@@ -1,0 +1,71 @@
+/**************************************************
+OPENCAR SIMULATOR BEZEL-ART PLUGIN
+
+Required files for a complete Bezel-Art Simulator plugin:
+bezel-art.html
+plugin.json
+***************************************************/
+
+/* Set your custom bezel artwork */
+#bezel { 
+    background: url(img/bezel.jpg) no-repeat center top;
+    /* actaul image size is 3096px x 1572px, double of the render size for double density screens */ 
+    /* If you use double resolution images then half the background-size  */
+    background-size: 1548px 786px;
+    /* Need to set the height to the height of your custom bezel artwork */
+    height: 716px;
+}
+/* Set the #screen offset in relation to your custom bezel artwork. This allows the #screen to align with your custom bezel artwork. */
+#screen { top: 60px; }
+
+/**************************************************
+THE OPENCAR SIMULATOR:
+This will help you to understand how the OpenCar Simulator is constructed and where Simulator plugins are loaded.
+---------------------------------------------------------------------------------------------
+|  OpenCar                                           |  Launch App  |  Program Picker   |   |
+---------------------------------------------------------------------------------------------
+|                                                                   |                   |   |
+|                                                                   |                   |   |
+|         -------------------------------------------------         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |  Vehicle Data     |   |
+|         |                                               |         |  plugin type      |   |
+|         |                                               |         |  defines what     |   |
+|         |                                               |         |  loads here       |   |
+|         |                                               |         |                   |   |
+|         |                     #screen                   |         |                   |   |
+|         |                                               |         |     TMX icons --\>|   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                     ------------------  |                   |   |
+|         |                                     |                |  |                   |   |
+|         |                                     |                |  |                   |   |
+|         --------------------------------------|     Floater    |  |                   |---|
+|                                               |     Control    |  |  Bezel & Floater  |   |
+|                                               |                |  |  control icons    |   |
+|    #bezel                                     |                |  |     load here --\>|   |
+|    Bezel Controls                             |                |  |                   |   |
+|                                               ------------------  |                   |   |
+|                                                                   |                   |   |
+---------------------------------------------------------------------------------------------
+|    Drive Play files load here                                     |         Legal         |
+---------------------------------------------------------------------------------------------
+
+SIMULATOR PLUGIN TYPES:
+
+Bezel-Art
+A bezel-art plugin defines the art surrounding the IVI #screen.
+
+Vehicle-Data
+Telematics data that defines what events load in the Simulators telematics sidebar.
+
+Bezel-Controls
+Your playground for adding emulated hardware controls/buttons that surround the screen.
+
+Floater-Controls
+Floating dialogs that contain emulated hardware controls/buttons.  
+
+Drive-Play
+Real-world data captured (telematics and video) and played back to simulate real-time telematics events.
+***************************************************/

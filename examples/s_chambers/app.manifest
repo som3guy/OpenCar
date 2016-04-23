@@ -1,0 +1,35 @@
+{
+    "id"         : "com.opencar.sdk.sample.chambers",
+    "name"       : "Sample Chambers",
+    "view"       : "view.js",
+    "css"        : ["styles.css"],
+    "screens"    : [
+        {
+            "id"        : "screen-a",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-a",
+                    "js"        : "ChamberA.js",
+                    "template"  : "chamber-a-template.html",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        },
+        {
+            "id"        : "screen-b",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-b",
+                    "js"        : "ChamberB.js",
+                    "template"  : "chamber-b-template.html",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        }
+    ],
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

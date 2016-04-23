@@ -1,0 +1,16 @@
+/* Lets center all the elements in .hello_container */
+.hello_container {
+    text-align: center;
+}
+/* This gives our #hello text some color and padding */
+#hello {
+    color: white;
+    padding: 20px;
+}
+/* Now lets put time where we want it using absolute positioning */
+#time {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100px;
+}

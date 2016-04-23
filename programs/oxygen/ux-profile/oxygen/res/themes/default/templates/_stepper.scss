@@ -1,0 +1,46 @@
+@import "../scss/base";
+/* Stepper Styles */
+
+.#{$theme}{
+  .oc-stepper-container {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      height: $minimum-font-size;
+      line-height: $minimum-font-size;
+      padding-right: 16px;
+      border: 1px solid #888;
+  }
+
+  .oc-stepper-container:focus {
+      box-shadow: 0 0 10px whitesmoke;
+  }
+
+  .oc-stepper-value-container {
+      height: $minimum-font-size;
+  }
+
+  .oc-stepper-value {
+      display: inline-block;
+      padding: 0 8px;
+  }
+
+  .oc-stepper-up-arrow {
+      background: url('../../images/up_arrow.png');
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+
+  .oc-stepper-down-arrow {
+      background: url('../../images/down_arrow.png');
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+}

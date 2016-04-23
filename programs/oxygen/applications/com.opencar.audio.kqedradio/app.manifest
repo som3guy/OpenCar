@@ -1,0 +1,11 @@
+{
+    "id"          : "com.opencar.audio.kqedradio",
+    "name"        : "KQED San Francisco",
+    "view"        : "$TEMPLATE_PATH/1.1/audio/view.js",
+    "controller"  : "$TEMPLATE_PATH/1.1/audio/controller.js",
+    "categoryId"  : "MEDIA",
+    "date"        : "2014-05-23",
+    "version"     : "1.0.0",
+    "permissions" : [ "unstoppable", "AudioManager.ALWAYS" ],
+    "screens"     : "screens.json"
+}

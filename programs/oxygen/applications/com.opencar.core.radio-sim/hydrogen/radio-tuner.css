@@ -1,0 +1,144 @@
+#now-playing-chamber.oc-chamber.oc-pane.chamber-show {
+}
+.oc-screens-wrapper, .oc-screen, .oc-chamber {
+}
+
+#streaming-indicator {
+    bottom: 130px;
+}
+
+#image-view-back-old {
+    background-image: url("h2o-icon-back_s10.png");
+}
+
+#display-hd {
+    position: absolute;
+    left: 650px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("icon-hd-radio-small.png");
+    background-size: cover;
+    display: none;
+}
+
+#display-hd-1,#display-hd-2,#display-hd-3,#display-hd-4 {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align:c enter;
+    font-size: 28px;
+    color: #288DFF;
+}
+
+#display-hd-1 {
+    left: 685px;
+}
+
+#display-hd-2 {
+    left: 710px;
+}
+
+#display-hd-3 {
+    left: 735px;
+}
+
+#display-hd-4 {
+    left: 760px;
+}
+
+#display-hd-1.on,#display-hd-2.on,#display-hd-3.on,#display-hd-4.on {
+    color: white;
+}
+
+#btn-tag {
+    background-image: url("icons/h2o-icon-tag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-tag:active {
+    background-image: url("h2o-icon-tag-on.png");
+}
+
+#btn-memory {
+    background-image: url("h2o-icon-auto-memory.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-favorite {
+    background-image: url("h2o-icon-fav.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-hd {
+    background-image: url("h2o-icon-hd-radio.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-hd.on {
+    background-image: url("h2o-icon-hd-radio-on.png");
+}
+
+#btn-scan {
+    background-image: url("h2o-icon-scan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-scan.on {
+    background-image: url("h2o-icon-scan-on.png");
+}
+
+#btn-play-pause {
+    background-image: url("hydrogen-icon-play.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-play-pause.on {
+    background-image: url("hydrogen-icon-pause.png");
+}
+
+#btn-tune {
+    background-image: url("h2o-icon-tune.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous {
+    background-image: url("h2o-icon-back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous.on {
+    background-image: url("h2o-icon-back-on.png");
+}
+
+#btn-seek-next {
+    background-image: url("h2o-icon-forward.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-next.on {
+    background-image: url("h2o-icon-forward-on.png");
+}
+
+#btn-audio-settings {
+    background-image: url("h2o-icon-audio-settings.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Fix for back button overlaying auto-memory button */
+.default .bb-back-button {
+    position: relative;
+    width: auto;
+}

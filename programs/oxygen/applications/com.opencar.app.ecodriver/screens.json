@@ -1,0 +1,71 @@
+[
+    {
+        "id": "main-screen",
+        "chambers": [
+            {
+                "id": "main-chamber",
+                "js": "screens/Main.js",
+                "autorun"   : true,
+                "focus"     : true,
+                "buttons"   : [
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "This Drive",
+                        "classNames" :["bb-this-drive-button"],
+                        "info-screen": "this-drive-screen",
+                        "action": "hideButtonBar"
+                    },
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "Fuel Economy",
+                        "classNames" :["bb-fuel-economy-button"],
+                        "info-screen": "fuel-economy-screen",
+                        "action": "hideButtonBar",
+                        "onFocus": "toggleInfoScreen"
+                    },
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "Fuel Usage",
+                        "classNames" :["bb-fuel-usage-button"],
+                        "info-screen": "fuel-usage-screen",
+                        "action": "hideButtonBar",
+                        "onFocus": "toggleInfoScreen"
+                    },
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "Carbon Footprint",
+                        "classNames" :["bb-carbon-footprint-button"],
+                        "info-screen": "co2-screen",
+                        "action": "hideButtonBar",
+                        "onFocus": "toggleInfoScreen"
+                    },
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "Fuel Cost",
+                        "classNames" :["bb-fuel-cost-button"],
+                        "info-screen": "fuel-cost-screen",
+                        "action": "hideButtonBar",
+                        "onFocus": "toggleInfoScreen"
+                    },
+                    {
+                        "oc-control" : "CustomButton",
+                        "label": "Settings",
+                        "action": "doSettings",
+                        "classNames" :["bb-settings-button"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "settings-screen",
+        "chambers": [
+            {
+                "id": "settings-chamber",
+                "js": "screens/Settings.js",
+                "autorun"   : false,
+                "focus"     : false
+            }
+        ]
+    }
+]

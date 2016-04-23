@@ -1,0 +1,117 @@
+#button-preset-1, #button-preset-2, #button-preset-3, #button-preset-4 {
+    width: 71px;
+}
+
+#button-preset-1.on,#button-preset-2.on,#button-preset-3.on,#button-preset-4.on {
+	/* need images for on state */
+}
+
+#container-dialer {
+    font-size: 11px;
+	width: 100%;
+}
+
+#container-back-button {
+	display: none;
+}
+
+#container-buttons {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    left: 0; bottom: 30px;
+}
+
+#button-seek-previous {
+	margin-right: 50px;
+	background-image: url("oxygen-previous.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	padding: 0 70px 0 12px;
+	color: transparent;
+	border: none;
+    box-shadow: none;
+}
+#button-seek-previous span {
+	visibility: hidden;
+}
+
+#button-seek-previous:focus {
+	background-image: url("oxygen-previous-focus.png");
+	border: none;
+}
+
+#button-seek-next {
+	margin-left: 50px;
+	background-position: right;
+	background-repeat: no-repeat;
+	padding: 0 12px 0 70px;
+	color: transparent;
+	background-image: url("oxygen-next.png");
+	border: none;
+    box-shadow: none;
+}
+#button-seek-next span {
+	visibility: hidden;
+}
+
+#button-seek-next:focus {
+	background-image: url("oxygen-next-focus.png");
+	border: none;
+}
+
+#button-preset-1 {
+    border: none;
+    box-shadow: none;
+    color: transparent;
+	background-image: url("oxygen-icon-1.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#button-preset-1:focus {
+	background-image: url("oxygen-icon-1-focus.png");
+	border: none;
+}
+
+#button-preset-2 {
+    border: none;
+    box-shadow: none;
+    color: transparent;
+	background-image: url("oxygen-icon-2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#button-preset-2:focus {
+	background-image: url("oxygen-icon-2-focus.png");
+    border: none;
+}
+
+#button-preset-3 {
+    border: none;
+    box-shadow: none;
+    color: transparent;
+	background-image: url("oxygen-icon-3.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#button-preset-3:focus {
+	background-image: url("oxygen-icon-3-focus.png");
+    border: none;
+}
+
+#button-preset-4 {
+    border: none;
+    box-shadow: none;
+    color: transparent;
+	background-image: url("oxygen-icon-4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#button-preset-4:focus {
+	background-image: url("oxygen-icon-4-focus.png");
+    border: none;
+}

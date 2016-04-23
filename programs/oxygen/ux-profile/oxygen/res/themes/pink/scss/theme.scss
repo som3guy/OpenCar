@@ -1,0 +1,41 @@
+/*
+    Default OpenCar theme stylesheet.
+*/
+$fa-font-path:        "../../fonts/font-awesome-4.3.0/fonts";
+@import '../fonts/font-awesome-4.3.0/scss/font-awesome';
+@import 'mixins';
+@import 'clearfix';
+@import 'globals';
+@import 'breadcrumbs';
+@import 'button';
+@import 'button-bar';
+@import 'checkbox';
+@import 'radio';
+@import 'dial';
+@import 'dialog';
+@import 'edge-warnings';
+@import 'edittext';
+@import 'openbar';
+@import 'progress';
+@import 'radial-gauge';
+@import 'slider';
+@import 'slottextview';
+@import 'spinner';
+@import 'splash';
+@import 'stepper';
+@import 'tabview';
+@import 'textview';
+@import 'tooltip';
+@import 'widgets';
+@import 'vehicle-icon';
+@import 'overlay';
+/*LV/ SLV-RELATED*/
+@import 'listview';
+@import 'listview_legacy';
+@import 'list-module';
+@import 'slv';
+@import 'slv_legacy';
+@import 'gridview';
+@import 'settingsview';
+/*IPAD*/
+@import 'ipad';

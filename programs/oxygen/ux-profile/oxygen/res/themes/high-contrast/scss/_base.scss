@@ -1,0 +1,62 @@
+$theme: high-contrast;
+
+$font-family-regular: Roboto-Regular, Helvetica, Arial, sans-serif;
+$font-family-light: Roboto-Light, Helvetica, Arial, sans-serif;
+$font-family-thin: Roboto-Thin, Helvetica, Arial, sans-serif;
+$font-family-medium: Roboto-Medium, Helvetica, Arial, sans-serif;
+$font-family-condensed: Roboto-Condensed, Helvetica, Arial, sans-serif;
+$font-family-bold-condensed: Roboto-BoldCondensed, Helvetica, Arial, sans-serif;
+
+$color: #EFF;
+$color-active: $color;
+$info: #5bc0de;
+$warn: #f0ad4e;
+$danger: #d9534f;
+$success: #5cb85c;
+$cubic: cubic-bezier(0.080, 0.905, 0.040, 0.995);
+
+$listview_li_height: 66px;
+$listview_title_height: 60px;
+$listview_li_line_height: 66px;
+$listview_li_padding_left: 75px;
+
+$minimum-font-size: 33px;
+$smaller-font-size: 30px;
+$item-text-font-size: 31px;
+
+$active: $color;
+$regular: $color;
+$pressed: $color;
+$openbar-height: 63px;
+
+$viewport-width: 800px;
+$viewport-height: 480px;
+
+$keyboard-full-height: $viewport-height - $openbar-height;
+
+$dialog-top: 28px;
+$dialog-left: 60px;
+
+$dialog-border: 5px;
+$dialog-width: 660px;
+$dialog-total-width: $dialog-width + ($dialog-border * 2);
+$dialog-height: 376px;
+$dialog-content-padding: 20px;
+$dialog-content-height: $dialog-height - ($dialog-content-padding * 2);
+
+$dialog-header-height: 84px;
+$dialog-footer-height: 84px;
+$dialog-border-width: 5px;
+$dialog-content-width: $dialog-width - ($dialog-content-padding * 2);
+$dialog-content-width-full: $viewport-width - ($dialog-content-padding * 2);
+$dialog-content-height-full: $viewport-height - ($dialog-content-padding * 2);
+$dialog-content-width: $dialog-width - ($dialog-content-padding * 2);
+
+@mixin text-shadow($dist : 8px, $shadow-color : $color) {
+    -webkit-text-shadow : 0 0 $dist $shadow-color, 0 0 $dist $shadow-color;
+    text-shadow : 0 0 $dist $shadow-color, 0 0 $dist $shadow-color;
+}
+
+@mixin body-bg{
+    background: #000;
+}

@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-wfan.jpg",
+    "defaultContentImage"       : "logo-wfan.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio WFAN",
+        "stationName" : "WFAN Sports Radio",
+        "trackUrl" : "http://provisioning.streamtheworld.com/pls/WFANAMAAC.pls",
+        "trackTitle" : "New York"
+    }
+    
+}

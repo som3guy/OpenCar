@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+    <head>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <title>OpenCar Simulator</title>
+        <link rel="stylesheet" href="assets/css/reset.css" title="custom" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="assets/css/styles.css" title="custom" type="text/css" media="screen" charset="utf-8">
+        <script>
+            var require = {
+                baseUrl: 'assets/js',
+                paths: {
+                    jquery: 'libs/jquery-2.1.4.min', //this version of jquery does not support older versions of IE
+                    jqueryui: 'libs/jquery-ui-1.10.3.min',
+                    CSVTransformer : 'libs/CSVTransformer.min',
+                    platform: '/ui/platform',
+                    common: '/ui/common',
+                    apps: '/ui/apps'
+                },
+                shim: {
+                    'jqueryui': {
+                        exports: "$",
+                        deps: ['jquery']
+                    },
+
+                    'CSVTransformer': {
+                        exports: "_CSVTransformer",
+                        deps: ['jqueryui']
+                    }
+
+                }
+            };
+        </script>
+        <script data-main="main" src="assets/js/libs/require.js"></script>
+    </head>
+    <body>
+    <div id="floater-container"></div>
+    <div id="welcome">
+        <div id="feature-list" class="dialog">
+            <h1>Welcome to the OpenCar Simulator</h1>
+            <ul>
+                <li id="help-vehicle-profiles">
+                    <h2>Vehicle Profiles</h2>
+                    <p>Switch profiles to redefine head units and vehicles. Simulate your application using different head units or vehicles with one simple click.</p>
+                </li>
+                <li id="help-hardware-emulation">
+                    <h2>Hardware Emulation</h2>
+                    <p>Use representations of input methods including multi-input devices, rotary knobs, and buttons to test your app without proprietary hardware.</p>
+                </li>
+                <li id="help-telematics">
+                    <h2>Vehicle Data and Telematics</h2>
+                    <p>Access telematics feeds available for your vehicle. Set and adjust values such as location, speed, and climate control system settings.</p>
+                </li>
+                <li id="help-drive-playback" style="display:none">
+                    <h2>Drive Playback</h2>
+                    <p>Simulate vehicle telematics events in real time. See corresponding videos and control playback for simplified application testing.</p>
+                </li>
+                <li id="get-started" class="clearfix">
+                    <div id="go" class="btn-blue">Get Started!</div>
+                </li>
+            </ul>
+        </div>
+        <div id="feature-telematics"></div>
+        <div id="feature-hardware-emulation"></div>
+        <div id="feature-vehicle-profiles"></div>
+        <div id="feature-drive-playback"></div>
+    </div>
+    <div id="program-error">
+	    <div class="dialog">
+		    <h1>Oops, we couldn't find any Programs.</h1>
+		    <ul>
+	            <li>
+	                <p>Check to see if there are any Programs in ~/OpenCar/programs/. If you see programs in ~/OpenCar/programs/ refresh your browser.</p>
+	                <p>If you don't see any programs in ~/OpenCar/programs you can do two things to fix this:</p>
+	                <ol>
+		                <li>Go to <a href="http://insidetrack.opencar.com" target="_blank">InsideTrack</a> to get the latest SDK and install it.</li>
+		                <li>Go to <a href="http://insidetrack.opencar.com" target="_blank">InsideTrack</a> and download and install a Program in ~/OpenCar/programs/.</li>
+	                </ol>
+	            </li>
+	        </ul>
+	    </div>
+    </div>
+    <div id="container">
+        <header id="toolbar">
+            <h1 id="logo">OpenCar, Inc.</h1>
+            <div id="docs-link" style="display:none"><a href="docs.html" target="_blank" class="button">Documentation</a></div>
+            <nav id="launch">
+	            <ul class="picker launch-picker">
+		            <li><a href="#">Launch App</a>
+                        <div id="launch-tabs">
+	                        <ul class="clearfix" id="launch-tab-list">
+		                        <li><a href="#launch-tab-1">Workspace</a></li>
+		                        <li><a href="#launch-tab-2">Examples</a></li>
+		                        <li><a href="#launch-tab-3">Tutorials</a></li>
+		                        <!--<li><a href="#launch-tab-4">My Projects</a></li>-->
+	                        </ul>
+	                        <div id="launch-tab-1" class="scrollbar">
+		                        <div id="workspace-error" class="hide">
+			                        <p>We couldn't find any Apps in your Workspace folder.</p>
+									<p class="help">To create your first app in OSX run the following in a Terminal.app window:</p>
+									<p class="help"><code>$ <span>opencar newApp</span></code></p>
+									<p class="help">For more information on creating Apps go to <a target="_blank" href="https://insidetrack.opencar.com/application/index/documentation?version=1.6&category=DevDocs.Developers_Guide.OpenCar_Developers_Guide&section=DevDocs.Developers_Guide.Tutorials.Tutorials_Overview&page=DevDocs.Developers_Guide.Tutorials.Creating_OpenCar_Apps">http://insidetrack.opencar.com</a></p>
+		                        </div>
+		                        <p class="launch-message workspace-message">Click an App below to load it in the Simulator</p>
+		                        <h2>Workspace</h2>
+		                        <ul id="workspace-app-list">
+		                        </ul>
+	                        </div>
+	                        <div id="launch-tab-2" class="scrollbar">
+		                        <p class="launch-message">Click an App below to load it in the Simulator</p>
+		                        <h2>Examples</h2>
+		                        <ul id="examples-app-list">
+		                        </ul>
+		                    </div>
+	                        <div id="launch-tab-3" class="scrollbar">
+		                        <p class="launch-message">Click an App below to load it in the Simulator</p>
+		                        <h2>Tutorials</h2>
+		                        <ul id="tutorials-app-list">
+		                        </ul>
+	                        </div>
+                        </div>
+                    </li>
+	            </ul>
+            </nav>
+            <nav id="profiles">
+                <!--<div class="toolbar-text">Profile:</div>-->
+                <ul class="picker profile-picker">
+                    <li><a href="#"><span id="current-profile"></span></a>
+                        <ul id="profile-list-items" class="scrollbar"></ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="oc-icon" id="sidebar-button" alt="Open/Close Sidebar" title="Open/Close Sidebar">
+                <svg viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="44px" height="44px">
+                    <path class="icon-color" d="M 23.1345 31 L 32 22.5 L 23.1345 14 L 23.1345 31 ZM 19.8655 31 L 19.8655 14 L 11 22.5 L 19.8655 31 Z" fill="#999999"/>
+                </svg>
+            </div>
+        </header><!-- /#toolbar -->
+        <div id="content">
+            <div id="console-wrapper" class="content-margin scrollbar">
+	            <div id="debug-info">
+	            	<iframe id="simulator-frame" src="http://simulator.opencar.com"></iframe>
+	            	<!--span id="current-app">Loaded App: /Workspace/KEXP</span-->
+	            </div>
+                <div id="bezel">
+                    <div id="screen-wrapper">
+                        <iframe id="screen" src=""></iframe>
+                    </div>
+                    <div id="bezel-buttons"></div>
+                </div>
+            </div><!-- /.content-margin -->
+            <div id="loading-telematics"><span>Loading Profile...</span></div>
+            <div id="sidebar">
+                <div id="ivi-reload" title="Reload Screen">Reload Screen</div>
+            </div><!-- /#sidebar -->
+            <div id="footer" class="clearfix">
+                <div id="playback">
+                    <div id="drive-playback">
+                        <div id="drive-picker">
+                            <ul class="picker drive-picker">
+                                <li><div><span id="drive-file-title" default="Select Drive"></span></div>
+                                    <ul id="drive-file-select"></ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <nav id="drive-controls">
+                            <div id="drive-file-controls">
+                                <div class="playback-icon" id="drive-play-pause" alt="Play/Pause" title="Play/Pause">
+                                    <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                        <path class="icon-color" d="M 8 9 L 24.5 16.5 L 8 24 L 8 9 Z" fill="#565656"/>
+                                    </svg>
+                                </div>
+                                <div class="playback-icon" id="playback-loop" alt="Loop Playback" title="Loop Playback">
+                                    <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                    	<path class="icon-color" d="M 20.8976 23.5833 C 20.8976 23.4922 20.8564 23.388 20.8015 23.3099 L 18.6028 20.8099 C 18.5203 20.7188 18.3829 20.6667 18.2592 20.6667 L 12.344 20.6667 C 11.2394 20.6667 10.344 19.7712 10.344 18.6667 L 10.344 15.6667 L 12.9824 15.6667 C 13.4634 15.6667 13.8619 15.2891 13.8619 14.8333 C 13.8619 14.638 13.7932 14.4427 13.6558 14.2995 L 9.3143 9.2995 C 9.1578 9.1172 8.9232 9.013 8.6755 9.013 C 8.4279 9.013 8.1932 9.1172 8.0369 9.2995 L 3.7055 14.2995 C 3.5685 14.4427 3.5 14.638 3.5 14.8333 C 3.5 15.2891 3.8973 15.6667 4.3768 15.6667 L 7.0071 15.6667 C 7.0071 15.6667 7.0057 17.2286 7.0042 19.0001 C 7.0019 21.7615 9.2385 24 11.9998 24 C 15.8283 24 20.4579 24 20.4579 24 C 20.6915 24 20.8976 23.8047 20.8976 23.5833 ZM 29.5 18.1667 C 29.5 17.7109 29.1027 17.3333 28.6232 17.3333 L 25.9929 17.3333 L 25.9929 14 C 25.9929 11.2385 23.7544 9 20.9929 9 L 12.5427 9 C 12.3091 9 12.103 9.1953 12.103 9.4167 C 12.103 9.5078 12.1442 9.612 12.1992 9.6771 L 14.3978 12.1771 C 14.4803 12.2813 14.6177 12.3333 14.7413 12.3333 L 20.656 12.3333 C 21.7606 12.3333 22.656 13.2288 22.656 14.3333 L 22.656 17.3333 L 20.0182 17.3333 C 19.5372 17.3333 19.1387 17.7109 19.1387 18.1667 C 19.1387 18.362 19.2075 18.5573 19.3448 18.7005 L 23.6857 23.7005 C 23.8422 23.8828 24.0768 24 24.3245 24 C 24.5721 24 24.8068 23.8828 24.9631 23.7005 L 29.2945 18.7005 C 29.4315 18.5573 29.5 18.362 29.5 18.1667 Z" fill="#565656"/>
+                                    </svg>
+                                </div>
+                                <div id="drive-playhead">
+                                    <span class="toolbar-text drive-time text-right" id="drive-time-pos">00:00:0.1</span>
+                                    <div id="drive-file-scrub-area">
+                                        <div id="drive-file-position">
+                                            <button id="drive-file-scrubber"></button>
+                                        </div>
+                                    </div>
+                                    <!--<span class="toolbar-text drive-time" id="drive-time-pos">00:00:00</span>-->
+                                </div>
+                                <div class="playback-icon" id="playback-movie" alt="Show/Hide Embedded Video Clip" title="Show/Hide Embedded Video Clip">
+                                    <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                        <path class="icon-color" d="M 11 16 L 8 16 L 8 13 L 11 13 L 11 16 ZM 25 16 L 22 16 L 22 13 L 25 13 L 25 16 ZM 22 17 L 25 17 L 25 20 L 22 20 L 22 17 ZM 8 17 L 11 17 L 11 20 L 8 20 L 8 17 ZM 11 24 L 8 24 L 8 21 L 11 21 L 11 24 ZM 21 24 L 12 24 L 12 21 L 12 20 L 12 17 L 21 17 L 21 20 L 21 21 L 21 24 ZM 25 24 L 22 24 L 22 21 L 25 21 L 25 24 ZM 22 9 L 25 9 L 25 12 L 22 12 L 22 9 ZM 12 9 L 21 9 L 21 12 L 21 13 L 21 16 L 12 16 L 12 13 L 12 12 L 12 9 ZM 8 9 L 11 9 L 11 12 L 8 12 L 8 9 ZM 6 8 L 6 9 L 6 16 L 6 17 L 6 24 L 6 25 L 8 25 L 11 25 L 12 25 L 21 25 L 22 25 L 25 25 L 27 25 L 27 24 L 27 17 L 27 16 L 27 9 L 27 8 L 25 8 L 22 8 L 21 8 L 12 8 L 11 8 L 8 8 L 6 8 Z" fill="#565656" />
+                                    </svg>
+                                </div>
+                                <!--
+                                <a href="javascript:void(0);" class="playback-icon" id="playback-settings" alt="Drive Settings" title="Drive Settings">
+                                    <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                    <path class="icon-color" d="M 10 16.5 C 10 13.4624 12.4624 11 15.5 11 C 18.5376 11 21 13.4624 21 16.5 C 21 19.5376 18.5376 22 15.5 22 C 12.4624 22 10 19.5376 10 16.5 ZM 14.3978 5.1068 L 12.8151 8.6359 C 12.2762 8.8267 11.8302 9.0336 11.3406 9.3198 L 7.5607 8.3105 C 6.8843 8.9632 6.3677 9.5962 5.8684 10.3837 L 7.6858 13.762 C 7.5081 14.2845 7.3997 14.7484 7.3273 15.2955 L 4.2139 17.4931 C 4.3137 18.4172 4.4967 19.2104 4.8132 20.0916 L 8.6248 20.8853 C 8.9343 21.3573 9.2397 21.7394 9.6349 22.1485 L 9.4829 25.9635 C 10.2925 26.4937 11.0494 26.875 11.9623 27.2119 L 14.967 24.7975 C 15.5439 24.869 16.0453 24.8847 16.6243 24.849 L 19.6772 27.4848 C 20.6173 27.2085 21.4012 26.8742 22.2444 26.3896 L 22.0857 22.4825 C 22.4985 22.086 22.8185 21.7113 23.1432 21.2439 L 27.2014 20.6174 C 27.5433 19.7168 27.7413 18.9 27.8495 17.9425 L 24.5126 15.5553 C 24.4358 14.9899 24.321 14.5094 24.1329 13.9671 L 26.0671 10.5185 C 25.5332 9.6978 24.9829 9.0394 24.2654 8.362 L 20.3168 9.3628 C 19.813 9.0679 19.3553 8.8545 18.8044 8.6575 L 17.1978 5.1 C 16.2223 4.9908 15.3674 4.993 14.3978 5.1068 Z" fill="#565656" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0);" class="playback-icon" id="drive-previous" alt="Previous Marker" title="Previous Marker">
+                                    <svg id="" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                    	<path class="icon-color" d="M 8 9 L 8 24 L 11 24 L 11 9 L 8 9 ZM 25 24 L 25 9 L 13 17 L 25 24 Z" fill="#565656" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0);" class="playback-icon" id="drive-rewind" alt="Rewind" title="Rewind">
+                                    <svg id="" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                    	<path class="icon-color" d="M 23 9 L 23 24 L 26 24 L 26 9 L 23 9 ZM 20 24 L 20 9 L 8 17 L 20 24 Z" fill="#565656" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0);" class="playback-icon" id="playback-forward" alt="Fast Forward" title="Fast Forward">
+                                    <svg id="" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                                        <path class="icon-color" d="M 8 9 L 8 24 L 11 24 L 11 9 L 8 9 ZM 14 9 L 14 24 L 26 17 L 14 9 Z" fill="#565656" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0);" class="playback-icon" id="playback-next" alt="Next Marker" title="Next Marker">
+                                    <svg id="" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"x="0px" y="0px" width="33px" height="33px">
+                                        <path class="icon-color" d="M 22 9 L 22 24 L 25 24 L 25 9 L 22 9 ZM 8 9 L 8 24 L 20 17 L 8 9 Z" fill="#565656" />
+                                    </svg>
+                                </a>
+                                -->
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div id="legal">
+                    <div id="copyright">&copy; Copyright OpenCar Inc., <span id="footerCopyrightYear"></span></div>
+                    <a href="terms.html" target="_blank" id="terms" class="button">Terms of Use</a>
+                </div>
+            </div>
+        </div><!-- /#content -->
+    </div><!-- /#container -->
+    <!-- drive file -->
+    <div id="drive-file-window" class="floater hide">
+        <div class="floater-icon-bar-bkg"></div>
+        <div class="drag-handle" title="move window">
+            <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+            	<path class="icon-color" d="M 7 21 L 7 24 L 27 24 L 27 21 L 7 21 ZM 7 15 L 7 18 L 27 18 L 27 15 L 7 15 ZM 7 9 L 7 12 L 27 12 L 27 9 L 7 9 Z" fill="#000000"/>
+            </svg>
+        </div>
+        <div class="drive-telematics-button" title="Telematics of vehicle's drive data">
+
+            <!--
+            <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                -->
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="33px" height="33px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<path class="icon-color" d="M344,256l-84.4,64.2c-1.2-0.1-2.4-0.2-3.6-0.2c-17.7,0-32,14.3-32,32c0,17.7,14.3,32,32,32c17.7,0,32-14.3,32-32   c0-1.2-0.1-2.4-0.2-3.6L352,264L344,256z" fill="#000000"/>
+	<path class="icon-color" d="M256,96C132.3,96,32,196.3,32,320c0,34.4,7.8,66.9,21.6,96h36.1c-15.4-26.6-24.2-56.6-25.5-88H96v-16H64.2   c1.2-28.8,8.7-56.5,21.8-81.4l27.5,15.9l8-13.9L94,216.8c7.4-11.6,16.2-22.6,26.2-32.6c10.2-10.1,21.3-19,33.1-26.5l15.8,27.3   l13.9-8l-15.8-27.3c24.8-13,52.2-20.3,80.8-21.5V160h16v-31.8c28.6,1.2,56,8.6,80.8,21.5L329.1,177l13.9,8l15.8-27.3   c11.8,7.5,22.9,16.4,33.1,26.5c10,10,18.7,20.9,26.2,32.6l-27.4,15.8l8,13.9l27.5-15.9c13.1,24.9,20.6,52.6,21.8,81.4H416v16h31.8   c-1.3,31.4-10.1,61.4-25.5,88h36.1c13.8-29.1,21.6-61.6,21.6-96C480,196.3,379.7,96,256,96z" fill="#000000"/>
+</g>
+
+            </svg>
+        </div>
+
+        <div class="popout-button" title="Popout to new window">
+            <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+                <path class="icon-color" d="M 8 25 L 15 25 L 12.835 22.835 L 17 18.6667 L 14.3333 16 L 10.165 20.165 L 8 18 L 8 25 ZM 25 8 L 18 8 L 20.165 10.165 L 16 14.3333 L 18.6667 17 L 22.835 12.835 L 25 15 L 25 8 Z" fill="#000000"/>
+            </svg>
+        </div>
+        <div class="close-box" title="Hide this video">
+            <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+            	<path class="icon-color" d="M 22.2931 8.5 L 16.5 14.2925 L 10.7069 8.5 L 8.5 10.7069 L 14.2925 16.5 L 8.5 22.2931 L 10.7069 24.5 L 16.5 18.7075 L 22.2931 24.5 L 24.5 22.2931 L 18.7075 16.5 L 24.5 10.7069 L 22.2931 8.5 Z" fill="#000000"/>
+            </svg>
+        </div>
+        <div id="drive-file-content">
+            <!--
+            <hr/>
+            <div id="drive-file-image-area">
+                <img id="drive-file-image" src="assets/img/logo-opencar.png"/>
+            </div>
+            <div id="drive-file-info">
+                <p id="drive-file-date"></p>
+                <p id="drive-file-place"></p>
+                <p id="drive-file-title"></p>
+                <p id="drive-file-car"></p>
+            </div>
+            <p id="drive-file-desc"></p>
+            <hr/>
+
+            <select id="drive-markers">
+                <option>Markers</option>
+                <option>-- Add Marker --</option>
+            </select>
+            -->
+            <div id="drive-file-video-area">
+                <video id="drive-file-video" poster="assets/img/logo-opencar.png"></video>
+
+                <!-- realtime details during the drive -->
+                <div id="drive-telematics-overlay-section">
+
+                    <div id="drive-telematics-speed-layout">
+                        <div id="drive-telematics-speed-value"></div>
+                        <div id="drive-telematics-speed-unit"></div>
+                        <div id="drive-telematics-direction-value"></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

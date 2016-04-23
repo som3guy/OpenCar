@@ -1,0 +1,63 @@
+{
+    "usesCustomFetchFunctions"  : true,
+    "usesJsonResponseParsing"   : true,
+    "usesXmlResponseParsing"    : true,
+    "handlesICYMetadata"        : true,
+    "hasCustomButtons"          : true,
+    "hasStartChoiceModule"      : true,
+
+    "topLevelCategories": [
+        {
+            "text" : "Selected Stations",
+            "_data_tree_branch" : [
+                {
+                    "text"          : "Radio Paradise",
+                    "stationName"   : "Radio Paradise",
+                    "trackUrl"      : "http://www.radioparadise.com/m3u/aac-128.m3u"
+                },
+                {
+                    "text"          : "KEXP Seattle",
+                    "stationName"   : "KEXP 90.3 Seattle",
+                    "trackTitle"    : "Where the music matters",
+                    "trackUrl"      : "http://live-mp3-128.kexp.org:8000/listen.pls"
+                },
+                {
+                    "text"          : "Jazz 24.org",
+                    "stationName"   : "Jazz 24",
+                    "trackTitle"    : "World Class Jazz",
+                    "trackUrl"      : "http://icy1.abacast.com/kplu-jazz24aac-64.m3u"
+                }
+            ]
+        },
+        {
+            "text" : "Public Radio",
+            "fetchInfo" : {
+                "url"           : "http://www.ohmert.com/opencar/ocradio/public-stations.php",
+                "jsonParser"    : "parsePublicStations"
+            }
+        },
+        {
+            "text" : "Sports Radio",
+            "fetchInfo" : {
+                "url"           : "http://www.ohmert.com/opencar/ocradio/sports-stations.php",
+                "xmlParser"     : "parseSportsStations"
+            }
+        },
+        {
+            "text" : "Public Domain Classical",
+            "fetchInfo" : {
+                "fetchFunction" : "customFetchExample",
+                "jsonParser"    : "parsePublicDomainAudio"
+            }
+        },
+        {
+            "text"              : "Favorites",
+            "fetchInfo" : {
+                "fetchFunction" : "fetchFavorites",
+                "jsonParser"    : "parseFavorites",
+                "_expireSeconds" : 0
+            }
+        }
+    ]
+
+}

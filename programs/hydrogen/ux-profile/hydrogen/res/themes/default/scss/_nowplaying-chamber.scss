@@ -1,0 +1,215 @@
+@import "base";
+
+/* play-time-now and play-time-total time values on the side of the progress bar */
+$playback-time-width: 112.5px;
+
+#now-playing-chamber {
+
+  #np-top {
+    /* make same as np-title, and position it as top line there */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 35px;
+    line-height: 38px !important;
+    width: 100%;
+    margin-top: 0px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 231px;
+  }
+
+  .np-singular {
+    margin-top: 100px !important;
+  }
+
+  #np-title-block {
+    margin-left: 231px;
+    margin-top: 71px;
+  }
+
+  .np-title {
+    /*border: #900000 dashed thin;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-position: center left;
+    font-size: 35px;
+    line-height: 44px;
+    width: 100%;
+    margin-top: 0px;
+    display: block;
+    text-shadow: 1px 0px 8px rgb(66, 23, 33);
+
+    // annotation: text row expansion
+    // NowPlayingChamber::applyDoubleLineAnnotation() grants permission to occupy up to 2 lines of text.
+    // Consult with specs to ensure the extra line does not impact other elements below
+
+    &.hasTwoTextLinesReserved {
+      white-space: normal;
+      -o-ellipsis-lastline: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box !important; // override. framework is adding a display attribute inline
+      line-height: 44px; // if not specified, the alignment is miscalculated
+    }
+
+    // annotation: expresses intent to show content with natural line breaks on \n character
+    &.hasPreserveNewlines {
+      white-space: pre;
+    }
+
+  }
+
+  .np-title-icons .np-title {
+    padding-left: 47px;
+  }
+
+  .np-title-icons #np-top {
+    padding-left: 47px;
+  }
+
+  /* The individual title items *
+  .np-title-track {
+
+  }
+
+  .np-title-artist {
+
+  }
+
+  .np-title-album {
+
+  }
+
+  /* Enabled per settings */
+  .np-icon-station {
+  }
+
+  .np-icon-song {
+    background-image: url('../images/ui/now-playing/IcnListSong.png');
+  }
+
+  .np-icon-artist {
+    background-image: url('../images/ui/now-playing/IcnListPerson.png');
+  }
+
+  .np-icon-album {
+    background-image: url('../images/ui/now-playing/IcnListAlbum.png');
+  }
+
+  .np-horiz-rule {
+
+    /*background-image: -webkit-linear-gradient(left, #000000 0%, #8E8E8E 25%, #000000 100%);*/
+    /*height: 1px;*/
+    /*width: 100%;*/
+    /*margin-bottom: 11px;*/
+  }
+
+  #np-station {
+  }
+
+  #np-track {
+    /*color: #fff;*/
+  }
+
+  #np-from {
+  }
+
+  #np-context {
+  }
+
+  #np-content-image {
+    /*border: #00bf00 dashed thick;*/
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    width: 160px;
+    height: 160px;
+  }
+
+  #np-play-time {
+    position: absolute;
+    top: 259px;
+    width: 100%;
+
+    /*
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    */
+
+    // stream time text objects near progress bar
+    & [data-oc-control="TextView"].play-time-now,
+    & [data-oc-control="TextView"].play-time-total {
+      color: rgb(41, 142, 255);
+      font-size: 28px;
+      line-height: normal;
+      padding-right: 17px;
+      padding-left: 17px;
+      display: inline-block;
+      width: $playback-time-width;
+    }
+
+    & [data-oc-control="TextView"].play-time-now {
+      text-align: right;
+    }
+
+    .oc-progress-bar.play-progress {
+      /*
+        -webkit-flex: 1 1 auto;
+        -webkit-align-self: center;
+        */
+      /* remainder space after compensating for timing values */
+      width: $viewport-width - ( 2 * $playback-time-width);
+
+      height: 18px;
+      position: relative;
+      display: inline-block;
+    }
+
+  }
+
+  /*
+  #play-time-now {
+    width: 12%;
+    height: 100%;
+    background-color: #fffacd;
+    display: inline-block;
+  }
+
+  #play-time-total {
+    width: 12%;
+    height: 100%;
+    background-color: #dcdcdc;
+    display: inline-block;
+  }
+  */
+
+  .oc-progress-spinner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 20% 40%;
+  }
+
+  #streaming-indicator {
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    bottom: 135px;
+    font-size: 28px;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    margin: 0 5%;
+  }
+
+}
+
+

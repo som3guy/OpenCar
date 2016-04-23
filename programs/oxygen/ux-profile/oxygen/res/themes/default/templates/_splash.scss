@@ -1,0 +1,33 @@
+@import "../scss/base";
+
+/*
+        Application / Widget Loading Splash
+*/
+
+.#{$theme} {
+    .oc-app-splash {
+        background: #000;
+        position: absolute;
+        z-index: 8000;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+
+    .oc-app-splash.overlay {
+        background: -webkit-linear-gradient(top, rgba(61, 72, 80, 0.7), rgba(35, 43, 48, 0.7));
+        display: block;
+        background-size: initial !important;
+    }
+
+    .oc-app-splash .oc-error-text {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 50%;
+        margin-top: -103px;
+        font-size: 30px;
+        color: #FF4E4A;
+    }
+}

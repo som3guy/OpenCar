@@ -1,0 +1,18 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    "backgroundImage"           : "bkg-whyy.jpg",
+    "defaultContentImage"       : "logo-whyy.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio WHYY",
+        "stationName" : "WHYY Radio",
+        "trackUrl" : "http://207.245.67.209/91FM.m3u",
+        "trackTitle" : "Philadelphia"
+    }
+    
+}

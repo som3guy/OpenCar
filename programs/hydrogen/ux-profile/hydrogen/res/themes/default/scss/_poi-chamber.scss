@@ -1,0 +1,53 @@
+#poi-wrapper {
+
+
+	.text-view-detail, #text-view-title {
+		display: block;
+		font-size: 33px;
+		line-height: 40px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 100%;
+		padding: 5px 20px;
+	}
+
+	#container-content {
+		padding: 40px;
+	}
+
+	#container-detail-content {
+		text-align: left;
+		width: 65%;
+		float: right;
+	}
+
+	#container-image {
+		text-align: right;
+		width: 35%;
+		float: left;
+	}
+
+	#image-view {
+		width: 230px;
+		height: 230px;
+	}
+
+
+
+// rule -  on the last detail, allow newlines to be preserved, this guarantees a 
+// chance for longer text to possibly render unobstructed, but limited to 2 lines
+        .text-view-detail.preserveNewlines {
+                 white-space: pre;
+                -o-ellipsis-lastline: 2;
+                 -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  display: -webkit-box;
+    line-height: inherit; // optimizes font to have a slight chance of fitting better in tight layout
+        }
+
+
+
+}

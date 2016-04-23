@@ -1,0 +1,8 @@
+{
+    "id"         : "com.opencar.sdk.tutorial.hello_1_html",
+    "name"       : "Tutorial Hello 1 - HTML",
+    "template"   : "template.html",
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

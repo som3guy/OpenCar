@@ -1,0 +1,8 @@
+{
+    "uid":"oxygen-blue-bezel",
+    "display": "OpenCar Oxygen Blue Bezel",
+    "screen": { "width":800,"height":480 },
+    "types": ["bezel-art","bezel-controls"],
+    "frameworkVersion": "1.6",
+    "projectVersion": "1.0"
+}

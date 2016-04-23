@@ -1,0 +1,236 @@
+body.oc-module-view {
+    background-image: url("oxygen-tuner-bkg.png");
+}
+
+#audio-settings-container-main {
+    margin-top: 60px;
+}
+
+#container-back-button {
+    display: none;
+}
+
+.default .bb-pane .bb-pane-body {
+    margin-left: 0px;
+}
+
+.default .oc-breadcrumb-container ~ .oc-screens-wrapper #now-playing-chamber #streaming-indicator {
+    top: 175px;
+    text-align: left;
+}
+
+#display-hd {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("icon-hd-radio-small.png");
+    background-size: cover;
+    display: none;
+}
+
+#display-hd {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("icon-hd-radio-small.png");
+    background-size: cover;
+    display: none;
+}
+
+#display-hd-1,#display-hd-2,#display-hd-3,#display-hd-4 {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 28px;
+    color: lightgray;
+}
+
+#display-hd-1 {
+    left: 80px;
+}
+
+#display-hd-2 {
+    left: 105px;
+}
+
+#display-hd-3 {
+    left: 130px;
+}
+
+#display-hd-4 {
+    left: 155px;
+}
+
+#display-hd-1.on,#display-hd-2.on,#display-hd-3.on,#display-hd-4.on {
+    color: #0097CE;
+}
+
+#btn-tag {
+    background-image: url("oxygen-tag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-tag:active {
+    background-image: url("oxygen-tag-on.png");
+}
+
+#btn-memory {
+    background-image: url("oxygen-playlist.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-memory.on {
+    background-image: url("oxygen-playlist-on.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-memory.bb-button-focus {
+    background-image: url("oxygen-playlist-focus.png");
+}
+
+#btn-memory.on.bb-button-focus {
+    background-image: url("oxygen-playlist-on-focus.png");
+}
+
+#btn-favorite {
+    background-image: url("oxygen-favorite.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-favorite.bb-button-focus {
+    background-image: url("oxygen-favorite-focus.png");
+}
+
+#btn-favorite.on {
+    background-image: url("oxygen-favorite-on.png");
+}
+
+#btn-favorite.on.bb-button-focus {
+    background-image: url("oxygen-favorite-on-focus.png");
+}
+
+#btn-hd {
+    background-image: url("oxygen-icon-hd.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-hd.on {
+    background-image: url("oxygen-icon-hd-on.png");
+}
+
+#btn-hd.bb-button-focus {
+    background-image: url("oxygen-icon-hd-focus.png");
+}
+
+#btn-hd.on.bb-button-focus {
+    background-image: url("oxygen-icon-hd-on-focus.png");
+}
+
+#btn-scan {
+    background-image: url("oxygen-icon-scan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-scan.on {
+    background-image: url("oxygen-icon-scan-on.png");
+}
+
+#btn-scan.bb-button-focus {
+    background-image: url("oxygen-icon-scan-focus.png");
+}
+
+#btn-scan.on.bb-button-focus {
+    background-image: url("oxygen-icon-scan-on-focus.png");
+}
+
+#btn-play-pause {
+    background-image: url("oxygen-play.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+}
+
+#btn-play-pause.bb-button-focus {
+    background-image: url("oxygen-play-focus.png");
+}
+
+#btn-play-pause.on {
+    background-image: url("oxygen-stop.png");
+}
+
+#btn-play-pause.on.bb-button-focus {
+    background-image: url("oxygen-stop-focus.png");
+}
+
+#btn-tune {
+    background-image: url("oxygen-icon-tune.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-tune.bb-button-focus {
+    background-image: url("oxygen-icon-tune-focus.png");
+}
+
+#btn-seek-previous {
+    background-image: url("oxygen-previous.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous.bb-button-focus {
+    background-image: url("oxygen-previous-focus.png");
+}
+
+#btn-seek-previous.on {
+    background-image: url("oxygen-previous-on.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-previous.on.bb-button-focus {
+    background-image: url("oxygen-previous-on-focus.png");
+}
+
+#btn-seek-next {
+    background-image: url("oxygen-next.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-next.bb-button-focus {
+    background-image: url("oxygen-next-focus.png");
+}
+
+#btn-seek-next.on {
+    background-image: url("oxygen-next-on.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-seek-next.on.bb-button-focus {
+    background-image: url("oxygen-next-on-focus.png");
+}
+
+#btn-audio-settings {
+    background-image: url("oxygen-icon-audio-settings.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btn-audio-settings.bb-button-focus {
+    background-image: url("oxygen-icon-audio-settings-focus.png");
+}

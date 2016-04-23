@@ -1,0 +1,26 @@
+{
+    "id"         : "com.opencar.sdk.tmx_data_monitor",
+    "name"       : "CAN Data Monitor",
+    "css"        : [ "css/style.css", "$MODULE_PROFILE_PATH/style.css" ],
+    "view"       : "view.js",
+    "screens":
+    [
+        {
+            "id": "telematics-screen",
+            "chambers":
+            [
+                {
+                    "id"        : "telematics-chamber",
+                    "js"        : "screen/Data.js",
+                    "template"  : "template/preview.html",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        }
+    ],
+    "permissions" : [ "Telematics.WHEN_ACTIVE" ],
+    "categoryId" : "VEHICLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

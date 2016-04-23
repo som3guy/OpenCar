@@ -1,0 +1,125 @@
+@import "base";
+/* Progress Bar Styles */
+
+.#{$theme}{
+  .oc-progress-bar {
+      background-color: rgba(0,0,0,.4);
+      border-radius: 4px;
+      overflow: hidden;
+  }
+
+  .oc-progress-bar-container,
+  .oc-progress-bar-value {
+      display: block;
+      box-sizing: border-box;
+  }
+
+  .oc-progress-bar-container {
+      display: block;
+      height: 20px;
+      width: 100%;
+  }
+
+  .oc-progress-bar-vertical {
+      width: 20px;
+  }
+
+  .oc-progress-bar-vertical .oc-progress-bar-container {
+      width: 20px;
+      height: 100%;
+  }
+
+  .oc-progress-bar-value {
+      position: relative;
+      background: linear-gradient(to top, $color 0%,rgba(255, 255, 255, .55) 100%);
+
+      -webkit-transition: width 500ms $cubic;
+      -o-transition: width 500ms $cubic;
+      -moz-transition: width 500ms $cubic;
+
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-progress-bar-vertical .oc-progress-bar-value {
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to top, $color 0%,rgba(255, 255, 255, .55) 100%);
+
+      -webkit-transition: height 500ms $cubic;
+      -o-transition: height 500ms $cubic;
+      -moz-transition: height 500ms $cubic;
+
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-progress-bar-indeterminate {
+      background-image: linear-gradient(#f1a165, #f36d0a);
+      overflow:  hidden;
+  }
+
+  .oc-progress-bar-indeterminate .oc-progress-bar-value {
+      width: 200% !important;
+      border-width: 0 !important;
+      background-size: 50px 50px !important;
+
+      background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, .2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%,
+          transparent 75%,
+          transparent
+      ) !important;
+
+      /* For Webkit */
+      -webkit-animation: oc-progress-bar-indeterminate-animate 750ms linear infinite !important;
+
+      /* For Opera */
+      background-image: -o-linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, .2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%,
+          transparent 75%,
+          transparent
+      ) !important;
+      -o-transition-duration: 375ms !important;
+      -o-transition-timing-function: linear !important;
+      -o-transition-property: margin-left !important;
+  }
+
+  .oc-progress-bar-label {
+      float: right;
+      padding: 0 8px;
+      background-color: #000;
+      opacity: 0.4;
+      color: $color;
+      border-radius: 8.5px;
+      line-height: 17px;
+      display: inline-block;
+      margin: 2px 4px;
+      font-weight: bold;
+      font-size: 11px;
+      white-space: nowrap;
+  }
+
+  .oc-progress-bar-indeterminate .oc-progress-bar-label,
+  .oc-progress-bar-vertical .oc-progress-bar-label {
+      display: none;
+  }
+}
+
+@-webkit-keyframes oc-progress-bar-indeterminate-animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50px -50px;
+  }
+}

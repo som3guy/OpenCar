@@ -1,0 +1,52 @@
+.default .oc-list-view-container.vertical.list-icons-view ul.oc-list-view li.wide{
+    height: auto;
+    line-height: 1;
+    padding-top: 10px;
+}
+.default .oc-list-view-container.vertical.list-icons-view ul.oc-list-view li.wide .rate{
+    display: block;
+    font-size: 26px;
+}
+.list-icons-view .wide .item-text-arrow,
+.list-icons-view .wide .item-text-sub{
+    margin-top: 21px;
+}
+.default .oc-list-view-container.vertical li.wide:before{
+    background-image: url(../images/list-focus-focused-wide.png);
+}
+.default .oc-list-view-container.oc-down-state:focus li.selected.wide:before{
+    background-image: url(../images/list-focus-pressed-wide.png);
+}
+
+.list-icons-view .item-text-arrow, .list-icons-view .item-text-sub{
+	float: right;
+	font-size: 22px;
+	color: #b8b8b8;
+}
+.list-icons-view .item-text-sub{
+	margin: 0 30px;
+}
+
+.default .oc-listitemview.radiobox .item-text{
+    background: url(../images/icons/circle.png) 10px 19px no-repeat;
+}
+.default .oc-listitemview.radiobox-selected .item-text{
+    background: url(../images/icons/circle-on.png) 10px 19px no-repeat;
+}
+.default .oc-list-view-container.vertical ul.oc-list-view li.radiobox,
+.default .oc-list-view-container.vertical ul.oc-list-view li.radiobox-selected{
+    padding-left: 20px;
+}
+.default .oc-listitemview.radiobox .item-text,
+.default .oc-listitemview.radiobox-selected .item-text{
+    padding-left: 60px;
+}
+
+.default .oc-list-view-container.vertical ul.oc-list-view li.disabled .item-text{
+    color: #525453;
+}
+
+.list-load-more .item-text{
+    padding-left: 30px;
+    background: url(../images/arrow-more.png) left no-repeat;
+}

@@ -1,0 +1,40 @@
+@import "base";
+@import "compass/css3/images";
+
+.#{$theme}{
+    .oc-tooltip {
+        text-align: center;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .oc-tooltip > span {
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        color: $color-active;
+        background: $active;
+    }
+
+    .oc-tooltip,
+    .oc-tooltip > span {
+        font: 20px/28px $font-family-light;
+    }
+
+    .oc-tooltip-tip {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-top: 10px solid $active;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+}

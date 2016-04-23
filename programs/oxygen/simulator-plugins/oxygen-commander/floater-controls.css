@@ -1,0 +1,137 @@
+/***************************************************
+OPENCAR SIMULATOR FLOATER-CONTROL PLUGIN
+
+Required files for a complete Floater-Control Simulator plugin:
+floater-controls.html 
+floater-controls.css
+floater-controls.js
+plugin.json
+***************************************************/
+
+/* COMMANDER AND WHEEL BUTTONS */
+.floater { width: 400px; }
+#oxygen-commander-buttons {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 720;
+}
+#oxygen-commander {
+    background: #000 url(img/oxygen-blue-commander-bkg.png) no-repeat;
+    background-size: 400px 400px;
+    bottom: 45px; right: 45px;
+}
+#oxygen-commander-wheel,
+#oxygen-commander-top,
+#oxygen-commander-rotate,
+#oxygen-commander-lighting {
+    position: absolute;
+    top: 0; left: 0;
+    width: 211px; height: 211px;
+}
+#oxygen-commander-wheel {
+    top: 113px; left: 93px;
+    z-index: 720;
+}
+#oxygen-commander-top {
+    z-index: 723;
+    background: url(img/oxygen-blue-commander-top.png) no-repeat center center;
+    background-size: 166px 166px;
+}
+#oxygen-commander-rotate {
+    z-index: 721;
+    background: url(img/oxygen-blue-commander-rotate.png) no-repeat center center;
+    background-size: 211px 211px;
+}
+#oxygen-commander-lighting {
+    z-index: 722;
+    background: url(img/oxygen-blue-commander-lighting.png) no-repeat center center;
+    background-size: 193px 193px;
+}
+
+#oxygen-commander-overlay {
+    position: absolute;
+    top: 146px; left: 100px;
+    z-index: 723;
+}
+
+.oxygen-button > path { 
+    opacity: 0; 
+    cursor: pointer;
+}
+.oxygen-center-button {
+    opacity: .5;
+}
+.oxygen-outer-button {
+    
+}
+path.oxygen-outer-button:hover { opacity: .3; }
+path.oxygen-outer-button:active { opacity: .1; }
+
+#oxygen-commander-overlay:hover > path.oxygen-rotate-button {
+    opacity: 1;
+}
+#oxygen-commander-overlay:hover > path.oxygen-rotate-button:hover {
+    opacity: .8;
+}
+#oxygen-commander-overlay:hover > path.oxygen-rotate-button:active,
+#oxygen-commander-overlay:hover > path.oxygen-center-button {
+    opacity: .4;
+}
+#oxygen-commander-overlay:hover > path.oxygen-center-button:hover {
+    opacity: .3;
+}
+#oxygen-commander-overlay:hover > path.oxygen-center-button:active {
+    opacity: .2;
+}
+
+/**************************************************
+THE OPENCAR SIMULATOR:
+This will help you to understand how the OpenCar Simulator is constructed and where Simulator plugins are loaded.
+---------------------------------------------------------------------------------------------
+|  OpenCar                                           |  Launch App  |  Program Picker   |   |
+---------------------------------------------------------------------------------------------
+|                                                                   |                   |   |
+|                                                                   |                   |   |
+|         -------------------------------------------------         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |  Vehicle Data     |   |
+|         |                                               |         |  plugin type      |   |
+|         |                                               |         |  defines what     |   |
+|         |                                               |         |  loads here       |   |
+|         |                                               |         |                   |   |
+|         |                     #screen                   |         |                   |   |
+|         |                                               |         |     TMX icons --\>|   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                     ------------------  |                   |   |
+|         |                                     |                |  |                   |   |
+|         |                                     |                |  |                   |   |
+|         --------------------------------------|     Floater    |  |                   |---|
+|                                               |     Control    |  |  Bezel & Floater  |   |
+|                                               |                |  |  control icons    |   |
+|    #bezel                                     |                |  |     load here --\>|   |
+|    Bezel Controls                             |                |  |                   |   |
+|                                               ------------------  |                   |   |
+|                                                                   |                   |   |
+---------------------------------------------------------------------------------------------
+|    Drive Play files load here                                     |         Legal         |
+---------------------------------------------------------------------------------------------
+
+SIMULATOR PLUGIN TYPES:
+
+Bezel-Art
+A bezel-art plugin defines the art surrounding the IVI #screen.
+
+Vehicle-Data
+Telematics data that defines what events load in the Simulators telematics sidebar.
+
+Bezel-Controls
+Your playground for adding emulated hardware controls/buttons that surround the screen.
+
+Floater-Controls
+Floating dialogs that contain emulated hardware controls/buttons.  
+
+Drive-Play
+Real-world data captured (telematics and video) and played back to simulate real-time telematics events.
+***************************************************/

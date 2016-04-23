@@ -1,0 +1,2791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>Page not found &mdash; Chef Docs</title>
+    <link rel="stylesheet" href="_static/chefv2.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    './',
+    VERSION:     '',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+    HAS_SOURCE:  true
+  };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script src="//cdn.optimizely.com/js/128576591.js"></script>
+<script type="text/javascript" src="_static/script.js"></script>
+
+<script type='text/javascript'>
+window.__lo_site_id = 51873;
+
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://cdn') + '.luckyorange.com/w.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+</script>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Community Plugins" href="plugin_community.html" />
+    <link rel="prev" title="Chef Software Inc Packages" href="packages.html" /> 
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+  <nav class="nav-main" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <a href="https://learn.chef.io">
+            <span>Learn Chef</span>
+          </a>
+        </h1>
+      </div>
+
+      <i id="nav-icon" class="fa fa-bars"></i>
+      <a href="https://www.chef.io/">
+        <img id="logo" src="_static/chef_logo_v2.svg" onerror="_static/chef_logo_v2.png"/>
+      </a>
+
+      <ul class="nav-links links-main">
+        <li class="nav-link">
+          <a href="https://learn.chef.io/tutorials">Tutorials</a>
+        </li>
+        <li class="nav-link">
+          <a href="https://learn.chef.io/skills/">Skills Library</a>
+        </li>
+        <li class="nav-link is-active">
+          <a href="http://docs.chef.io/">Docs</a>
+        </li>
+        <li class="nav-link">
+          <a href="https://www.chef.io/training/">Training</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+    <div class="document chef-docs">
+    <nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+    <li class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+   
+
+    </li>
+    <li class="version-picker">
+      Filter by product and version
+      <div class="dropdown-wrapper">
+  <div class="dropdown-select">
+    <span id="dropdown-select-product">Chef</span>: <span id="dropdown-select-version">current</span>
+    <i class="fa fa-chevron-down"></i>
+  </div>
+  <ul class="dropdown-items">
+    <li class="dropdown-item">
+    <a href="/">Chef: current</a>
+    </li>
+    <li class="dropdown-item has-sub-items">
+      Chef Client<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/12-8/">12.9</a></li>
+        <li class="dropdown-item"><a href="/release/12-8/">12.8</a></li>
+        <li class="dropdown-item"><a href="/release/12-7/">12.7</a></li>
+        <li class="dropdown-item"><a href="/release/12-6/">12.6</a></li>
+        <li class="dropdown-item"><a href="/release/12-5/">12.5</a></li>
+        <li class="dropdown-item"><a href="/release/12-4/">12.4</a></li>
+        <li class="dropdown-item"><a href="/release/12-3/">12.3</a></li>
+        <li class="dropdown-item"><a href="/release/12-2/">12.2</a></li>
+        <li class="dropdown-item"><a href="/release/12-1/">12.1</a></li>
+        <li class="dropdown-item"><a href="/release/12-0/">12.0</a></li>
+        <li class="dropdown-item"><a href="/release/11-18/">11.18</a></li>
+        <li class="dropdown-item"><a href="/release/11-16/">11.16</a></li>
+        <li class="dropdown-item"><a href="/release/11-14/">11.14</a></li>
+        <li class="dropdown-item"><a href="/release/11-12/">11.12</a></li>
+        <li class="dropdown-item"><a href="/release/11-10/">11.10</a></li>
+        <li class="dropdown-item"><a href="/release/11-8/">11.8</a></li>
+        <li class="dropdown-item"><a href="/release/11-6/">11.6</a></li>
+        <li class="dropdown-item"><a href="/release/11-4/">11.4</a></li>
+        <li class="dropdown-item"><a href="/release/11-2/">11.2</a></li>
+        <li class="dropdown-item"><a href="/release/11-0/">11.0</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/devkit_1-0/">Chef DK</a>
+    </li>
+    <li class="dropdown-item has-sub-items">
+      Chef Server<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/server_12-5">12.5</a></li>
+        <li class="dropdown-item"><a href="/release/server_12-4">12.4</a></li>
+        <li class="dropdown-item"><a href="/release/server_12-3">12.3</a></li>
+        <li class="dropdown-item"><a href="/release/server_12-2">12.2</a></li>
+        <li class="dropdown-item"><a href="/release/server_12-1">12.1</a></li>
+        <li class="dropdown-item"><a href="/release/server_12-0">12.0</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/analytics/">Chef Analytics</a>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/compliance_1-0/">Chef Compliance</a>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/delivery/">Chef Delivery</a>
+    </li>
+    <li class="dropdown-item has-sub-items">
+      Ohai<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/ohai-8/">8</a></li>
+        <li class="dropdown-item"><a href="/release/ohai-7/">7</a></li>
+        <li class="dropdown-item"><a href="/release/ohai-6/">6</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/push_jobs_1-0/">Push Jobs</a>
+    </li>
+    <li class="legacy-heading">
+      Legacy Docs
+    </li>
+    <li class="dropdown-item has-sub-items legacy-item">
+      Enterprise Chef Server<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item legacy-item"><a href="/release/oec_11-2/">11.2</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/oec_11-1/">11.1</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/oec_11-0/">11.0</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item has-sub-items legacy-item">
+      Open Source Chef Server<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item legacy-item"><a href="/release/osc_11-1/">11.1</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/osc_11-0/">11.0</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </li>
+    
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Getting Started">
+        <i class="fa fa-home icon-left"></i>Getting Started
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/index.html" title="Start Here">
+            Start Here
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/chef_overview.html" title="Overview">
+            Overview
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/quick_start.html" title="Quick Start">
+            Quick Start
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/community.html" title="Community">
+            Community
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="https://learn.chef.io/tutorials/" title="Tutorials">
+            Tutorials
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/resources.html" title="Resources Reference">
+            Resources Reference
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/release_notes.html" title="Release Notes">
+            Release Notes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Theory &amp; Concepts">
+        <i class="fa fa-cube icon-left"></i>Theory &amp; Concepts
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Workstations">
+            Workstations
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/workstation.html" title="About Workstations">
+                About Workstations
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/chef_repo.html" title="chef-repo">
+                chef-repo
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/nodes.html" title="Nodes">
+            Nodes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_components.html" title="Chef Server">
+            Chef Server
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/chef_client.html" title="Chef Client">
+            Chef Client
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/compliance.html" title="Chef Compliance">
+            Chef Compliance
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/analytics.html" title="Chef Analytics">
+            Chef Analytics
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Delivery">
+            Chef Delivery
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery.html" title="Overview">
+                Overview
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_cookbooks.html" title="Build Cookbooks">
+                Build Cookbooks
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_users_and_roles.html" title="Users and Roles">
+                Users and Roles
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="https://learn.chef.io/tutorials/#build-a-delivery-pipeline" title="Tutorial: Build a Pipeline">
+                Tutorial: Build a Pipeline
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_manage_dependencies.html" title="Manage Dependencies">
+                Manage Dependencies
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_manage_secrets.html" title="Manage Secrets">
+                Manage Secrets
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_server_disaster_recovery.html" title="Disaster Recovery">
+                Disaster Recovery
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Components">
+            Components
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ohai.html" title="Ohai">
+                Ohai
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/push_jobs.html" title="Push Jobs">
+                Push Jobs
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_replication.html" title="Replication">
+                Replication
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/reporting.html" title="Reporting">
+                Reporting
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/supermarket.html" title="Supermarket">
+                Supermarket
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Setup &amp; Config">
+        <i class="fa fa-gears icon-left"></i>Setup &amp; Config
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/chef_system_requirements.html" title="System Requirements">
+            System Requirements
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/packages.html" title="Packages">
+            Packages
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/install_dk.html" title="Workstation">
+            Workstation
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/proxies.html" title="Proxies">
+            Proxies
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Client">
+            Chef Client
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_bootstrap.html" title="Bootstrap">
+                Bootstrap
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_windows.html" title="Microsoft Windows">
+                Microsoft Windows
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_omnibus.html" title="via URL">
+                via URL
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/junos.html" title="Junos OS">
+                Junos OS
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Server">
+            Chef Server
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="https://manage.chef.io/signup" title="Hosted">
+                Hosted
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_server.html#standalone" title="Standalone">
+                Standalone
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_server_ha_aws.html" title="HA w/AWS">
+                HA w/AWS
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_server_ha_drbd.html" title="HA w/DRBD">
+                HA w/DRBD
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_server_tiered.html" title="Tiered">
+                Tiered
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/aws_marketplace.html#chef-server-title-ami" title="AWS Marketplace">
+                AWS Marketplace
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/azure_portal.html#azure-marketplace" title="Microsoft Azure">
+                Microsoft Azure
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/openstack.html" title="OpenStack">
+                OpenStack
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/install_analytics.html" title="Chef Analytics">
+            Chef Analytics
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Compliance">
+            Chef Compliance
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_compliance.html" title="Install">
+                Install
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_compliance_chef_server.html" title="Integrate w/Chef Server">
+                Integrate w/Chef Server
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/aws_marketplace.html#chef-compliance-ami" title="AWS Marketplace">
+                AWS Marketplace
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/azure_portal.html" title="Microsoft Azure">
+                Microsoft Azure
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Delivery">
+            Chef Delivery
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_delivery_aws.html" title="Install w/AWS">
+                Install w/AWS
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/install_delivery_ssh.html" title="Install w/SSH">
+                Install w/SSH
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_delivery_bitbucket.html" title="Integrate w/Bitbucket">
+                Integrate w/Bitbucket
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_delivery_github.html" title="Integrate w/GitHub">
+                Integrate w/GitHub
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_delivery_ldap.html" title="Integrate w/LDAP">
+                Integrate w/LDAP
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_delivery_slack.html" title="Integrate w/Slack">
+                Integrate w/Slack
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/integrate_delivery_smtp.html" title="Integrate w/Email">
+                Integrate w/Email
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/delivery_configure_pipeline.html" title="Configure a Pipeline">
+                Configure a Pipeline
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/manage.html" title="Management Console">
+            Management Console
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/install_push_jobs.html" title="Push Jobs">
+            Push Jobs
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/install_reporting.html" title="Reporting">
+            Reporting
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/uninstall.html" title="Uninstall">
+            Uninstall
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Cookbooks">
+        <i class="fa fa-book icon-left"></i>Cookbooks
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/cookbooks.html" title="About Cookbooks">
+            About Cookbooks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Cookbook Components">
+            Cookbook Components
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/attributes.html" title="Attributes">
+                Attributes
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/definitions.html" title="Definitions">
+                Definitions
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/files.html" title="Files">
+                Files
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/libraries.html" title="Libraries">
+                Libraries
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/recipes.html" title="Recipes">
+                Recipes
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource.html" title="Resources">
+                Resources
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/templates.html" title="Templates">
+                Templates
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/cookbook_repo.html" title="Cookbook Repo">
+            Cookbook Repo
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/ruby.html" title="Ruby">
+            Ruby
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Workflow">
+        <i class="fa fa-wrench icon-left"></i>Workflow
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Kitchen">
+            Kitchen
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/kitchen.html" title="About Kitchen">
+                About Kitchen
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_yml_kitchen.html" title=".kitchen.yml">
+                .kitchen.yml
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_kitchen_vagrant.html" title="kitchen-vagrant">
+                kitchen-vagrant
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/chefspec.html" title="ChefSpec">
+            ChefSpec
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/foodcritic.html" title="Foodcritic">
+            Foodcritic
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/chef_vault.html" title="chef-vault">
+            chef-vault
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rubocop.html" title="Rubocop">
+            Rubocop
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/berkshelf.html" title="Berkshelf">
+            Berkshelf
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/knife.html" title="Knife">
+            Knife
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/provisioning.html" title="Provisioning">
+            Provisioning
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Policy">
+            Policy
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/cookbook_versions.html" title="Cookbook Versions">
+                Cookbook Versions
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/policyfile.html" title="Policyfile">
+                Policyfile
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/roles.html" title="Roles">
+                Roles
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/environments.html" title="Environments">
+                Environments
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/data_bags.html" title="Data Bags (Secrets)">
+                Data Bags (Secrets)
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/dsl_compliance.html" title="Compliance Controls">
+            Compliance Controls
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/analytics_rules.html" title="Chef Analytics Rules">
+            Chef Analytics Rules
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/debug.html" title="Debug Recipes">
+            Debug Recipes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/windows.html" title="Microsoft Windows">
+            Microsoft Windows
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Manage the Server">
+        <i class="fa fa-hdd-o icon-left"></i>Manage the Server
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_backup_restore.html" title="Backup &amp; Restore">
+            Backup &amp; Restore
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_data.html" title="Data Storage">
+            Data Storage
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_firewalls_and_ports.html" title="Firewalls &amp; Ports">
+            Firewalls &amp; Ports
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_high_availability.html" title="High Availability">
+            High Availability
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_ldap.html" title="Active Directory &amp; LDAP">
+            Active Directory &amp; LDAP
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_logs.html" title="Log Files">
+            Log Files
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_monitor.html" title="Monitor">
+            Monitor
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_orgs.html" title="Organizations &amp; Groups">
+            Organizations &amp; Groups
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_security.html" title="Security">
+            Security
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_services.html" title="Services">
+            Services
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_tuning.html" title="Tuning">
+            Tuning
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Upgrades">
+            Upgrades
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/upgrade_analytics.html" title="Chef Analytics">
+                Chef Analytics
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/upgrade_compliance.html" title="Chef Compliance">
+                Chef Compliance
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/upgrade_client.html" title="Chef Client">
+                Chef Client
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/upgrade_server.html" title="Chef Server">
+                Chef Server
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/server_users.html" title="Users">
+            Users
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Management Console">
+            Management Console
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_clients.html" title="Clients">
+                Clients
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_cookbooks.html" title="Cookbooks">
+                Cookbooks
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_data_bags.html" title="Data Bags">
+                Data Bags
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_environments.html" title="Environments">
+                Environments
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_nodes.html" title="Nodes">
+                Nodes
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_reports.html" title="Reports">
+                Reports
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_manage_roles.html" title="Roles">
+                Roles
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_users.html#chef-manage-title.html" title="Users">
+                Users
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/analytics_monitor.html" title="Monitor Chef Analytics">
+            Monitor Chef Analytics
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Extend Chef">
+        <i class="fa fa-clone icon-left"></i>Extend Chef
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/custom_resources.html" title="Custom Resources">
+            Custom Resources
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/dsl_recipe.html" title="Recipe DSL">
+            Recipe DSL
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/handlers.html" title="Handlers">
+            Handlers
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Community Plugins">
+            Community Plugins
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_community.html#chef-client-title" title="Chef">
+                Chef
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_community.html#handlers" title="Handlers">
+                Handlers
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_community.html#knife-title" title="Knife">
+                Knife
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_community.html#ohai" title="Ohai">
+                Ohai
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Reference">
+        <i class="fa fa-th icon-left"></i>Reference
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+      <ul class="sub-items">
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Resources">
+            Chef Resources
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_apt_package.html" title="apt_package">
+                apt_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_apt_update.html" title="apt_update">
+                apt_update
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_bash.html" title="bash">
+                bash
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_batch.html" title="batch">
+                batch
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_bff_package.html" title="bff_package">
+                bff_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_breakpoint.html" title="breakpoint">
+                breakpoint
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_chef_gem.html" title="chef_gem">
+                chef_gem
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_chef_handler.html" title="chef_handler">
+                chef_handler
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_chocolatey_package.html" title="chocolatey_package">
+                chocolatey_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_cookbook_file.html" title="cookbook_file">
+                cookbook_file
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_cron.html" title="cron">
+                cron
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_csh.html" title="csh">
+                csh
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_deploy.html" title="deploy">
+                deploy
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_directory.html" title="directory">
+                directory
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_dpkg_package.html" title="dpkg_package">
+                dpkg_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_dsc_resource.html" title="dsc_resource">
+                dsc_resource
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_dsc_script.html" title="dsc_script">
+                dsc_script
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_easy_install_package.html" title="easy_install_package">
+                easy_install_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_env.html" title="env">
+                env
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_erlang_call.html" title="erl_call">
+                erl_call
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_execute.html" title="execute">
+                execute
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_file.html" title="file">
+                file
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_freebsd_package.html" title="freebsd_package">
+                freebsd_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_gem_package.html" title="gem_package">
+                gem_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_git.html" title="git">
+                git
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_group.html" title="group">
+                group
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_homebrew_package.html" title="homebrew_package">
+                homebrew_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_http_request.html" title="http_request">
+                http_request
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ifconfig.html" title="ifconfig">
+                ifconfig
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ips_package.html" title="ips_package">
+                ips_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ksh.html" title="ksh">
+                ksh
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_launchd.html" title="launchd">
+                launchd
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_link.html" title="link">
+                link
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_log.html" title="log">
+                log
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_macports_package.html" title="macports_package">
+                macports_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_mdadm.html" title="mdadm">
+                mdadm
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_mount.html" title="mount">
+                mount
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ohai.html" title="ohai">
+                ohai
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_openbsd_package.html" title="openbsd_package">
+                openbsd_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_osx_profile.html" title="osx_profile">
+                osx_profile
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_package.html" title="package">
+                package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_pacman_package.html" title="pacman_package">
+                pacman_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_paludis_package.html" title="paludis_package">
+                paludis_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_perl.html" title="perl">
+                perl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_portage_package.html" title="portage_package">
+                portage_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_powershell_script.html" title="powershell_script">
+                powershell_script
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_python.html" title="python">
+                python
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_reboot.html" title="reboot">
+                reboot
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_registry_key.html" title="registry_key">
+                registry_key
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_remote_directory.html" title="remote_directory">
+                remote_directory
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_remote_file.html" title="remote_file">
+                remote_file
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_route.html" title="route">
+                route
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_rpm_package.html" title="rpm_package">
+                rpm_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ruby.html" title="ruby">
+                ruby
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_ruby_block.html" title="ruby_block">
+                ruby_block
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_script.html" title="script">
+                script
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_service.html" title="service">
+                service
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_smartos_package.html" title="smartos_package">
+                smartos_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_solaris_package.html" title="solaris_package">
+                solaris_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_subversion.html" title="subversion">
+                subversion
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_template.html" title="template">
+                template
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_user.html" title="user">
+                user
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_windows_package.html" title="windows_package">
+                windows_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_windows_service.html" title="windows_service">
+                windows_service
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/resource_yum.html" title="yum_package">
+                yum_package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="InSpec Resources">
+            InSpec Resources
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_apache_conf.html" title="apache_conf">
+                apache_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_apt.html" title="apt">
+                apt
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_audit_policy.html" title="audit_policy">
+                audit_policy
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_auditd_conf.html" title="auditd_conf">
+                auditd_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_auditd_rules.html" title="auditd_rules">
+                auditd_rules
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_bond.html" title="bond">
+                bond
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_bridge.html" title="bridge">
+                bridge
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_command.html" title="command">
+                command
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_csv.html" title="csv">
+                csv
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_directory.html" title="directory">
+                directory
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_etc_group.html" title="etc_group">
+                etc_group
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_file.html" title="file">
+                file
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_gem.html" title="gem">
+                gem
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_group.html" title="group">
+                group
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_host.html" title="host">
+                host
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_inetd_conf.html" title="inetd_conf">
+                inetd_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_interface.html" title="interface">
+                interface
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_iptables.html" title="iptables">
+                iptables
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_json.html" title="json">
+                json
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_kernel_module.html" title="kernel_module">
+                kernel_module
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_kernel_parameter.html" title="kernel_parameter">
+                kernel_parameter
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_limits_conf.html" title="limits_conf">
+                limits_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_login_def.html" title="login_defs">
+                login_defs
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_mount.html" title="mount">
+                mount
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_mysql_conf.html" title="mysql_conf">
+                mysql_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_mysql_session.html" title="mysql_session">
+                mysql_session
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_npm.html" title="npm">
+                npm
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_ntp_conf.html" title="ntp_conf">
+                ntp_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_oneget.html" title="oneget">
+                oneget
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_os.html" title="os">
+                os
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_os_env.html" title="os_env">
+                os_env
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_package.html" title="package">
+                package
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_parse_config.html" title="parse_config">
+                parse_config
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_parse_config_file.html" title="parse_config_file">
+                parse_config_file
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_etc_passwd.html" title="passwd">
+                passwd
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_pip.html" title="pip">
+                pip
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_port.html" title="port">
+                port
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_postgres_conf.html" title="postgres_conf">
+                postgres_conf
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_postgres_session.html" title="postgres_session">
+                postgres_session
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_process.html" title="processes">
+                processes
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_registry_key.html" title="registry_key">
+                registry_key
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_script.html" title="script">
+                script
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_security_policy.html" title="security_policy">
+                security_policy
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_service.html" title="service">
+                service
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_ssh_config.html" title="ssh_config">
+                ssh_config
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_sshd_config.html" title="sshd_config">
+                sshd_config
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_user.html" title="user">
+                user
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_windows_feature.html" title="windows_feature">
+                windows_feature
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_yaml.html" title="yaml">
+                yaml
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/inspec_yum.html" title="yum">
+                yum
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Knife Commands">
+            Knife Commands
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_bootstrap.html" title="bootstrap">
+                bootstrap
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_client.html" title="client">
+                client
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_configure.html" title="configure">
+                configure
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_cookbook.html" title="cookbook">
+                cookbook
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_cookbook_site.html" title="cookbook site">
+                cookbook site
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_data_bag.html" title="data bag">
+                data bag
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_delete.html" title="delete">
+                delete
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_deps.html" title="deps">
+                deps
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_diff.html" title="diff">
+                diff
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_download.html" title="download">
+                download
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_edit.html" title="edit">
+                edit
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_environment.html" title="environment">
+                environment
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_exec.html" title="exec">
+                exec
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_list.html" title="list">
+                list
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_node.html" title="node">
+                node
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_raw.html" title="raw">
+                raw
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_recipe_list.html" title="recipe list">
+                recipe list
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_role.html" title="role">
+                role
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_search.html" title="search">
+                search
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_serve.html" title="serve">
+                serve
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_show.html" title="show">
+                show
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_ssh.html" title="ssh">
+                ssh
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_ssl_check.html" title="ssl check">
+                ssl check
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_ssl_fetch.html" title="ssl fetch">
+                ssl fetch
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_status.html" title="status">
+                status
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_tag.html" title="tag">
+                tag
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_upload.html" title="upload">
+                upload
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_user.html" title="user">
+                user
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/knife_xargs.html" title="xargs">
+                xargs
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/plugin_knife.html" title="Cloud Plugins">
+                Cloud Plugins
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="CLIs">
+            CLIs
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef.html" title="chef">
+                chef
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_apply.html" title="chef-apply">
+                chef-apply
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_client.html" title="chef-client">
+                chef-client
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_init.html" title="chef-init">
+                chef-init
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_server.html" title="chef-server-ctl">
+                chef-server-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_shell.html" title="chef-shell">
+                chef-shell
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_sync.html" title="chef-sync-ctl">
+                chef-sync-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_delivery.html" title="Delivery CLI">
+                Delivery CLI
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_delivery_server.html" title="delivery-ctl">
+                delivery-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_inspec.html" title="inspec">
+                inspec
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_kitchen.html" title="kitchen">
+                kitchen
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_ohai.html" title="ohai">
+                ohai
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_analytics.html" title="opscode-analytics-ctl">
+                opscode-analytics-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_opscode_expander.html" title="opscode-expander-ctl">
+                opscode-expander-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_manage.html" title="opscode-manage-ctl">
+                opscode-manage-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_reporting.html" title="opscode-reporting-ctl">
+                opscode-reporting-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_push_jobs_client.html" title="push-jobs-client">
+                push-jobs-client
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_supermarket.html" title="supermarket-ctl">
+                supermarket-ctl
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Config Files">
+            Config Files
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_compliance.html" title="chef-compliance.rb">
+                chef-compliance.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_server.html" title="chef-server.rb">
+                chef-server.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_chef_sync.html" title="chef-sync.rb">
+                chef-sync.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_client.html" title="client.rb">
+                client.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb.html" title="config.rb">
+                config.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_knife.html" title="knife.rb">
+                knife.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_manage.html" title="manage.rb">
+                manage.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_metadata.html" title="metadata.rb">
+                metadata.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_analytics.html" title="opscode-analytics.rb">
+                opscode-analytics.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_policyfile.html" title="Policyfile.rb">
+                Policyfile.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_push_jobs_server.html" title="push-jobs-server.rb">
+                push-jobs-server.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_reporting.html" title="reporting.rb">
+                reporting.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_supermarket.html" title="supermarket.rb">
+                supermarket.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Recipe DSL Methods">
+            Recipe DSL Methods
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#attribute" title="attribute?">
+                attribute?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#control" title="control">
+                control
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#control-group" title="control_group">
+                control_group
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#cookbook-name" title="cookbook_name">
+                cookbook_name
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#data-bag" title="data_bag">
+                data_bag
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#data-bag-item" title="data_bag_item">
+                data_bag_item
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#platform" title="platform?">
+                platform?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#platform-family" title="platform_family?">
+                platform_family?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#reboot-pending" title="reboot_pending?">
+                reboot_pending?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#recipe-name" title="recipe_name">
+                recipe_name
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-data-exists" title="registry_data_exists?">
+                registry_data_exists?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-get-subkeys" title="registry_get_subkeys">
+                registry_get_subkeys
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-get-values" title="registry_get_values">
+                registry_get_values
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-has-subkeys" title="registry_has_subkeys?">
+                registry_has_subkeys?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-key-exists" title="registry_key_exists?">
+                registry_key_exists?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#registry-value-exists" title="registry_value_exists?">
+                registry_value_exists?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#resources" title="resources">
+                resources
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#search" title="search">
+                search
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#shell-out" title="shell_out">
+                shell_out
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#id6" title="shell_out!">
+                shell_out!
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#shell-out-with-systems-locale" title="shell_out_with_systems_locale">
+                shell_out_with_systems_locale
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#tag-tagged-untag" title="tag">
+                tag
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#tag-tagged-untag" title="tagged?">
+                tagged?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#tag-tagged-untag" title="untag">
+                untag
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#value-for-platform" title="value_for_platform">
+                value_for_platform
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#value-for-platform-family" title="value_for_platform_family">
+                value_for_platform_family
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_recipe.html#helpers" title="Windows Platform Helpers">
+                Windows Platform Helpers
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Other DSLs">
+            Other DSLs
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_custom_resource.html" title="Custom Resource DSL">
+                Custom Resource DSL
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_handler.html" title="Handler DSL">
+                Handler DSL
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_compliance.html" title="Compliance DSL">
+                Compliance DSL
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/dsl_delivery.html" title="Delivery DSL">
+                Delivery DSL
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="APIs">
+            APIs
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_analytics.html" title="Analytics API">
+                Analytics API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_chef_server.html" title="Chef Server API">
+                Chef Server API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_compliance.html" title="Compliance API">
+                Compliance API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_cookbooks_site.html" title="Cookbooks Site API">
+                Cookbooks Site API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_delivery.html" title="Delivery API">
+                Delivery API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_omnitruck.html" title="Omnitruck API">
+                Omnitruck API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_push_jobs.html" title="Push Jobs API">
+                Push Jobs API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/api_reporting.html" title="Reporting API">
+                Reporting API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Webui Tasks">
+            Webui Tasks
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/analytics_webui_tasks.html" title="Chef Analytics">
+                Chef Analytics
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_webui_tasks.html" title="Chef Manage">
+                Chef Manage
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/server_webui_tasks.html#reporting-title-tasks" title="Chef Reporting">
+                Chef Reporting
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Chef Solo">
+            Chef Solo
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/chef_solo.html" title="About Chef Solo">
+                About Chef Solo
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/ctl_chef_solo.html" title="chef-solo">
+                chef-solo
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/config_rb_solo.html" title="solo.rb">
+                solo.rb
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li> <!-- /for item in navItems -->
+    
+    <li class="main-item dark-item">
+      <a href="https://github.com/chef/chef-web-docs" title="Available on Github">
+        <i class="fa fa-github icon-left"></i>
+        Available on Github
+      </a>
+    </li>
+    <li class="main-item dark-item">
+      <a href="https://www.chef.io/chef/get-chef">
+        <i class="fa fa-download icon-left"></i>
+        Get Chef
+      </a>
+    </li>
+    <li class="main-item dark-item">
+      <a href="https://docs.chef.io/feedback.html">
+        <i class="fa fa-commenting icon-left"></i>
+        Send Feedback
+      </a>
+    </li>
+    <li class="main-item dark-item">
+      <a href="https://www.chef.io/support/">
+        <i class="fa fa-support icon-left"></i>
+        Support
+      </a>
+    </li>
+  </ul>
+</nav>
+      <div class="documentwrapper"><div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+  </div>
+</div>
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="page-not-found">
+<h1>Page not found<a class="headerlink" href="#page-not-found" title="Permalink to this headline">¶</a></h1>
+<p>This page you were looking for is not here. If you think it&#8217;s our fault, <a class="reference internal" href="feedback.html"><em>please let us know</em></a>.</p>
+<p>The left navigation shows all the topics about Chef. Browse through to find what you&#8217;re looking for or use the search box (in the top left) to search for something specific. If you&#8217;re looking for documentation for a specific Chef release, use the drop-down (in the top left) to choose that version.</p>
+<p>Thanks for reading chef-docs!</p>
+</div>
+
+
+          </div>
+
+
+          <div class="footer" role="contentinfo">
+                &copy; Copyright: This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+              This page is about: current version of Chef.
+            <a href="/feedback.html">Provide feedback on Chef documentation</a>.
+            </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6369228-7', 'auto', {'legacyCookieDomain': '.chef.io', 'allowLinker': true});
+  ga('send', 'pageview');
+
+  var trackOutboundLink = function(url) {
+    if (ga.q) {
+     document.location = url;
+    } else {
+      ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+        function () {
+          document.location = url;
+        }
+      });
+    }
+  };
+</script>
+<!-- End of Async Google Analytics Code -->
+
+<!-- Start of Marketo Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Marketo Analytics Code -->
+
+<!-- Start of DemandBase Analytics Code -->
+<script type="text/javascript">
+	(function(d,b,a,s,e){ var t = b.createElement(a),
+		fs = b.getElementsByTagName(a)[0]; t.async=1; t.id=e;
+		t.src=('https:'==document.location.protocol ? 'https://' : 'http://') + s;
+		fs.parentNode.insertBefore(t, fs); })
+	(window,document,'script','scripts.demandbase.com/zH7sZrWR.min.js','demandbase_js_lib');
+</script>
+<!-- End of DemandBase Analytics Code -->
+
+
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+  </body>
+</html>

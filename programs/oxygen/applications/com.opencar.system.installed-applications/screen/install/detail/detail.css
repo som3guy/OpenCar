@@ -1,0 +1,37 @@
+#app-detail-wrapper {
+}
+#app-icon {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    width: 166px; height: 166px;
+}
+#app-detail-meta {
+    width: 500px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+#app-title,
+#app-version,
+#app-description {
+    width: 500px;
+}
+#app-title {
+    font-weight: 600;
+}
+#app-version {
+    font-size: 24px;
+    line-height: 10px !important;
+    margin-bottom: 20px;
+    opacity: .7;
+}
+#app-description {
+    line-height: 45px !important;
+}
+
+.default .bb-button-divider {
+    background: transparent;
+}
+.default .bb-pane {
+    margin-left: 12px;
+}

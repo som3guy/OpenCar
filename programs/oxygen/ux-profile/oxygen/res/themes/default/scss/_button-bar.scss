@@ -1,0 +1,372 @@
+@import "base";
+@import "compass/css3/images";
+
+$button-height: 100px;
+$bottom-offset: 10px;
+/* TODO is there a way to make this value automatic? */
+$tooltip-clearance: 59px;
+
+.#{$theme} {
+    .bb-pane {
+        width: 100%;
+        height: $button-height + $tooltip-clearance;
+        z-index: 9000;
+        overflow: hidden;
+        position: relative;
+
+        .bb-pane-body {
+            height: $button-height;
+            position: relative;
+            top: $tooltip-clearance;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+        }
+
+        .bb-pane-top {
+            position: absolute;
+            bottom: $button-height;
+            width: 100%;
+
+            /* Allow click-through to the underlying button objects */
+            pointer-events: none;
+
+            /* Matched to height of background graphic of top, if applicable */
+            height: 1px;
+        }
+
+        .bb-button {
+            height: 100%;
+            flex: auto;
+            align-self: auto;
+            opacity: 1;
+            max-width: 100px;
+        }
+
+        .bb-button[disabled="disabled"] .bb-button-icon {
+            opacity: 0.3;
+        }
+
+        .bb-tooltip-fade {
+            opacity: 0;
+            transition: opacity 1s linear 2s;
+        }
+    }
+
+    .bb-pane.bottom {
+        position: absolute;
+        bottom: $bottom-offset;
+        overflow: hidden;
+    }
+
+    a {
+        opacity: 0.92 !important;
+    }
+
+    .bb-button-activate {
+        opacity: 1.0 !important;
+    }
+
+    .bb-button-icon {
+        height: 100%;
+        width: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .bb-button-divider {
+        height: 100%;
+        width: 1px;
+        margin-left: 99%;
+        margin-top: -$button-height;
+        background: #000;
+    }
+
+    .bb-spacer {
+        visibility: hidden;
+    }
+
+    .bb-back-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-last.png);
+    }
+    .bb-button-focus.bb-back-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-last-focus.png);
+    }
+
+    .bb-list-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-playlist.png);
+    }
+    .bb-button-focus.bb-list-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-playlist-focus.png);
+    }
+
+    .bb-stop-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-stop.png);
+    }
+
+    .bb-play-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-play.png);
+    }
+    .bb-button-focus.bb-play-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-play-focus.png);
+    }
+
+    .bb-pause-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pause.png);
+    }
+    .bb-button-focus.bb-pause-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pause-focus.png);
+    }
+
+    .bb-last-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-last.png);
+    }
+    .bb-button-focus.bb-last-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-last-focus.png);
+    }
+
+    .bb-next-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-next.png);
+    }
+    .bb-button-focus.bb-next-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-next-focus.png);
+    }
+
+    .bb-delete-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-delete.png);
+    }
+    .bb-button-focus.bb-delete-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-delete-focus.png);
+    }
+    .bb-delete-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-delete-on.png);
+    }
+
+    .bb-install-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-install.png);
+    }
+    .bb-button-focus.bb-install-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-install-focus.png);
+    }
+    .bb-install-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-install-on.png);
+    }
+
+    .bb-favorite-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-favorite.png);
+    }
+    .bb-button-focus.bb-favorite-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-favorite-focus.png);
+    }
+    .bb-favorite-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-favorite-on.png);
+    }
+    .bb-button-focus.bb-favorite-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-favorite-on-focus.png);
+    }
+
+    .bb-previous-list-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-previous-list.png);
+    }
+    .bb-button-focus.bb-previous-list-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-previous-list-focus.png);
+    }
+    .bb-previous-list-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-previous-list-on.png);
+    }
+    .bb-button-focus.bb-previous-list-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-previous-list-on-focus.png);
+    }
+
+    .bb-pin-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pin.png);
+    }
+    .bb-button-focus.bb-pin-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pin-focus.png);
+    }
+    .bb-pin-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pin-on.png);
+    }
+    .bb-button-focus.bb-pin-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-pin-on-focus.png);
+    }
+
+    .bb-info-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-info.png);
+    }
+    .bb-button-focus.bb-info-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-info-focus.png);
+    }
+    .bb-info-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-info-on.png);
+    }
+    .bb-button-focus.bb-info-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-info-on-focus.png);
+    }
+
+    .bb-phone-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-phone.png);
+    }
+    .bb-button-focus.bb-phone-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-phone-focus.png);
+    }
+    .bb-phone-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-phone-on.png);
+    }
+    .bb-button-focus.bb-phone-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-phone-on-focus.png);
+    }
+
+    .bb-map-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-map.png);
+    }
+    .bb-button-focus.bb-map-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-map-focus.png);
+    }
+    .bb-map-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-map-on.png);
+    }
+    .bb-button-focus.bb-map-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-map-on-focus.png);
+    }
+
+    .bb-approve-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-approve.png);
+    }
+    .bb-button-focus.bb-approve-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-approve-focus.png);
+    }
+    .bb-approve-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-approve-on.png);
+    }
+
+    .bb-disapprove-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-disapprove.png);
+    }
+    .bb-button-focus.bb-disapprove-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-disapprove-focus.png);
+    }
+    .bb-disapprove-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-disapprove-on.png);
+    }
+
+    .bb-playlist-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-playlist.png);
+    }
+    .bb-button-focus.bb-playlist-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-playlist-focus.png);
+    }
+    .bb-playlist-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-playlist-on.png);
+    }
+
+    .bb-bookmark-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-bookmark.png);
+    }
+    .bb-button-focus.bb-bookmark-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-bookmark-focus.png);
+    }
+    .bb-bookmark-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-bookmark-on.png);
+    }
+
+    .bb-tag-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-tag.png);
+    }
+    .bb-button-focus.bb-tag-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-tag-focus.png);
+    }
+    .bb-tag-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-tag-on.png);
+    }
+
+    .bb-shuffle-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-shuffle.png);
+    }
+    .bb-button-focus.bb-shuffle-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-shuffle-focus.png);
+    }
+    .bb-shuffle-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-shuffle-on.png);
+    }
+
+    .bb-repeat-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-repeat.png);
+    }
+    .bb-button-focus.bb-repeat-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-repeat-focus.png);
+    }
+    .bb-repeat-button-on .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-repeat-on.png);
+    }
+
+    .bb-rewind-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-rewind.png);
+    }
+    .bb-button-focus.bb-rewind-button .bb-button-icon {
+        background-image: url(../../images/ui/button-bar/oxygen-rewind-focus.png);
+    }
+    .bb-settings-audio-button .bb-button-icon,
+    .bb-audiosettings-button .bb-button-icon,
+    .bb-audio-settings-button .bb-button-icon,
+    .bb-settings-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-settings.png) !important;
+    }
+    .bb-button-focus.bb-audiosettings-button .bb-button-icon,
+    .bb-button-focus.bb-audio-settings-button .bb-button-icon,
+    .bb-button-focus.bb-settings-audio-button .bb-button-icon,
+    .bb-button-focus.bb-settings-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-settings-focus.png) !important;
+    }
+    .bb-create-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-create-station.png);
+    }
+    .bb-button-focus.bb-create-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-create-station-focus.png);
+    }
+    .bb-discover-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-discover.png);
+    }
+    .bb-button-focus.bb-discover-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-discover-focus.png);
+    }
+    .bb-results-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-previous-list.png);
+    }
+    .bb-button-focus.bb-results-button .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-previous-list-focus.png);
+    }
+    .bb-results-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-previous-list-on.png);
+    }
+    .bb-button-focus.bb-results-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-previous-list-on-focus.png);
+    }
+    .bb-nearby-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-pin.png);
+    }
+    .bb-button-focus.bb-nearby-button .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-pin-focus.png);
+    }
+    .bb-nearby-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-pin-on.png);
+    }
+    .bb-button-focus.bb-nearby-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-pin-on-focus.png);
+    }
+    .bb-call-button .bb-button-icon{
+        background-image: url(../../images/ui/button-bar/oxygen-phone.png);
+    }
+    .bb-button-focus.bb-call-button .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-phone-focus.png);
+    }
+    .bb-call-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-phone-on.png);
+    }
+    .bb-button-focus.bb-call-button-on .bb-button-icon {
+      background-image: url(../../images/ui/button-bar/oxygen-phone-on-focus.png);
+    }
+
+}
+

@@ -1,0 +1,13 @@
+@import "base";
+
+.#{$theme}{
+  .oc-overlay{
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 9000;
+  }
+}

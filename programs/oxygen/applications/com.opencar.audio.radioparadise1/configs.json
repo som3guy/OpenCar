@@ -1,0 +1,16 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "backgroundImage"           : "bkg-radio-paradise.jpg",
+    "defaultContentImage"       : "logo-radio-paradise.png",
+
+    "singleStreamStart" : {
+        "text" : "Radio Paradise",
+        "stationName" : "Radio Paradise",
+        "trackUrl" : "http://www.radioparadise.com/m3u/aac-128.m3u"
+    }
+
+}

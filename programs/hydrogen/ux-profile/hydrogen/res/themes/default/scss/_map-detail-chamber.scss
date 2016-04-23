@@ -1,0 +1,155 @@
+@import "base";
+
+/* List Module Styles */
+
+.#{$theme} .map-detail-chamber {
+
+  // these are overriding the listview template SCSS
+
+  /* how to locate the container for the list in this chamber */
+  .default-list-wrapper.has-text {
+
+    /* position of the listview wrapper container - shrink it*/
+    top: 130px;
+    height: 285px;
+    position:absolute;
+
+
+    // holds the text
+    & .oc-textview-title + .oc-list-view-container {
+
+      height: 260px;
+
+      // vertical orientation
+      &.vertical {
+
+        UL {
+
+        }
+
+      }
+
+    }
+
+    /* scrollbar precedes textview-title shorten the tracker element - the top numeric is changed */
+    .default-scroll-bar {
+      top:0;
+
+      .scroll-up-button {
+
+      }
+      .scroll-down-button {
+        bottom: 64px;
+      }
+/*
+      top: 130px;
+      height: 285px;
+*/
+
+    }
+
+  }
+
+
+  .oc-list-view-container.vertical.list-text-view li:before,
+  .oc-list-view-container.oc-down-state:focus li.selected:before {
+    background: none;
+  }
+
+  /* current item in list : reset */
+  .oc-list-view-container.vertical:focus LI.selected .item-text {
+    color: inherit;
+  }
+
+  .oc-list-view-container.vertical:focus UL.oc-list-view--15 LI.selected:before {
+    background: none;
+  }
+
+  /*
+  .default .map-detail-chamber .default-list-wrapper.has-text .oc-textview-title + .oc-list-view-container.list-text-view {
+      height: 220px;
+      top: 140px;
+  }
+  */
+
+  /*
+  SCROLL
+  .default .map-detail-chamber .default-list-wrapper.has-text + .default-scroll-bar {
+      clip: rect(180px 56px 416px 0px);
+  }
+  */
+
+  /*
+  .default .map-detail-chamber .oc-list-view-container.vertical.list-text-view UL.oc-list-view LI {
+      height: auto;
+      background: none !important;
+      xline-height: 1;
+      padding-left: 0;
+      font-size: 32px;
+  }
+  */
+
+  /*
+  .default .map-detail-chamber .oc-list-view-container.vertical.list-text-view UL.oc-list-view LI:first-child {
+      padding-top: 10px;
+  }
+  */
+
+
+
+  .oc-list-view-container.vertical.list-text-view UL.oc-list-view--15 LI {
+    padding-left: 20px;
+
+	  .item-text {
+	  /* text row */
+	    white-space: normal;
+	    /*
+	    rule: introspected by TextChamber
+	    */
+	    max-width: 630px;
+	    /*
+	    line-height: 1;
+	    */
+	  }
+
+
+// currently focused row representing the cursor in the text list
+  &.selected .oc-listitemview-text {
+	color: inherit;
+	}
+
+  }
+
+
+
+
+  .oc-list-view-container.vertical LI.oc-listitemview-branch:after,
+  .oc-list-view-container.vertical LI.selected.oc-listitemview-branch:after {
+    opacity: 0;
+  }
+
+  /*
+  .default .map-detail-chamber .default-list-wrapper.has-text .oc-textview-title > .item-text {
+      white-space: nowrap;
+      max-width: 546px;
+      overflow: hidden;
+      display: block;
+  }
+  */
+
+  /* override: remove rule */
+  .oc-list-view-container.vertical LI:not(:last-child) {
+    background-image: none;
+  }
+
+  /* map layout */
+
+  .map {
+    position: absolute;
+    top: 0px;
+    left: 58px;
+    width: 742px;
+    height: 130px;
+  }
+
+}

@@ -1,0 +1,131 @@
+/***************************************************
+OPENCAR SIMULATOR BEZEL-CONTROL PLUGIN
+
+Required files for a complete Bezel-Control Simulator plugin:
+bezel-controls.html 
+bezel-controls.css
+bezel-controls.js
+plugin.json
+***************************************************/
+
+#bezel-buttons {
+    width: 1024px; /* overriding the width of the bezel buttons container to pull them in closer to the screen */
+}     
+.bezel-side-buttons {
+    position: absolute;
+    margin: 0 auto;
+	top: 200px;
+	width: 105px; height: 300px;
+	background: url(img/oxygen-blue-side-buttons.png) no-repeat left center;
+	background-size: 210px 300px;
+}
+#bezel-buttons-left { left: 0; }
+#bezel-buttons-right { right: 0; background-position-x: right; }
+.bezel-side-buttons a {
+    background-color: transparent;
+	display: block;
+	width: 100px; height: 95px;
+	position: absolute;
+	text-align: center;
+	line-height: 95px;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 7px;
+    font-size:16px;
+    color:rgb(38,147,255);
+    text-shadow:0px 0px 20px rgba(38,201,255,0.8);
+    -webkit-text-stroke:1px rgba(255,255,255,.2); 
+}
+.bezel-side-buttons a:hover { background: rgba(255,255,255,0.1); }
+#bezel-buttons-left a { left: 4px; text-indent: -5px; }
+#bezel-buttons-right a { right: 4px; text-indent: 5px; }
+#side-button-1 { top: 2px; }
+#side-button-2 { top: 101px; }
+#side-button-3 { top: 200px; }
+#side-button-4 { top: 2px; }
+#side-button-5 { top: 101px; }
+#side-button-6 { top: 200px; }
+
+/* bottom buttons */
+#oxygen-blue-bottom-buttons {
+    position: absolute;
+    top: 641px; left: 5px;
+    background: url(img/oxygen-blue-bottom-buttons.png) no-repeat;
+    background-size: 1014px 104px;
+    width: 1014px; height: 104px;
+    margin: 0 auto;
+}
+#oxygen-blue-bottom-buttons a {
+    display: block;
+    width: 165px; height: 86px;
+    position: absolute;
+    top: 8px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 73px;
+    font-size: 22px;
+    font-weight: 600;
+    color:rgb(38,147,255);
+    text-shadow:0px 0px 20px rgba(38,201,255,0.8);
+    -webkit-text-stroke:1px rgba(255,255,255,.2); 
+}
+#oxygen-blue-bottom-buttons a.ui-state-focus { background: transparent; }
+#oxygen-blue-bottom-buttons a:hover { background: rgba(255,255,255,0.1); }
+#bottom-button-1 { left: 9px; }
+#bottom-button-2 { left: 177px; }
+#bottom-button-3 { left: 343px; }
+#bottom-button-4 { left: 509px; }
+#bottom-button-5 { left: 674px; }
+#bottom-button-6 { left: 841px; }
+
+/**************************************************
+THE OPENCAR SIMULATOR:
+This will help you to understand how the OpenCar Simulator is constructed and where Simulator plugins are loaded.
+---------------------------------------------------------------------------------------------
+|  OpenCar                                           |  Launch App  |  Program Picker   |   |
+---------------------------------------------------------------------------------------------
+|                                                                   |                   |   |
+|                                                                   |                   |   |
+|         -------------------------------------------------         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |  Vehicle Data     |   |
+|         |                                               |         |  plugin type      |   |
+|         |                                               |         |  defines what     |   |
+|         |                                               |         |  loads here       |   |
+|         |                                               |         |                   |   |
+|         |                     #screen                   |         |                   |   |
+|         |                                               |         |     TMX icons --\>|   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                     ------------------  |                   |   |
+|         |                                     |                |  |                   |   |
+|         |                                     |                |  |                   |   |
+|         --------------------------------------|     Floater    |  |                   |---|
+|                                               |     Control    |  |  Bezel & Floater  |   |
+|                                               |                |  |  control icons    |   |
+|    #bezel                                     |                |  |     load here --\>|   |
+|    Bezel Controls                             |                |  |                   |   |
+|                                               ------------------  |                   |   |
+|                                                                   |                   |   |
+---------------------------------------------------------------------------------------------
+|    Drive Play files load here                                     |         Legal         |
+---------------------------------------------------------------------------------------------
+
+SIMULATOR PLUGIN TYPES:
+
+Bezel-Art
+A bezel-art plugin defines the art surrounding the IVI #screen.
+
+Vehicle-Data
+Telematics data that defines what events load in the Simulators telematics sidebar.
+
+Bezel-Controls
+Your playground for adding emulated hardware controls/buttons that surround the screen.
+
+Floater-Controls
+Floating dialogs that contain emulated hardware controls/buttons.  
+
+Drive-Play
+Real-world data captured (telematics and video) and played back to simulate real-time telematics events.
+***************************************************/

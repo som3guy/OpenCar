@@ -1,0 +1,7 @@
+{
+    "uid":"oxygen-tmx",
+    "display": "OpenCar Oxygen Simulator Parts",
+    "types": ["vehicle-data"],
+    "frameworkVersion": "1.6",
+    "projectVersion": "1.0"
+}

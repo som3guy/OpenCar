@@ -1,0 +1,112 @@
+<!-- **************************************************
+OPENCAR SIMULATOR FLOATER-CONTROL PLUGIN
+
+Required files for a complete Floater-Control Simulator plugin:
+floater-controls.html 
+floater-controls.css
+floater-controls.js
+plugin.json
+************************************************** -->
+<!-- The following HTML gets injected into the Simulator. -->
+<!-- Start required markup for this floater-control to work properly. -->
+<div id="oxygen-commander" class="control-window floater hide"><!-- These classes are required. Set your own id and apply your artwork to it. -->
+    <div class="floater-icon-bar-bkg"></div>
+    <div class="drag-handle" title="move window">
+        <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+        	<path class="icon-color" d="M 7 21 L 7 24 L 27 24 L 27 21 L 7 21 ZM 7 15 L 7 18 L 27 18 L 27 15 L 7 15 ZM 7 9 L 7 12 L 27 12 L 27 9 L 7 9 Z" fill="#000000"/>
+        </svg>
+    </div>
+    <div class="close-box" title="hide this floater control">
+        <svg viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="33px" height="33px">
+        	<path class="icon-color" d="M 22.2931 8.5 L 16.5 14.2925 L 10.7069 8.5 L 8.5 10.7069 L 14.2925 16.5 L 8.5 22.2931 L 10.7069 24.5 L 16.5 18.7075 L 22.2931 24.5 L 24.5 22.2931 L 18.7075 16.5 L 24.5 10.7069 L 22.2931 8.5 Z" fill="#000000"/>
+        </svg>
+    </div>
+<!-- End required markup for this floater-control to work properly. -->
+    <div id="oxygen-commander-wheel">
+        <div id="oxygen-commander-top"></div>
+        <div id="oxygen-commander-lighting"></div>
+        <div id="oxygen-commander-rotate"></div>
+    </div>
+    <div id="oxygen-commander-buttons">
+        <svg class="oxygen-button" viewBox="0 0 400 400" x="0px" y="0px" width="400px" height="400px">
+        	<path id="oxygen-back-button" class="oxygen-outer-button" d="M 20 220 L 20 369 C 20 376.1714 25.8286 382 33 382 L 200.5 382 L 200.5 334.9925 C 200.0839 334.9969 199.6672 335 199.25 335 C 135.5983 335 84 283.5136 84 220 L 20 220 Z" fill="#ffffff"/>
+            <path id="oxygen-home-button" class="oxygen-outer-button" d="M 200.5 382 L 368.5 382 C 375.6714 382 381.5 376.1714 381.5 369 L 381.5 219 L 314.495 219 L 314.5 220 C 314.5 283.0973 263.5758 334.3237 200.5 334.9925 L 200.5 382 Z" fill="#ffffff"/>
+            <path id="oxygen-nav-button" class="oxygen-outer-button" d="M 33 18.5 C 25.8286 18.5 20 24.3286 20 31.5 L 20 219.5 L 84 219.5 C 84.173 178.94 105.3895 143.3362 137.3175 122.9975 L 118.7125 18.5 L 33 18.5 Z" fill="#ffffff"/>
+            <path id="oxygen-apps-button" class="oxygen-outer-button" d="M 280.6675 18.5 L 120.3275 18.5 L 137.645 122.79 C 155.464 111.523 176.5934 105 199.25 105 C 222.5936 105 244.3168 111.9243 262.4675 123.8275 L 280.6675 18.5 Z" fill="#ffffff"/>
+            <path id="oxygen-music-button" class="oxygen-outer-button" d="M 381.5 219 L 381.5 31.5 C 381.5 24.3286 375.6714 18.5 368.5 18.5 L 280.5825 18.5 L 262.9125 124.12 C 293.7456 144.5444 314.1569 179.3832 314.495 219 L 381.5 219 Z" fill="#ffffff"/>
+        </svg>
+        <svg id="oxygen-commander-overlay" class="oxygen-button" viewBox="0 0 195 144" width="195px" height="144px">
+        	<defs>
+        		<linearGradient id="gradient1" x1="50%" y1="0%" x2="50%" y2="100%">
+        			<stop stop-color="#ffffff" stop-opacity="1" offset="0%"/>
+        			<stop stop-color="#ffffff" stop-opacity="1" offset="18.1818%"/>
+        			<stop stop-color="#ffffff" stop-opacity="0.2" offset="100%"/>
+        		</linearGradient>
+        		<linearGradient id="gradient2" x1="50%" y1="0%" x2="50%" y2="100%">
+        			<stop stop-color="#ffffff" stop-opacity="1" offset="0%"/>
+        			<stop stop-color="#ffffff" stop-opacity="1" offset="18.1818%"/>
+        			<stop stop-color="#ffffff" stop-opacity="0.2" offset="100%"/>
+        		</linearGradient>
+        	</defs>
+        	<path id="oxygen-down-button" class="oxygen-center-button" d="M 51.2038 123.8699 C 50.6774 124.3968 50.6954 125.232 51.2544 125.7237 C 63.5208 136.5154 79.513 143.1649 97.051 143.4897 C 97.7952 143.5034 99.0019 143.5034 99.7459 143.4897 C 117.3782 143.1633 133.4475 136.444 145.7394 125.5497 C 146.2965 125.056 146.3131 124.2192 145.7867 123.6923 L 128.9229 106.8118 C 128.3966 106.2849 127.517 106.2571 126.9424 106.7307 C 119.504 112.8616 110.0612 116.6459 99.7463 116.95 C 99.0022 116.972 97.7951 116.972 97.0511 116.95 C 86.8301 116.6487 77.4666 112.9305 70.0598 106.8978 C 69.4825 106.4276 68.6006 106.458 68.0742 106.9849 L 51.2038 123.8699 Z" fill="#ffffff"/>
+        	<path id="oxygen-up-button" class="oxygen-center-button" d="M 146.445 20.9214 C 146.9713 20.3946 146.9599 19.5523 146.4089 19.0516 C 134.0339 7.8045 117.6999 0.8428 99.7464 0.5103 C 99.0021 0.4965 97.7953 0.4965 97.0512 0.5103 C 79.1916 0.841 62.9343 7.7317 50.5829 18.8751 C 50.0299 19.374 50.0169 20.2148 50.5433 20.7416 L 67.398 37.611 C 67.9244 38.1378 68.7983 38.1592 69.3661 37.6776 C 76.8778 31.3064 86.5086 27.3608 97.0509 27.05 C 97.795 27.028 99.0022 27.028 99.7461 27.0499 C 110.3822 27.3634 120.0913 31.3758 127.6317 37.847 C 128.1967 38.332 129.0683 38.3132 129.5946 37.7864 L 146.445 20.9214 Z" fill="#ffffff"/>
+        	<path id="oxygen-left-button" class="oxygen-center-button" d="M 26.971 70.6515 C 26.9572 71.3962 26.9572 72.6038 26.971 73.3485 C 27.3031 91.3175 34.259 107.6661 45.4962 120.052 C 45.9965 120.6035 46.838 120.6149 47.3643 120.0881 L 64.2169 103.2209 C 64.7433 102.694 64.7621 101.8218 64.2776 101.2563 C 57.8117 93.7096 53.8009 83.9939 53.4876 73.3486 C 53.4657 72.604 53.4657 71.3959 53.4876 70.6512 C 53.7915 60.3273 57.5724 50.8764 63.6979 43.4315 C 64.1711 42.8564 64.1434 41.976 63.617 41.4492 L 46.7512 24.5707 C 46.2248 24.0439 45.3887 24.0605 44.8953 24.6181 C 34.0105 36.9207 27.297 53.0039 26.971 70.6515 Z" fill="#ffffff"/>
+        	<path id="oxygen-right-button" class="oxygen-center-button" d="M 149.6125 119.8969 C 150.1389 120.4237 150.9789 120.4107 151.4773 119.8574 C 162.6111 107.4952 169.4958 91.2238 169.8263 73.3487 C 169.84 72.6039 169.84 71.396 169.8263 70.6511 C 169.5018 53.0978 162.8582 37.0918 152.0758 24.8148 C 151.5844 24.2554 150.75 24.2373 150.2237 24.7641 L 133.3553 41.647 C 132.829 42.1739 132.7987 43.0565 133.2685 43.6344 C 139.2956 51.048 143.0087 60.4212 143.3097 70.6513 C 143.3316 71.3959 143.3316 72.6041 143.3097 73.3488 C 142.9991 83.9003 139.057 93.5394 132.6914 101.0575 C 132.2101 101.626 132.2314 102.5007 132.7578 103.0275 L 149.6125 119.8969 Z" fill="#ffffff"/>
+        	<path id="oxygen-middle-button" class="oxygen-center-button" d="M 57.9608 72 C 57.9608 49.6471 76.0651 31.5271 98.3986 31.5271 C 120.7321 31.5271 138.8364 49.6471 138.8364 72 C 138.8364 94.3529 120.7321 112.4729 98.3986 112.4729 C 76.0651 112.4729 57.9608 94.3529 57.9608 72 Z" fill="#ffffff"/>
+        	<path id="oxygen-counter-button" class="oxygen-rotate-button" d="M 169.1063 137.8763 C 185.1715 120.6107 195 97.4548 195 72 C 195 46.6736 185.2704 23.622 169.3489 6.3844 L 174.3318 1.3973 L 152.765 1.3973 L 152.765 22.9828 L 157.9005 17.8427 C 170.9001 32.1415 178.8249 51.144 178.8249 72 C 178.8249 93.0829 170.7261 112.2719 157.4737 126.6226 L 169.1063 137.8763 Z" fill="url(#gradient1)"/>
+        	<path id="oxygen-clockwise-button" class="oxygen-rotate-button" d="M 0 72 C 0 97.4689 9.8395 120.6368 25.9206 137.9055 L 26.0599 137.656 L 36.8433 126.4135 L 37.333 126.4135 C 24.1949 112.0858 16.1751 92.9804 16.1751 72 C 16.1751 51.2587 24.0133 32.3504 36.886 18.0788 L 41.7857 22.9828 L 41.7857 1.3973 L 20.2189 1.3973 L 25.4353 6.6183 C 9.6414 23.8302 0 46.7879 0 72 Z" fill="url(#gradient2)"/>
+        </svg>
+    </div>
+</div>
+<!-- /end oxygen-commander -->
+<!-- **************************************************
+THE OPENCAR SIMULATOR:
+This will help you to understand how the OpenCar Simulator is constructed and where Simulator plugins are loaded.
+---------------------------------------------------------------------------------------------
+|  OpenCar                                           |  Launch App  |  Program Picker   |   |
+---------------------------------------------------------------------------------------------
+|                                                                   |                   |   |
+|                                                                   |                   |   |
+|         -------------------------------------------------         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |  Vehicle Data     |   |
+|         |                                               |         |  plugin type      |   |
+|         |                                               |         |  defines what     |   |
+|         |                                               |         |  loads here       |   |
+|         |                                               |         |                   |   |
+|         |                     #screen                   |         |                   |   |
+|         |                                               |         |     TMX icons --\>|   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                               |         |                   |   |
+|         |                                     ------------------  |                   |   |
+|         |                                     |                |  |                   |   |
+|         |                                     |                |  |                   |   |
+|         --------------------------------------|     Floater    |  |                   |---|
+|                                               |     Control    |  |  Bezel & Floater  |   |
+|                                               |                |  |  control icons    |   |
+|    #bezel                                     |                |  |     load here --\>|   |
+|    Bezel Controls                             |                |  |                   |   |
+|                                               ------------------  |                   |   |
+|                                                                   |                   |   |
+---------------------------------------------------------------------------------------------
+|    Drive Play files load here                                     |         Legal         |
+---------------------------------------------------------------------------------------------
+
+SIMULATOR PLUGIN TYPES:
+
+Bezel-Art
+A bezel-art plugin defines the art surrounding the IVI #screen.
+
+Vehicle-Data
+Telematics data that defines what events load in the Simulators telematics sidebar.
+
+Bezel-Controls
+Your playground for adding emulated hardware controls/buttons that surround the screen.
+
+Floater-Controls
+Floating dialogs that contain emulated hardware controls/buttons.  
+
+Drive-Play
+Real-world data captured (telematics and video) and played back to simulate real-time telematics events.
+************************************************** -->

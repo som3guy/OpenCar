@@ -1,0 +1,61 @@
+@import "base";
+@import "compass/css3/border-radius";
+/* Button Styles */
+
+.#{$theme}{
+    %oc-button {
+        padding: 0 12px;
+        display: inline-block;
+        line-height: 70px;
+        font-size: $item-text-font-size;
+        font-family: $font-family-regular;
+        color: $color;
+        text-shadow: 0px 2px 0 rgba(0,0,0,.6);
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.65);
+        border:none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: linear-gradient(to bottom,  #8c8b8d 0%, #4c4b4d 100%);
+    }
+
+  [data-oc-control="Button"], .oc-normal-button, [is="oc-button"] {
+      @extend %oc-button;
+      &.oc-down-state,
+      &.oc-pressed {
+        opacity: .8;
+      }
+      &.oc-button-green,
+      &.oc-button-positive,
+      &.oc-confirm-button,
+      &.toggled {
+        background: linear-gradient(to bottom,  #85b452 0%, #49742c 100%);
+      }
+      &.oc-button-red,
+      &.oc-button-negative,
+      &.oc-decline-button {
+        border-color: #931f1f;
+        background: linear-gradient(to bottom,  #c94f4f 0%, #9b2b2b 100%);
+      }
+      &.oc-button-blue {
+        background: linear-gradient(#599BDC, #3072B3);
+        color: $color;
+      }
+      &:hover:not(:disabled),
+      &:focus:not(:disabled),
+      &.focused {
+        color: $color;
+        -webkit-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+        -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+        box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      }
+      &.toggled {
+          opacity: 1;
+      }
+  }
+  *:disabled, .oc-disabled {
+      opacity: 0.5;
+      text-shadow: none;
+      box-shadow: none;
+  }
+
+}

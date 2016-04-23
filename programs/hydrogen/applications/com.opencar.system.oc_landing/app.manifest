@@ -1,0 +1,47 @@
+{
+    "id"                : "com.opencar.system.oc_landing",
+    "name"              : "Landing Page",
+    "css"               : [ "css/appstyle.css", "screen/install/options/options.css" ],
+    "controller"        : "controller.js",
+    "permissions"       : ["application-management", "unstoppable", "query-registry", "load-registry", "SystemInformation.ALWAYS", "Install.ALWAYS", "VehicleLocation.ALWAYS"],
+    "view"              : "view.js",
+    "isSystem"          : true,
+    "version"           : "2.1.0",
+    "otaUrl"            : "https://ota-target-prod.opencar.com",
+    "defaultSettings" : {
+        "autoInstall" : true,
+        "autoUpdate" : true
+    },
+    "screens"     : [
+        {
+            "id"        : "menu-screen",
+            "chambers"  : [
+              {
+                  "id"        : "menu",
+                  "js"        : "Menu.js",
+                  "autorun"   : true,
+                  "focus"     : true
+              }
+            ]
+        },
+          {
+            "id"        :  "settings-screen",
+            "chambers"  : [
+              {
+                "id"      : "settings",
+                "js"      : "screen/main/Settings.js"
+              }
+            ]
+          },
+          {
+            "id"        :  "options-screen",
+            "chambers"  : [
+              {
+                "id"      : "options",
+                "js"      : "screen/install/options/Options.js",
+                "template": "screen/install/options/options.html"
+              }
+            ]
+          }
+    ]
+}

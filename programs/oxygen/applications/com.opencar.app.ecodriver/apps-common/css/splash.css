@@ -1,0 +1,29 @@
+.default .oc-app-splash button[data-oc-control="Button"]:not(.no-style) {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    width: 663px;
+    margin-left: -322px;
+    height: 80px;
+    border: none;
+    background: url(../images/splash-button.png) transparent 0 -90px no-repeat;
+    font-family: Tipperary, Corbel, Helvetica, Arial, sans-serif;
+    font-size: 38px;
+    color: rgb(255,255,255);
+    text-shadow: 1px 1px 0px rgb(0,0,0);
+}
+.default .oc-app-splash button[data-oc-control="Button"]:not(.no-style):hover {
+    background-position: 0 -178px !important;
+}
+.default .oc-app-splash button[data-oc-control="Button"]:not(.no-style):active {
+    background: url(../images/splash-button.png) transparent 0 0 no-repeat !important;
+}
+.oc-app-splash-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 8000;
+}
+.default .oc-app-splash-container .oc-app-splash{
+    background-color: transparent;
+}

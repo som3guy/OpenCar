@@ -1,0 +1,22 @@
+{
+    "id"          : "com.opencar.system.installed-applications",
+    "name"        : "Home",
+    "css"         : [ "screen/main/menu.css", "screen/install/detail/detail.css", "screen/install/options/options.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "permissions" : ["application-management", "unstoppable", "query-registry", "load-registry", "SystemInformation.ALWAYS", "Install.ALWAYS", "VehicleLocation.ALWAYS"],
+    "isSystem"    : true,
+    "screens"     : "screens.json",
+    "categoryId"  : "INFO",
+    "date"        : "2016-02-17",
+    "version"     : "2.1.0",
+
+    "versionForm" : "long",
+    "otaUrl"      : "https://ota-target-prod.opencar.com",
+
+    "defaultSettings" : {
+        "autoInstall" : false,
+        "autoUpdate" : false
+    }
+
+}

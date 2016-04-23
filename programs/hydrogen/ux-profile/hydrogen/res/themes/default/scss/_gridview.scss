@@ -1,0 +1,131 @@
+@import "base";
+/* Grid View */
+
+.#{$theme}{
+    .oc-list-view-container.vertical ul.oc-list-view.grid li .item-icon + .item-text{
+        left: 0px;
+    }
+    .oc-list-view-container.vertical.grid-container{
+        margin: 0;
+    }
+    .oc-list-view-container.vertical.grid-container.fancy{
+        width: 100%;
+        white-space: normal;
+        overflow: visible;
+        margin: 0 auto;
+    }
+
+    .oc-list-view-container.vertical ul.oc-list-view.grid li {
+        padding-left: 0px;
+        padding-right: 0px;
+        color: #2c89ff;
+    }
+    .oc-list-view-container.vertical.grid-container.fancy ul.oc-list-view.grid{
+        text-align: center;
+    }
+
+    .oc-list-view-container.vertical.grid-container.fancy ul.oc-list-view.grid li.oc-listitemview
+    {
+        display: inline-block;
+        width: 200px;
+        min-width: 200px;
+        display: inline-block;
+        height: 200px;
+        margin: 0 20px 0 20px;
+    }
+    .default-list-wrapper .oc-list-view-container:not(.fancy){
+        z-index: 8;
+//        border-left: 2px solid $regular;
+        left: $list-with-title-left-offset;
+//        width: 742px;
+        width: inherit;
+        max-width: 742px;
+    }
+
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview
+    {
+        display: inline-block;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        overflow: visible;
+        margin: 33px;
+    }
+
+    .oc-list-view-container.vertical.grid-container.fancy ul.oc-list-view.grid li.oc-listitemview .item-text{
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: -15px;
+        text-align: center;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview .item-text{
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: -62px;
+        text-align: center;
+        font-size: 27px;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview.oc-transient-top-list-style .item-text{
+        opacity: 0;
+        -webkit-transition: opacity 0.8s cubic-bezier(0.08, 0.905, 0.04, 0.995);
+        font-size: 42px;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview .item-icon{
+        display: block;
+        position: absolute;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview.oc-transient-top-list-style .item-icon{
+        opacity: 0;
+    }
+    .oc-list-view-container.vertical.grid-container.fancy ul.oc-list-view.grid li.oc-listitemview .item-icon{
+        width: 100px;
+        height: 100px;
+        left: 10px;
+        top: 10px;
+        -webkit-transform: translateX(40px) translateY(25px);
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview .item-icon{
+        width: 75px;
+        height: 75px;
+        left: 15px;
+        top: 11px;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview.oc-transient-top-list-style .item-icon{
+        width: 0px;
+        height: 0px;
+        -webkit-transform: translateX(85px) translateY(90px);
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview.oc-transient-top-list-style .item-icon.full{
+        width: 120px;
+        height: 120px;
+        left: 0px;
+        top: 0px;
+    }
+    .oc-list-view-container.vertical ul.oc-list-view.grid li.oc-listitemview.oc-transient-top-list-style .item-icon{
+        left: -27px;
+        top: -7px;
+    }
+    .oc-list-view-container.vertical:focus ul.oc-list-view.grid li.selected:before{
+        background: rgba(44, 137, 255, 0.5);
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        top: 0;
+    }
+    .oc-list-view-container.vertical.grid-container.fancy:focus ul.oc-list-view.grid li.selected:before{
+        background: rgba(44, 137, 255, 0.5);
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        -webkit-border-radius: 10px;
+        left: 50%;
+        top: 50%;
+        margin-left: -60px;
+        margin-top: -75px;
+    }
+}

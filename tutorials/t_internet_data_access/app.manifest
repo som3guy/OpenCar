@@ -1,0 +1,12 @@
+{
+    "id"          : "com.opencar.sdk.tutorial.internet_data_access",
+    "name"        : "Tutorial Internet Data Access",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [ ],
+    "categoryId"  : "EXAMPLE",
+    "date"        : "2015-11-14",
+    "version"     : "1.0.0"
+}

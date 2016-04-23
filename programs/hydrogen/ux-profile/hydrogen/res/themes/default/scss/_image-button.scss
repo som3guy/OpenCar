@@ -1,0 +1,44 @@
+/**
+ *     IMAGE BUTTON
+ */
+.oc-button-image {
+	display: inline-flex;
+	&.oc-button-image-left {
+		align-items: center;
+		.oc-button-image-label {
+			order: 1;
+		}
+		.oc-button-image-container {
+			order: 0;
+		}
+	}
+	&.oc-button-image-right {
+		align-items: center;
+		.oc-button-image-label {
+			order: 0;
+		}
+		.oc-button-image-container {
+			order: 1;
+		}	
+	}
+	&.oc-button-image-bottom {
+		align-items: center;
+		flex-flow: column;
+		.oc-button-image-label {
+			order: 0;
+		}
+		.oc-button-image-container {
+			order: 1;
+		}
+	}
+	&.oc-button-image-top {		
+		align-items: center;
+		flex-flow: column;
+		.oc-button-image-label {
+			order: 1;
+		}
+		.oc-button-image-container {
+			order: 0;
+		}
+	}
+}

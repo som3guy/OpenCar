@@ -1,0 +1,75 @@
+@import "../scss/base";
+/***********************************************
+
+	Activity Indicator
+
+************************************************/
+
+.#{$theme}{
+  .oc-progress-spinner,
+  .oc-progress-spinner span {
+      display: block;
+      padding: 0;
+      margin: 0;
+  }
+
+  .oc-progress-spinner {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      font-family: ding;
+      margin: 168px auto;
+  }
+
+  .oc-progress-spinner.small{
+    width: 40px;
+    height: 40px;
+  }
+
+  .oc-progress-spinner > div {
+      display: inline-block;
+      height: 80px;
+      left: 0;
+      position: absolute;
+      top: 0;
+  }
+
+  .oc-progress-spinner .bar {
+      -webkit-animation: pulse 2s infinite cubic-bezier(.76, .05, .73, .95);
+      opacity: 0.2;
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 0px 0px 15px #91bef4;
+      line-height: 0px;
+      position: absolute;
+  }
+
+  .oc-progress-spinner.small .bar {
+    font-size: 17px;
+  }
+
+  /* Transforms */
+  .oc-progress-spinner .bar:nth-child(1),
+  .oc-progress-spinner.small .bar:nth-child(1) {-webkit-transform: translate(1px, 18px);}
+
+  .oc-progress-spinner .bar:nth-child(2),
+  .oc-progress-spinner.small .bar:nth-child(2) {-webkit-transform: rotateY(180deg) translate(-42px, 18px); -webkit-animation-delay: 0.5s;}
+
+  .oc-progress-spinner .bar:nth-child(3),
+  .oc-progress-spinner.small .bar:nth-child(3) {-webkit-transform: rotateX(180deg) rotateY(180deg) translate(-42px, -72px); -webkit-animation-delay: 1s;}
+
+  .oc-progress-spinner .bar:nth-child(4),
+  .oc-progress-spinner.small .bar:nth-child(4) {-webkit-transform: rotateX(180deg) translate(1px, -72px); -webkit-animation-delay: 1.5s;}
+
+  .oc-progress-spinner.small .bar:nth-child(1) {-webkit-transform: translate(0px, 0px);}
+  .oc-progress-spinner.small .bar:nth-child(2) {-webkit-transform: rotateY(180deg) translate(-19px, 0px);}
+  .oc-progress-spinner.small .bar:nth-child(3) {-webkit-transform: rotateX(180deg) rotateY(180deg) translate(-19px, -23px);}
+  .oc-progress-spinner.small .bar:nth-child(4) {-webkit-transform: rotateX(180deg) translate(0px, -23px);}
+}
+
+/* Keyframes */
+@-webkit-keyframes pulse {
+    0%, 100%   { opacity: 0.2; }
+    6% { opacity: 0.9; }
+    28% { opacity: 0.2; }
+}

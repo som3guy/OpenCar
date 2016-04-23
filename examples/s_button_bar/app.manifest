@@ -1,0 +1,9 @@
+{
+    "id"         : "com.opencar.sdk.sample.button_bar",
+    "name"       : "Sample Button Bar",
+    "css"        : [ "css/style.css" ],
+    "view"       : "view.js",
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

@@ -1,0 +1,24 @@
+.default .oc-dialog{
+    margin-top: -50px;
+    background: rgba(0,0,0,0.7);
+    border: 3px solid #a6a6a6;
+}
+.default .oc-dialog-button-container button[data-oc-control="Button"]:not(:disabled):not(.no-style){
+    width: 243px;
+    height: 74px;
+    background-image: url(../images/button.png);
+    opacity: 0.4;
+}
+.default .oc-dialog-button-container button[data-oc-control="Button"]:hover:not(:disabled):not(.no-style),
+.default .oc-dialog-button-container button[data-oc-control="Button"]:focus:not(:disabled):not(.no-style){
+    opacity: 1;
+}
+.default .oc-dialog h1.oc-dialog-title{
+    display: table;
+    width: 100%;
+    height: 250px;
+}
+.default .oc-dialog h1.oc-dialog-title .oc-textview{
+    display: table-cell;
+    vertical-align: middle;
+}

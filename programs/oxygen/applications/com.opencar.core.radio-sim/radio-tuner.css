@@ -1,0 +1,19 @@
+#button-audio-settings-back {
+    margin-top: 50px;
+}
+
+#audio-settings-container-main {
+    margin: 20px;
+}
+
+#slider-volume {
+    margin-top: 20px;
+}
+
+#audio-settings-container-mute {
+    margin-top: 50px;
+}
+
+#checkbox-mute {
+    margin-left: 20px;
+}

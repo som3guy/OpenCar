@@ -1,0 +1,21 @@
+{
+    "id"         : "com.opencar.dev.tutorial.list_8_reset",
+    "name"       : "Tutorial List 8 - Reset",
+    "view"       : "view.js",
+    "screens"    : [
+        {
+            "id"        : "screen1",
+            "chambers"  : [
+                {
+                    "id"        : "chamber1",
+                    "js"        : "modules/Chamber1.js",
+                    "autorun"   : true,
+                    "focus"     : true
+                }
+            ]
+        }
+    ],
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

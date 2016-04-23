@@ -1,0 +1,13 @@
+@import "base";
+
+.#{$theme}{
+    color: $color;
+    font-family: $font-family-light;
+    font-size: $minimum-font-size;
+    margin: 0;
+    -webkit-transform: translate(0, 0) scale(1, 1);
+}
+
+p div span {
+  margin:0;
+}

@@ -1,0 +1,16 @@
+{
+    "usesCustomFetchFunctions"  : false,
+    "usesJsonResponseParsing"   : false,
+    "usesXmlResponseParsing"    : false,
+    "handlesICYMetadata"        : false,
+    "hasCustomButtons"          : false,
+    "hasStartChoiceModule"      : false,
+    
+    "singleStreamStart" : {
+        "text" : "WRIFF",
+        "stationName" : "WRIFF",
+        "trackUrl" : "http://15133.live.streamtheworld.com/WRIFFMMOBILE.mp3",
+        "trackTitle" : "Detroit's Rock Radio"
+    }
+    
+}

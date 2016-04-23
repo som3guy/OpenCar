@@ -1,0 +1,18 @@
+Package: com.opencar.poi.dev.maps-example-with-plugins
+Version: 2.0.115.2457420.2329861
+Status: install user installed
+Architecture: all
+Installed-Time: 1461248179
+
+Package: com.opencar.core.phone
+Version: 2.0.116.2457420.2315394
+Status: install user installed
+Architecture: all
+Installed-Time: 1461248181
+
+Package: com.opencar.system.about
+Version: 2.0.114.2457420.2333912
+Status: install user installed
+Architecture: all
+Installed-Time: 1461248179
+

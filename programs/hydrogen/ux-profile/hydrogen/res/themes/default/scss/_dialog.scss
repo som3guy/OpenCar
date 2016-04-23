@@ -1,0 +1,164 @@
+@import "base";
+@import "susy";
+@import "box-sizing";
+
+/* Dialog and Toast Styles */
+@-webkit-keyframes infinite-spinning {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.#{$theme} {
+    @import '../../../../../../../src/common/templates/dialog/dialog';
+
+    .favorites-dialog .oc-dialog-button-container{
+        display: flex;
+        padding: 10px;
+    }
+    .favorites-dialog [data-oc-control="Button"]{
+        flex: 1 1 auto;
+        margin: 8px;
+        font-size: 27px;
+    }
+    .favorites-dialog .oc-dialog-title{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    [data-oc-control="Button"]:focus .oc-countdown-spinner:before{
+        background: url(../../images/hydrogen-button-ring-highlight.png) no-repeat;
+    }
+    .oc-countdown-spinner:before{
+        content: "";
+        background: url(../../images/hydrogen-button-ring.png) no-repeat;
+        -webkit-animation: infinite-spinning 1s infinite;
+    }
+    .oc-countdown-spinner {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        position: relative;
+    }
+    .oc-countdown-spinner:before{
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        position: absolute;
+        left: 0;
+    }
+
+
+    .oc-dialog,
+    .oc-dialog-modal-overlay {
+        position: absolute;
+        //visibility: hidden;
+        display: none;
+        @include box-sizing(border-box);
+    }
+
+    /* Dialog */
+
+    .oc-dialog-title{
+        margin: 0;
+    }
+    .oc-dialog-title img {
+        width: 64px;
+        height: 64px;
+        margin-right: 10px;
+    }
+    .oc-dialog-title span{
+        font-size: $minimum-font-size;
+        font-family: $font-family-regular;
+        font-weight: normal;
+        position: relative;
+        top: -18px;
+    }
+    .oc-dialog-content {
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+
+    .oc-dialog .oc-dialog-button-close,
+    .oc-dialog .oc-dialog-button-close:hover,
+    .oc-dialog .oc-dialog-button-close:focus {
+        box-shadow: none;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 0 6px;
+        text-align: center;
+        font-size: 10px;
+        line-height: 18px;
+        height: 20px;
+        font-weight: normal;
+        border-radius: 10px;
+        border: none;
+        background: transparent;
+    }
+
+    .oc-dialog-modal-overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+        z-index: 10500;
+    }
+
+    .oc-dialog-button-container,
+    .oc-dialog-button-container li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .oc-dialog-button-container {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .oc-dialog-button-container li {
+        margin: 0 5px;
+        display: inline-block;
+    }
+
+    .oc-dialog-button-container li:first-child {
+        margin-left: 0;
+    }
+
+    .oc-dialog-button-container li:last-child {
+        margin-right: 0;
+    }
+
+    .oc-dialog-button-container button .item-text {
+        @extend %no-wrap;
+    }
+
+
+
+
+    //.oc-dialog-button-container.footer_2 button:first-child{
+    //    @include span(1 of 2);
+    //}
+    //.oc-dialog-button-container.footer_2 button:last-child {
+    //    @include span(1 of 2 last);
+    //}
+
+    .oc-dialog .progress-bar {
+        margin-top: 10px;
+        height: 16px
+    }
+    .oc-dialog .progress-bar .progress{
+        height: 100%; background: $active;
+    }
+}
+

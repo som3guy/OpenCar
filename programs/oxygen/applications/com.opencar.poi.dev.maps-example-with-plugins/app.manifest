@@ -1,0 +1,22 @@
+{
+    "id"          : "com.opencar.poi.dev.maps-example-with-plugins",
+    "name"        : "Google Maps",
+    "css"         : [ "styles.css" ],
+    "controller"  : [ "app.js" ],
+    "view"        : [ "view.js" ],
+    "categoryId"  : "NAVIGATION",
+    "permissions" : [ "Telematics.WHEN_ACTIVE", "GPSLocationSupplier.WHEN_ACTIVE" ],
+    "extensions"  : [
+        {
+            "name"  : "Navigate to...",
+            "id"    : "oc-locations-navigateTo"
+        },
+        {
+            "name"  : "Show all...",
+            "id"    : "oc-locations-showAll"
+        }
+    ],
+    "screens"    : "screens.json",
+    "date"        : "2014-02-01",
+    "version"     : "1.0.0"
+}

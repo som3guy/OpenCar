@@ -1,0 +1,10 @@
+Package: com.opencar.system.about
+Version: 2.0.114.2457420.2333912
+Description: Description goes here.
+Section: media
+Priority: optional
+Maintainer: OpenCar
+Architecture: all
+Homepage: http://www.opencar.com/
+Source:
+Depends:

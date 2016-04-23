@@ -1,0 +1,52 @@
+
+.opt-info {
+    font-size: 22px;
+    line-height: 25px;
+    height: 25px;
+    padding: 0px;
+    margin: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-after-overflow: ellipsis;
+}
+
+/* Take this out for now */
+#opt-cb-enable {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    visibility: hidden;
+}
+#opt-cb-install {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+#opt-cb-update {
+    position: absolute;
+    left: 80px;
+    top: 45px;
+}
+#opt-check-container {
+    position: absolute;
+    left: 30px;
+    top: 85px;
+}
+
+#opt-errcheck-container {
+    position: absolute;
+    left: 30px;
+    top: 130px;
+}
+
+#opt-btn-edit {
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+#opt-btn-erredit {
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+}

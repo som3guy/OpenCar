@@ -1,0 +1,26 @@
+{
+  "vehicle": {
+      "model": "Mazda3",
+      "year": "2014",
+      "VIN": "JM1BM1M34F1227489"
+
+  },
+  "drive": {
+      "date": "2014-12-30T18:56:00Z",
+      "locationName": "Mercer Island",
+      "distance": 3,
+      "duration": 442123,
+      "dataFile": "Demo.csv",
+      "video": "Demo.mp4",
+	"dimension" : {
+		"width": 1920,
+		"height": 1080
+	}
+  },
+  "info": {
+      "title": "Demo Drive",
+      "image": "Demo.png",
+      "description": "Sunny day on Mercer Island lakefront drive."
+  }
+}
+

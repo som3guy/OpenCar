@@ -1,0 +1,11 @@
+{
+    "id"          : "sdk.user.wriff",
+    "name"        : "WRIFF",
+    "view"        : "$TEMPLATE_PATH/1.1/audio/view.js",
+    "controller"  : "$TEMPLATE_PATH/1.1/audio/controller.js",
+    "categoryId"  : "WORKSPACE",
+    "date"        : "2016-04-23",
+    "version"     : "1.0.0",
+    "permissions" : [ "unstoppable", "AudioMedia.ALWAYS" ],
+    "screens"     : "screens.json"
+}

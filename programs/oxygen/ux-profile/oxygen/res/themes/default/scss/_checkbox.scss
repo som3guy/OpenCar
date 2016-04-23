@@ -1,0 +1,71 @@
+@import "base";
+
+.#{$theme}{
+  .oc-pane.oc-checkbox {
+      width: auto;
+  }
+
+  .oc-pressed{
+      background: none;
+  }
+  .oc-checkbox span{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: transparent;
+      margin: 0px auto;
+      position: relative;
+      border: 1px solid white;
+  }
+
+  .oc-checkbox label {
+      font-size: $item-text-font-size;
+      color: $color;
+  }
+
+  .oc-checkbox span + label{
+      position: relative;
+      left: 8px;
+      top: -2px;
+  }
+
+  .oc-checkbox.oc-pressed span, .oc-checkbox:focus span{
+      -webkit-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-checkbox input[type=checkbox] + label {
+      cursor: pointer;
+      position: absolute;
+      width: 26px;
+      height: 27px;
+      left: 0;
+      top: 0;
+      background: transparent;
+  }
+
+  .oc-checkbox input[type=checkbox] + label:after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: $color;
+
+      top: 5px;
+      left: 5px;
+
+      -webkit-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+  }
+
+  .oc-checkbox input[type=checkbox] + label:hover::after {
+      opacity: 0.3;
+  }
+
+  .oc-checkbox input[type=checkbox]:checked + label:after {
+      opacity: 1;
+  }
+}

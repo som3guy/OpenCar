@@ -1,0 +1,75 @@
+@import "../scss/base";
+
+.#{$theme}{
+    .oc-pressed{
+      background: none;
+    }
+    .oc-radiobutton{
+      margin-right: 10px;
+    }
+    .oc-radiobutton > span{
+      display: inline-block;
+      background: transparent;
+      border: 1px solid white;
+      width: 28px;
+      height: 28px;
+      margin: 0px auto;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      position: relative;
+    }
+
+    .oc-radiobutton span + label{
+      color: $color;
+      font-family: $font-family-light;
+      position: relative;
+      left: 4px;
+      top: -8px;
+    }
+
+    .oc-radiobutton.oc-pressed span label, .oc-radiobutton:focus span{
+      -webkit-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+    }
+
+    .oc-radiobutton input[type=radio] + label {
+      cursor: pointer;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      left: 3px;
+      top: 3px;
+    }
+
+    .oc-radiobutton input[type=radio] + label:after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: $color;
+
+      -webkit-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      -moz-box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+      box-shadow: 0px 1px 8px rgba(190,222,255,0.53), 0px 1px 10px rgba(190,222,255,0.53);
+
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      top: 2px;
+      left: 2px;
+    }
+
+    .oc-radiobutton input[type=radio] + label:hover::after {
+      opacity: 0.3;
+    }
+
+    .oc-radiobutton input[type=radio]:checked + label:after {
+      opacity: 1;
+    }
+}

@@ -1,0 +1,84 @@
+@import "base";
+/* Breadcrumb */
+
+.#{$theme}{
+  .oc-breadcrumb {
+      position: absolute;
+      color: $color;
+      font-family: $font-family-light;
+      top: 0px;
+      left: 0px;
+      font-size: 28px;
+      width: 800px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 10px;
+  }
+
+  .oc-breadcrumb > span, .oc-breadcrumb > oc-text {
+      &.has-text {
+        background: rgba(0,0,0,.3);
+        box-shadow: inset 1px 1px 0 rgba(0,0,0,.15), inset -1px -1px 0 rgba(255,255,255,.15);
+      }
+      border-radius: 10px;
+      float: left;
+      padding: 12px;
+      margin-right: 12px;
+      line-height: 26px;
+      vertical-align: top;
+      // partial fix for breadcrumb length being too long
+      max-width: 410px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  }
+  .oc-breadcrumb.oc-no-title > span {
+      box-shadow: none;
+      background: none;
+  }
+  .oc-breadcrumb.oc-no-title > span > span {
+      box-shadow: inset 1px 1px 0 rgba(0,0,0,.15), inset -1px -1px 0 rgba(255,255,255,.15);
+      background: rgba(0,0,0,.03);
+  }
+
+  .oc-breadcrumb:focus {
+      text-shadow: 0 0 6px $color
+  }
+
+  .oc-breadcrumb-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10000; /* keep on top */
+      width: 800px;
+      height: 70px;
+
+    // when layout breadcrumbs are in effect, they must size the first wrapper DIV that encloses the chamber
+    $breadcrumbLayoutModeContentViewportHeight: 480px; // precise viewport minus header and footer
+    & ~ .oc-screens-wrapper {
+      height: $breadcrumbLayoutModeContentViewportHeight;
+      & > .oc-screen {
+          top: 70px;
+          height: 358px;
+      }
+      & > #map.oc-screen {
+          top: 0;
+          height: 428px;
+      }
+      // for all general list chambers, reset the alpha mask to occupy most of its visible space
+      .oc-list-view-container.vertical.centered {
+        -webkit-mask-size: 100% 115%;
+        -webkit-mask-position:0;
+      }
+
+    }
+
+
+  }
+
+  // Named for oxygen, but actually "lives" in all profiles this is copied to (like the rest of breadcrumbs, normally oxygen only)
+  #oxygen-breadcrumb-clock {
+    display: none;
+  }
+}

@@ -1,0 +1,75 @@
+@import "base";
+
+/* Breadcrumb */
+
+.#{$theme} {
+  .oc-breadcrumb {
+    position: absolute;
+    color: $color;
+    font-family: $font-family-light;
+    top: 12px;
+    left: 12px;
+    font-size: 28px;
+    line-height: 50px;
+    width: 82%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .oc-breadcrumb > span {
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .15), inset -1px -1px 0 rgba(255, 255, 255, .15);
+    background: rgba(0, 0, 0, .02);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 12px;
+    margin-right: 12px;
+    line-height: 26px;
+  }
+  .oc-breadcrumb.oc-no-title > span {
+    box-shadow: none;
+    background: none;
+  }
+  .oc-breadcrumb.oc-no-title > span > span {
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .15), inset -1px -1px 0 rgba(255, 255, 255, .15);
+    background: rgba(0, 0, 0, .02);
+  }
+
+  .oc-breadcrumb:focus {
+    text-shadow: 0 0 6px $color
+  }
+
+  .oc-breadcrumb-container {
+    height: 60px;
+    width: 100%;
+
+    // breadcrumb type "Overlay"
+    &.oc-breadcrumb-overlay {
+      position: absolute;
+      z-index: 10000; /* keep on top */
+    }
+
+    // breadcrumb type "Layout"
+    &.oc-breadcrumb-layout {
+      height: auto;
+      border: 0;
+
+      // temporal state attempt to fix the overlay breadcrumb
+      &.fix {
+        border: 1px #f00 solid;
+      }
+
+    }
+
+  }
+
+  // Named for oxygen, but actually "lives" in all profiles this is copied to (like the rest of breadcrumbs, normally oxygen only)
+  #oxygen-breadcrumb-clock {
+    padding-left: 75px;
+    position: absolute;
+    top: 2px;
+    right: 18px;
+    font-size: 42px;
+    z-index: 10000; /* keep on top */
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "id"          : "com.opencar.core.radio-sim",
+    "name"        : "Radio Tuner Simulation",
+    "description" : "Listen to local radio stations over the airwaves.",
+    "view"        : "RadioView.js",
+    "controller"  : "RadioController.js",
+    "css"         : [
+						"radio-tuner.css",
+						"radio-dialer.css",
+						"$MODULE_PROFILE_PATH/radio-tuner.css",
+						"$MODULE_PROFILE_PATH/radio-dialer.css"],
+    "categoryId"  : "MEDIA",
+    "date"        : "2015-02-19",
+    "version"     : "1.0.0",
+    "permissions" : [ "unstoppable", "Tuner.WHEN_ACTIVE", "AudioManager.ALWAYS", "GPSLocationSupplier.WHEN_ACTIVE" ],
+    "screens"     : "$MODULE_PROFILE_PATH/screens.json"
+}

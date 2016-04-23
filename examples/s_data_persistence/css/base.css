@@ -1,0 +1,35 @@
+/* Styles for the Delayed Start Example Application */
+
+body.oc-module-view {
+    color: #fff;
+    height: 411px;
+}
+
+#container {
+    padding: 10px;
+}
+
+#buttons button {
+    display: block;
+    margin-bottom: 10px;
+    min-width: 350px;
+}
+
+#buttons, #code {
+    display: inline-block;
+    width: 380px;
+    vertical-align: middle;
+}
+
+#code span {
+    display: inline-block;
+    background-color: #333333;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #abc;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 30px;
+}

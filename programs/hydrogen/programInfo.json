@@ -1,0 +1,10 @@
+{
+    "uid": "hydrogen",
+    "display": "OpenCar Hydrogen",
+    "description": "Hydrogen",
+    "capabilities": "Touch Directional",
+    "profile": "hydrogen",
+    "plugins": [
+        "hydrogen"
+    ]
+}

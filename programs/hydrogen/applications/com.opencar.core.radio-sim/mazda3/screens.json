@@ -1,0 +1,131 @@
+[
+    {
+        "id"        : "menu",
+        "chambers"  : [
+            {
+                "id"        : "menu-chamber",
+                "js"        : "$TEMPLATE_PATH/1.1/audio/modules/Menu.js"
+            }
+        ]
+    },
+    {
+        "id"        :  "now-playing",
+        "chambers"  : [
+            {
+                "id"        : "now-playing-chamber",
+                "js"        : "RadioTuner.js",
+                "template"  : "radio-tuner.html",
+                "buttons": [
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Auto Memory",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-memory",
+                                "action"        : "onAutoMemory"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Favorite",
+                                "id"            : "btn-favorite",
+                                "buttonType"    : "toggle",
+                                "action"        : "onFavorite"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "HD",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-hd",
+                                "action"        : "onHD"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Scan",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-scan",
+                                "action"        : "onScan"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "id"            : "btn-tune",
+                                "label"         : "Tune",
+                                "buttonType"    : "toggle",
+                                "action"        : "onTune"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Seek Previous",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-seek-previous",
+                                "action"        : "onSeekPrevious"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Play/Stop",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-play-pause",
+                                "action"        : "onPlayPause"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Seek Next",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-seek-next",
+                                "action"        : "onSeekNext"
+                            },
+                            {
+                                "oc-control"    : "CustomButton",
+                                "from"          : "common/platform/chamber/ButtonBarChamber",
+                                "label"         : "Settings",
+                                "buttonType"    : "toggle",
+                                "id"            : "btn-audio-settings",
+                                "action"        : "onAudioSettings"
+                            }
+                   ]
+                }
+            ]
+        },
+        {
+            "id"        : "screen-radio-dialer",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-radio-dialer",
+                    "js"        : "RadioDialer.js"
+                }
+            ]
+        },
+        {
+            "id"        : "screen-audio-settings",
+            "chambers"  : [
+                {
+                        "id"        : "chamber-audio-settings",
+                        "js"        : "AudioSettings.js"
+                }
+            ]
+        },
+        {
+            "id"        : "listfaves",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-listfaves",
+                    "js"        : "ListFaves.js"
+                }
+            ]
+        },
+        {
+            "id"        : "listmemory",
+            "chambers"  : [
+                {
+                    "id"        : "chamber-listmemory",
+                    "js"        : "ListMemory.js"
+                }
+            ]
+        }
+]

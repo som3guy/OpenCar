@@ -1,0 +1,11 @@
+{
+    "id"         : "com.opencar.sdk.tutorial.hello_7_mvc_design",
+    "name"       : "Tutorial Hello 7 - MVC Design",
+    "view"       : "view.js",
+    "controller" : "controller.js",
+    "css"        : ["css/appstyle.css"],
+    "template"   : "template.html",
+    "categoryId" : "EXAMPLE",
+    "date"        : "2014-05-12",
+    "version"     : "1.0.0"
+}

@@ -1,0 +1,17 @@
+{
+    "uid": "hydrogen",
+    "display": "OpenCar Hydrogen",
+    "screen": {
+        "width": "800",
+        "height": "480"
+    },
+    "appStart" : {
+        "firstStartApplicationId" : "com.opencar.system.oc_landing"
+    },
+    "tmxInfo" : {
+        "path"      : "hydrogen/tmx",
+        "csvFile"   : "hydrogen.csv"
+    },
+    "capabilities": ["Touch","Directional"],
+    "description": "this is a description of the hydrogen profile"
+}

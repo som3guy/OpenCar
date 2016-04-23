@@ -1,0 +1,53 @@
+[
+    {
+        "id"        : "menu",
+        "chambers"  : [
+            {
+                "id"        : "menu-chamber",
+                "js"        : "$TEMPLATE_PATH/1.1/audio/modules/Menu.js"
+            }
+        ]
+    },
+    {
+        "id"        :  "now-playing",
+        "chambers"  : [
+            {
+                "id"        : "now-playing-chamber",
+                "js"        : "$TEMPLATE_PATH/1.1/audio/modules/NowPlaying.js",
+                "template"  : "$CURRENT_THEME/1.1/audio/templates/now-playing.html",
+                "buttons": [
+                    {
+                        "oc-control"    : "PlayPauseButton",
+                        "from"          : "common/platform/chamber/NowPlayingChamber"
+                    },
+                    {
+                        "oc-control"    : "PreviousTrackButton",
+                        "from"          : "common/platform/chamber/NowPlayingChamber"
+                    },
+                    {
+                        "oc-control"    : "NextTrackButton",
+                        "from"          : "common/platform/chamber/NowPlayingChamber"
+                    },
+                    {
+                        "oc-control"    : "FavoriteButton",
+                        "from"          : "common/platform/chamber/NowPlayingChamber"
+                    },
+                    {
+                        "oc-control"    : "DiscoverButton",
+                        "from"          : "common/platform/chamber/ButtonBarChamber",
+                        "action"        : "onDiscover"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id"        : "option-pick",
+        "chambers"  : [
+            {
+                "id"    : "option-pick-chamber",
+                "js"    : "appFeature/OptionChamber.js"
+            }
+        ]
+    }
+]

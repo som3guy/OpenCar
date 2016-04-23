@@ -1,0 +1,50 @@
+.default [data-oc-control="Button"]:not(.no-style), .default button[is="oc-button"] {
+    padding: 0 24px;
+}
+
+#button-preset-1, #button-preset-2, #button-preset-3, #button-preset-4 {
+    margin-right: 10px;
+    text-shadow: none;
+}
+
+#button-preset-1.disabled, #button-preset-2.disabled, #button-preset-3.disabled, #button-preset-4.disabled {
+    opacity: 0.3;
+}
+
+.default .oc-breadcrumb-container ~ .oc-screens-wrapper #now-playing-chamber #np-content-image {
+    top: 0px;
+    border: 0px solid white;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#image-view-hd-indicator {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.oc-radio-dialer {
+    overflow: hidden;
+}
+
+#oc-radio-canvas {
+    font-size: 11px;
+}
+
+#container-dialer {
+    font-size: 11px;
+    width: 92%;
+    float: right;
+}
+
+#container-back-button {
+    width: 8%;
+    height: 350px;
+    margin-top: 25px;
+    float: left;
+    border-right: 1px solid #298eff;
+}
+
+#container-buttons {
+    text-align: center;
+}

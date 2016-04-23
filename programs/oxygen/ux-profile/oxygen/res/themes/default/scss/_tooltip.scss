@@ -1,0 +1,42 @@
+@import "base";
+@import "compass/css3/images";
+
+.#{$theme}{
+    .oc-tooltip {
+        text-align: center;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+    }
+    .oc-tooltip > span {
+        // from text-view
+        color: #00BDFF;
+        display: inline-block;
+        font: #{$item-text-font-size}/60px $font-family-light;
+        font-weight: 200;
+        // end
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        -webkit-border-radius: 5px;
+        /*box-shadow: 0px 0px 8px 2px #4c5a64;*/
+        background: rgba(34,34,34,.95);
+        background-size: cover;
+        background-repeat: no-repeat;
+		white-space: nowrap;
+    }
+
+    .oc-tooltip-tip {
+        position: absolute;
+        top: 64px;
+        left: 50%;
+        background-image: url(../../images/ui/oxygen-popup-arrow.png);
+        background-repeat: no-repeat;
+        width: 36px;
+        height: 22px;
+    }
+}

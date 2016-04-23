@@ -1,0 +1,25 @@
+/* Hydrogen Modifications */
+
+.default .oc-list-view-container.vertical ul.oc-list-view li, .default .oc-list-view-container.vertical.centered ul.oc-list-view li, .default .oc-list-view-container.vertical.centered ul.oc-list-view li.selected, .oc-list-view li {
+    color: #f0f0f0;
+}
+
+
+.default .oc-listitemview .item-quantity {
+    vertical-align: middle;
+}
+
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-status {
+    background: #000;
+    border-color: #298eff;
+    border-radius: 15px;
+    vertical-align: top;
+    top: 13px;
+    width: 32%;
+}
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-progress {
+    background: #298eff;
+    border-radius: 15px;
+}

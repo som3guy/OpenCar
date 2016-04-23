@@ -1,0 +1,666 @@
+@import "base";
+/*
+    Orbital Menu
+*/
+
+.#{$theme}{
+  #oc-orbital-menu-container {
+      height: 100%;
+      -webkit-transform: translate(0, -100%);
+      position: absolute;
+      pointer-events: none;
+      text-transform: capitalize;
+      width: 100%;
+      z-index: 9999;
+
+      #oc-orbital-menu {
+          height: 100%;
+          width: 100%;
+          pointer-events: all;
+          position: relative;
+          -webkit-transform: translate(0, 100%);
+          background-color: rgba(0, 0, 0, 0);
+          -webkit-transition: background-color 150ms $cubic;
+          z-index: 1;
+      }
+  }
+  #oc-orbital-menu-container.active.delete-mode #oc-orbital-menu .selected .oc-listitemview.selected .oc-orbital-img-wrapper:after {
+      background-color: rgba(0, 0, 0, .2);
+      border-radius: 90px;
+      color: #fff;
+      content: '+';
+      display: block;
+      font-size: 150px;
+      font-weight: bold;
+      height: 163px;
+      left: 1.5px;
+      line-height: 163px;
+      position: absolute;
+      top: 1px;
+      width: 163px;
+      z-index: 999;
+      -webkit-transform: rotate(45deg);
+      text-align: center;
+  }
+
+
+  #oc-orbital-menu-container.active #oc-orbital-menu {
+      background-color: rgba(0, 0, 0, 0.8);
+      -webkit-transform: translate(0, 0);
+  }
+
+  #oc-orbital-menu-container.active.delete-mode #oc-orbital-menu:after {
+      content: 'delete mode';
+      color: $color;
+      left: 20px;
+      position: absolute;
+      top: 20px;
+  }
+
+
+  /* Expose Orbital Button, Shortcut Button */
+
+  #oc-shortcut-toggle {
+      bottom: 10px;
+      color: white;
+      font-size: 56px;
+      position: absolute;
+      border-radius: 24px;
+      text-align: center;
+      font-family: ding;
+      pointer-events: all;
+
+      z-index: 10000;
+  }
+
+  #oc-shortcut-toggle,
+  #oc-shortcut-toggle span {
+      display: inline-block;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+
+  }
+
+  #oc-shortcut-toggle span {
+      color: $color;
+      opacity: .5;
+      -webkit-transition: -webkit-transform 0.5s $cubic, opacity 1s $cubic;
+  }
+
+  #oc-shortcut-toggle {
+      display: none;
+      right: 10px;
+  }
+
+  .active #oc-shortcut-toggle {
+      display: block;
+  }
+
+  .active #oc-shortcut-toggle span {
+      opacity: .7;
+  }
+
+  .active #oc-shortcut-toggle:focus span {
+      opacity: 1;
+      text-shadow: 0 0 22px rgba(255,255,255,.7);
+
+  }
+
+
+
+
+  /* Orbital Listview */
+
+  /* container / ul */
+
+  #oc-orbital-menu .oc-listview-container.oc-orbital-menus,
+  .active.shortcut #oc-orbital-menu .oc-listview-container.oc-orbital-menus {
+      height: 10px;
+      position: absolute;
+      width: 10px;
+      -webkit-transform: translate(-10px, 480px);
+      -webkit-transition-property: opacity, height, width, -webkit-transform;
+      -webkit-transition-duration: 1s, 150ms, 150ms, 150ms;
+      -webkit-transition-timing-function: $cubic;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus {
+      height: 100%;
+      opacity: .65;
+      position: absolute;
+      width: 800px;
+      -webkit-transform: translate(-140px, 140px);
+
+      &.selected {
+          width: 100%;
+          z-index: 99;
+          -webkit-transform: translate(0, 0);
+      }
+
+      &:focus {
+          opacity: 1;
+      }
+  }
+
+  #oc-orbital-menu .oc-listview-container.oc-orbital-menus ul {
+      position: absolute;
+      height: 100%;
+      margin: 0;
+      -webkit-transform: translate(0, -50%);
+      -webkit-transition-duration: 150ms;
+      z-index: 99;
+  }
+
+  #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected ul {
+      z-index: 99;
+  }
+
+
+  /* Orbital Rings */
+
+  .oc-orbital-ring {
+      background: url(/ui/res/common/images/ivi-circle.png) no-repeat bottom left;
+      background-size: 100% 100%;
+      height: 480px;
+      position: absolute;
+      width: 580px;
+      z-index: 0;
+      -webkit-mask: url(/ui/res/common/images/mask.png) no-repeat 149px 0;
+      -webkit-mask-size: 800px 480px;
+      -webkit-transform: translate(-10px, 480px);
+      -webkit-transition-property: opacity, height, width, -webkit-transform;
+      -webkit-transition-duration: 150ms;
+      -webkit-transition-timing-function: $cubic;
+
+  }
+  .active:not(.shortcut) .oc-orbital-ring {
+      -webkit-transform: translate(140px, 65px);
+      z-index: 0;
+  }
+
+  .active:not(.shortcut) .selected .oc-orbital-ring, .active:not(.shortcut) #main_menu.selected .oc-orbital-ring {
+      -webkit-transform: translate(0, 2px);
+      -webkit-mask-position: 0 0;
+      width: 800px;
+      z-index: 0;
+  }
+
+  .active:not(.shortcut) #main_menu .oc-orbital-ring {
+      -webkit-mask-position: 78px 0;
+      z-index: 0;
+  }
+
+  .active.shortcut .oc-orbital-ring {
+      height: 10px;
+      width: 10px;
+      -webkit-transform: translate(-10px, -10px);
+      z-index: 0;
+  }
+
+  #shortcut-maker-ring {
+      height: 10px;
+      width: 10px;
+      -webkit-transform: translate(800px, 480px);
+      -webkit-mask-size: 0 0;
+      -webkit-mask-position: 610px 400px;
+      -webkit-transition-property: opacity, height, width, -webkit-transform;
+      -webkit-transition-duration: 150ms;
+      -webkit-transition-timing-function: $cubic;
+
+  }
+  .active.shortcut #shortcut-maker-ring {
+      height: 400px;
+      width: 800px;
+      -webkit-mask-size: 800px 480px;
+      -webkit-transform: translate(142px, 32px);
+  }
+
+  .active.shortcut .shorter #shortcut-maker-ring {
+      -webkit-mask-size: 453px 401px;
+      -webkit-mask-position: 328px 0;
+  }
+
+
+  /* li */
+  #oc-orbital-menu .oc-listview-container.oc-orbital-menus li {
+
+      height: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+      opacity: 0;
+      -webkit-transition-property: opacity, height, width, -webkit-transform;
+      -webkit-transition-duration: 50ms;
+      -webkit-transition-timing-function: $cubic;
+
+
+  }
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li {
+      height: 66px;
+      opacity: 1;
+      padding: 0;
+      width:  66px;
+      -webkit-transition-duration: 150ms;
+  }
+
+  /* Set display none on all orbital list items that should be rendered off screen */
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li:not([class^='adjacent-selected-']):not([class*=' adjacent-selected-']):not(.selected) {
+      display: none;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.before-selected {
+      -webkit-transform: translate(-120px, 6px);
+      z-index: 1;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.before-selected.adjacent-selected-3 {
+      -webkit-transform: translate(-33px, 92px);
+      z-index: 3;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.before-selected.adjacent-selected-2 {
+      -webkit-transform: translate(74px, 107px);
+      z-index: 5;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.before-selected.adjacent-selected-1 {
+      -webkit-transform: translate(173px, 136px);
+      z-index: 7;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.selected {
+      -webkit-transform: translate(261px, 159px);
+      height: 166px;
+      z-index: 10;
+  }
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.after-selected.adjacent-selected-1 {
+      -webkit-transform: translate(436px, 285px);
+      z-index: 8;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.after-selected.adjacent-selected-2 {
+      -webkit-transform: translate(509px, 359px);
+      z-index: 6;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.after-selected.adjacent-selected-3 {
+      -webkit-transform: translate(573px, 447px);
+      -webkit-transition-delay: 25ms;
+      z-index: 4;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus li.after-selected {
+      -webkit-transform: translate(626px, 544px);
+      z-index: 2;
+  }
+
+  /* LI Contents */
+
+  #oc-orbital-menu .oc-listview-container.oc-orbital-menus {
+
+      .oc-orbital-img-wrapper {
+          background-color: $color;
+          border-radius:  50%;
+          display: inline-block;
+          height: 0px;
+          padding-top: 1px;
+          text-align: center;
+          vertical-align: middle;
+          width: 0px;
+          -webkit-transition-property: opacity, height, width, -webkit-transform;
+          -webkit-transition-duration: 150ms;
+          -webkit-transition-timing-function: $cubic;
+
+          img {
+              border-radius: 50%;
+              height: 98%;
+              width:  98%;
+          }
+      }
+
+
+  }
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected li {
+      .oc-orbital-img-wrapper {
+          height: 66px;
+          width: 66px;
+          -webkit-transition-duration: 10ms;
+      }
+
+      &.selected .oc-orbital-img-wrapper {
+          box-shadow: 0 0 8px 8px rgba(255, 255, 255, .3);
+          height: 166px;
+          width: 166px;
+          -webkit-transition-duration: 150ms;
+      }
+
+  }
+
+
+  .oc-orbital-title {
+      display: none;
+      font-size: 36px;
+      left: 186px;
+      position: absolute;
+      top: 33px;
+      vertical-align: middle;
+      width: 300px;
+
+  }
+  .oc-listview-container.oc-orbital-menus.selected li .oc-orbital-title {
+      display: inline-block;
+      text-shadow: 0 0 5px $color;
+      visibility: hidden;
+  }
+
+  .oc-listview-container.oc-orbital-menus.selected li.selected .oc-orbital-title {
+      visibility: visible;
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected li {
+      .oc-orbital-title span {
+          display: inline-block;
+          opacity: 0;
+          -webkit-transition: opacity 0s $cubic;
+      }
+
+      &.selected .oc-orbital-title span {
+          opacity: 1;
+          -webkit-transition-duration: 100ms;
+          -webkit-transition-delay: 50ms;
+      }
+
+      &.selected .oc-orbital-title.nobody {
+          display: none;
+      }
+
+      &.selected .sub {
+          font-size: 19px;
+          line-height: 0px;
+          margin-top: -12px;
+          opacity: .75;
+          font-weight: 400;
+          text-shadow: none;
+      }
+
+      &.selected .sub:after {
+          border-radius: 20px;
+          content: '+';
+          font-weight: bold;
+          font-size: 24px;
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          border: 1px solid $color;
+          text-align: center;
+          line-height: 28px;
+          margin-left: 10px;
+          vertical-align: middle;
+      }
+
+      &.selected .oc-orbital-img-wrapper.nobody {
+          height: 94px;
+          width: 94px;
+          margin: 20px;
+          padding:  5px;
+          background: rgb(180, 180,180);
+      }
+
+  }
+
+  .active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected:focus li.selected .oc-orbital-title.nobody {
+      display: block;
+  }
+
+  #oc-orbital-menu-container.active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected:focus li.selected .oc-orbital-img-wrapper.nobody {
+      box-shadow: 0 0 3px 3px rgba(150, 150, 180, .8);
+  }
+  #oc-orbital-menu-container.active:not(.shortcut) #oc-orbital-menu .oc-listview-container.oc-orbital-menus.selected li.selected .oc-orbital-img-wrapper.nobody img {
+      height: 100%;
+      width: 100%;
+  }
+
+  .text-item-persp-container {
+      display: inline-block;
+      position: absolute;
+      width: 200px;
+      z-index: 0;
+      -webkit-transform: translate(0px, 0px);
+
+  }
+  .active:not(.shortcut) .text-item-persp-container {
+    -webkit-transform: translate(144px, 162px);
+  }
+
+  .oc-orbital-menu-text {
+      display: inline-block;
+      opacity: 0;
+      width: 200px;
+
+      &.active {
+          opacity: 1;
+      }
+  }
+
+
+  .oc-orbital-menu-text span.letter {
+      color: $color;
+      display: inline-block;
+      font-size: 24px;
+      opacity: 0;
+      -webkit-transition: opacity, height, width, -webkit-transform 250ms ease-in-out 75ms;
+
+      &:nth-child(1) {
+          -webkit-transform: translate(0, 1px) rotate(2deg);
+      }
+
+      &:nth-child(2) {
+          -webkit-transform: translate(1px, 2.25px) rotate(5deg);
+      }
+
+      &:nth-child(3) {
+          -webkit-transform: translate(2px, 5px) rotate(8deg);
+      }
+
+      &:nth-child(4) {
+          -webkit-transform: translate(2px, 8px) rotate(10deg);
+      }
+
+      &:nth-child(5) {
+          -webkit-transform: translate(3px, 12px) rotate(14deg);
+      }
+
+      &:nth-child(6) {
+          -webkit-transform: translate(3px, 16.25px) rotate(16deg);
+      }
+
+      &:nth-child(7) {
+          -webkit-transform: translate(3px, 22px) rotate(18deg);
+      }
+
+      &:nth-child(8) {
+          -webkit-transform: translate(2px, 28px) rotate(20deg);
+      }
+
+      &:nth-child(9) {
+          -webkit-transform: translate(0, 34px) rotate(22deg);
+      }
+  }
+  .active:not(.shortcut) #oc-orbital-menu .oc-orbital-menu-text span.letter  {
+    opacity: 1;
+  }
+
+
+  /* Shortcut Maker */
+
+  #oc-orbital-menu .shortcut-maker {
+      height: 10px;
+      margin: 0;
+      position: absolute;
+      width: 10px;
+      -webkit-transform: translate(800px, 480px);
+      -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+
+      ul {
+          height: 100%;
+          left: 0;
+          margin: 0;
+          top: 0;
+          width: 100%;
+          z-index: 99;
+          -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+      }
+  }
+  .active.shortcut #oc-orbital-menu .shortcut-maker {
+      height: 100%;
+      width: 100%;
+      -webkit-transform: translate(0, 0);
+      -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+  }
+
+  #oc-orbital-menu .shortcut-maker .oc-listitemview {
+      display: inline-block;
+      height: 0;
+      padding: 0;
+      width: 210px;
+      -webkit-transform: translate(350px, 150px);
+      -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+
+  }
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview:first-child {
+      height: 300px;
+      width: 250px;
+      -webkit-transform: translate(350px, 150px);
+  }
+
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview:nth-child(2) {
+      height: 300px;
+      -webkit-transform: translate(100px, 110px);
+
+  }
+
+  .active.shortcut #oc-orbital-menu .shortcut-maker.shorter .oc-listitemview:not(:first-child) {
+      display: none;
+  }
+
+  /* CONTENTS */
+
+  // text
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview {
+      .oc-orbital-title {
+          display: inline-block;
+          font-family: $font-family-light;
+          font-size: $minimum-font-size;
+          left: 0;
+          line-height: 1;
+          padding: 0;
+          position: absolute;
+          text-align: center;
+          top: 140px;
+          width: 100%;
+          text-shadow: 0px 0px 3px $color;
+      }
+
+      &.added .oc-orbital-title {
+          color: #26FF26;
+          text-shadow: none;
+      }
+
+      &.added.selected .oc-orbital-title {
+          text-shadow: 0px 0px 3px #26FF26;
+      }
+
+      &.adjacent-selected-1 .oc-orbital-title {
+          opacity: .5;
+      }
+
+      .oc-orbital-title span.type {
+          display: block;
+          font-size: 28px;
+          line-height: 40px;
+      }
+      &:first-child .oc-orbital-title {
+          top: 187px;
+      }
+  }
+
+  // img
+  #oc-orbital-menu .shortcut-maker .oc-listitemview {
+      .oc-orbital-img-wrapper {
+          background-color: $color;
+          border-radius: 50%;
+          height: 0;
+          left: 50%;
+          margin-left: 0;
+          position: absolute;
+          text-align: center;
+          width: 0;
+          z-index: 99;
+
+          img {
+              border-radius: 50%;
+              margin-top: 1px;
+              height: 98%;
+              width: 98%;
+              z-index: 99;
+          }
+
+          .active.shortcut .oc-orbital-img-wrapper {
+              height: 123px;
+              width: 123px;
+              margin-left: -61.5px;
+          }
+      }
+
+      & .oc-orbital-img-wrapper:after {
+          background-color: rgba(0, 0, 0, 0);
+          border-radius: 50%;
+          color: #26FF26;
+          content: ' ';
+          display: inline-block;
+          font-family: ding;
+          font-size: 1px;
+          height: 0;
+          left: 2px;
+          position: absolute;
+          top: 1px;
+          width: 0%;
+          z-index: 999;
+          -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+      }
+
+      &.added.adjacent-selected-1 .oc-orbital-img-wrapper:after {
+          opacity: .5;
+      }
+
+      &.added.selected .oc-orbital-img-wrapper:after {
+          opacity: 1;
+      }
+  }
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview.selected .oc-orbital-img-wrapper {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview:first-child .oc-orbital-img-wrapper {
+    height: 165px;
+    margin-left: -82.5px;
+    width: 165px;
+  }
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview.added:first-child .oc-orbital-img-wrapper:after {
+    font-size: 140px;
+    -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+  }
+  .active.shortcut #oc-orbital-menu .shortcut-maker .oc-listitemview.added .oc-orbital-img-wrapper:after {
+    background-color: rgba(0, 0, 0, .6);
+    content: '2';
+    font-size: 100px;
+    height: 98%;
+    width: 98%;
+    -webkit-transition: opacity, height, width, -webkit-transform 150ms ease-in-out;
+  }
+}
+
+
+

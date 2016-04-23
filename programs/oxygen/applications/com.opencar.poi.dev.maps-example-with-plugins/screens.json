@@ -1,0 +1,23 @@
+[
+    {
+        "id"        : "map",
+        "chambers"  : [
+            {
+                "id"        : "map-chamber",
+                "js"        : "MapChamber.js",
+                "x-template"  : "map-template.html",
+                "autorun"   : true,
+                "focus"     : true
+            }
+        ]
+    },
+    {
+        "id"        : "settings",
+        "chambers"  : [
+            {
+                "id"        : "settings-chamber",
+                "js"        : "SettingsChamber.js"
+            }
+        ]
+    }
+]

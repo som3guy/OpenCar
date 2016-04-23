@@ -1,0 +1,73 @@
+@import "base";
+
+/* Slider Styles */
+
+.#{$theme} {
+    .oc-slider,
+    .oc-slider-value-picker {
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .oc-slider {
+        outline: none;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid $active;
+        height: 16px;
+        width: 200px;
+        position: relative;
+    }
+
+    .oc-slider,
+    .oc-slider-value-picker,
+    .oc-slider-value-shadow {
+        border-radius: 8px;
+    }
+
+    .oc-slider-value-picker {
+        position: absolute;
+        border: 1px solid $active;
+        background: $regular;
+        width: 25px;
+        height: 25px;
+        border-radius: 15px;
+    }
+
+    .oc-slider:hover:not(:disabled) .oc-slider-value-picker,
+    .oc-slider:focus:not(:disabled) .oc-slider-value-picker {
+        border-color: $color;
+        background: $active;
+    }
+
+    .oc-slider.oc-slider-vertical {
+        height: 200px;
+        width: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .oc-slider:not(.oc-slider-vertical) .oc-slider-value-picker {
+        top: -50%;
+        margin-left: -15px;
+    }
+
+    .oc-slider.oc-slider-vertical .oc-slider-value-picker {
+        left: 50% !important;
+        margin-left: -10px !important;
+    }
+
+    .oc-slider .oc-slider-value-shadow {
+        background: $regular;
+        -webkit-transition:width 500 ms $cubic;
+        -o-transition: width 500ms $cubic;
+        -moz-transition: width 500ms $cubic;
+
+        bottom: 0;
+
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}

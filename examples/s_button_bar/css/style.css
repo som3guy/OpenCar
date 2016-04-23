@@ -1,0 +1,10 @@
+#bb_app {
+    width: 100%;
+    height: 100%;
+}
+button {
+    margin: 20px;
+}
+.default .bb-pane .bb-pane-body {
+    justify-content: flex-start;
+}

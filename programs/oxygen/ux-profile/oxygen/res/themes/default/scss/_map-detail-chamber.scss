@@ -1,0 +1,106 @@
+@import "base";
+
+// Map Details
+.#{$theme} .map-detail-chamber {
+
+  // crop the text to not overflow the breadcrumbs
+  .default-list-wrapper.oc-pane {
+    text-overflow: clip;
+    // padding: 60px 0 60px;
+  }
+
+  // container of list
+  .oc-list-view-container {
+
+    &.vertical.centered {
+      // slight fade. not so much as to make text indecipherable
+      -webkit-mask-size: 100% 300%;
+
+      /* remove fadeout */
+      //-webkit-mask: none;
+      //-webkit-font-smoothing: subpixel-antialiased;
+
+      // attempt to make a nice, soft masking gradient over the text
+      //-webkit-mask-position-y: 66%;
+
+      // offset all children
+      padding: 40px;
+
+      /* strip the centered listview bar effect */
+      &:before {
+        background: none;
+        content: none;
+        display: none;
+      }
+
+      /* new tag name for list view 1.5 ? */
+      UL.oc-list-view--15 {
+
+        LI {
+
+          padding-left: 0px;
+          /* good spacing - for descender/ascenders not getting truncated */
+          font-size: 30px;
+          height: 40px;
+          line-height: inherit;
+
+          /* text row */
+          .oc-listitemview-text {
+            white-space: normal;
+            font-size: inherit;
+            // rule introspected by TextChamber
+            // 450 + 8 + 8
+
+            // reset
+            margin: 0;
+            // !!!!!!!!!!!!!
+            //max-width: 468px;
+            padding: 0;
+          }
+        }
+
+      }
+
+      /* focused state */
+      &:focus {
+
+        UL.oc-list-view--15 {
+
+          LI.selected {
+
+            &:before {
+
+              padding: 0;
+              margin: 0;
+              text-indent: 0;
+            }
+
+            .oc-listitemview-text {
+              font-size: inherit;
+              padding: 0;
+              margin: 0;
+              /* undo treatments */
+              text-shadow: inherit;
+              width: inherit;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /* map layout */
+  .map {
+    position: absolute;
+    top: 53px;
+    right: 43px;
+    width: 250px;
+    height: 250px;
+  }
+
+}

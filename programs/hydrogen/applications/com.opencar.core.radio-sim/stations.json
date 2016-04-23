@@ -1,0 +1,72 @@
+[
+    {
+        "frequency"     : "88.5",
+        "callLetters"   : "KQED",
+        "genre"         : "NPR",
+        "contentImgUrl" : "./icons/KQED.jpg",
+        "trackUrl"      : "http://streams.kqed.org/kqedradio.m3u"
+    },
+    {
+        "frequency"     : "89.9",
+        "callLetters"   : "KCRW",
+        "genre"         : "News and Culture",
+        "contentImgUrl" : "./icons/KCRW.png",
+        "trackUrl"      : "http://newmedia.kcrw.com/legacy/pls/kcrwsimulcast.pls"
+    },
+    {
+        "frequency"     : "90.3",
+        "callLetters"   : "KEXP",
+        "genre"         : "Where the music matters",
+        "contentImgUrl" : "./icons/logo-kexp.png",
+        "trackUrl"      : "http://live-mp3-128.kexp.org:8000/listen.pls"
+    },
+    {
+        "frequency"     : "90.9",
+        "callLetters"   : "WBUR",
+        "genre"         : "Public Radio News",
+        "contentImgUrl" : "./icons/logo-wbur.png",
+        "trackUrl"      : "http://audio.wbur.org/stream/live_mp3.m3u"
+    },
+    {
+        "frequency"     : "91.1",
+        "callLetters"   : "KCSM",
+        "genre"         : "Jazz",
+        "contentImgUrl" : "./icons/KCSM.jpg",
+        "trackUrl"      : "http://ice5.securenetsystems.net/KCSM"
+    },
+    {
+        "frequency"     : "91.7",
+        "callLetters"   : "KALW",
+        "genre"         : "NPR",
+        "contentImgUrl" : "./icons/KALW.jpg",
+        "trackUrl"      : "http://live.str3am.com:2430/listen.pls"
+    },
+    {
+        "frequency"     : "93.9",
+        "callLetters"   : "WNYC",
+        "genre"         : "New York Public Radio",
+        "contentImgUrl" : "./icons/WNYC.png",
+        "trackUrl"      : "http://www.wnyc.org/stream/wnyc-fm939/aac.pls"
+    },
+    {
+        "frequency"     : "94.9",
+        "callLetters"   : "KUOW",
+        "genre"         : "NPR",
+        "contentImgUrl" : "./icons/logo-kuow.png",
+        "trackUrl"      : "http://shoutcast.kuow.org:8002/"
+    },
+    {
+        "frequency"     : "101.9",
+        "callLetters"   : "WHYY",
+        "genre"         : "NPR",
+        "contentImgUrl" : "./icons/logo-whyy.png",
+        "trackUrl"      : "http://207.245.67.209/91FM.m3u"
+    },
+    {
+        "frequency"     : "103.5",
+        "callLetters"   : "WTOP",
+        "genre"         : "News, Traffic & Weather",
+        "contentImgUrl" : "./icons/logo-wtop.png",
+        "trackUrl"      : "http://2173.live.streamtheworld.com/WTOPFM_SC"
+    }
+]

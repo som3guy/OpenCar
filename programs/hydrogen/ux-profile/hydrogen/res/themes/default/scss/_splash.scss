@@ -1,0 +1,54 @@
+@import "base";
+
+/*
+        Application / Widget Loading Splash
+*/
+
+.#{$theme} {
+    .oc-app-splash {
+        background: transparent;
+        position: absolute;
+        z-index: 8000;
+        height: 100%;
+        width: 100%;
+        top: 0;
+
+        oc-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            left: 50%;
+            display: none;
+        }
+        button[is="oc-button"] {
+            display: none !important;
+            //background: url(../../images/ui/button/splash-button.png) transparent 1px -89px no-repeat;
+            position: absolute;
+            top: 317px;
+            left: 68.5px;
+            width: 665px;
+            height: 80px;
+            font-size: 38px;
+            overflow: hidden;
+            display: none;
+        }
+        //display: none;
+    }
+
+    .oc-app-splash.overlay {
+        background: -webkit-linear-gradient(top, rgba(61, 72, 80, 0.7), rgba(35, 43, 48, 0.7));
+        display: block;
+        background-size: initial !important;
+    }
+
+    .oc-app-splash .oc-error-text {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 50%;
+        margin-top: -103px;
+        font-size: 30px;
+        color: #FF4E4A;
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "id"          : "sdk.user.controls",
+    "name"        : "Controls",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : [  ],
+    "categoryId"  : "WORKSPACE",
+    "date"        : "2016-04-21",
+    "version"     : "1.0.0"
+}

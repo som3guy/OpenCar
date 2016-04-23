@@ -1,0 +1,13 @@
+#hello {
+    color: white;
+    font-style: italic;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+#other {
+    width: 100%;
+    text-align: center;
+    display: block;
+}

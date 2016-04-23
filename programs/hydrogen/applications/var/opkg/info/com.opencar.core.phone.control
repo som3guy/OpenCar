@@ -1,0 +1,10 @@
+Package: com.opencar.core.phone
+Version: 2.0.116.2457420.2315394
+Description: Description goes here.
+Section: media
+Priority: optional
+Maintainer: OpenCar
+Architecture: all
+Homepage: http://www.opencar.com/
+Source:
+Depends:

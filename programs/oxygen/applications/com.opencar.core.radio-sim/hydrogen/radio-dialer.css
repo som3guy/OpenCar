@@ -1,0 +1,29 @@
+#button-preset-1.on,#button-preset-2.on,#button-preset-3.on,#button-preset-4.on {
+    color: white;
+}
+
+#button-seek-previous {
+    margin-right: 50px;
+    background-image: url("h2o-icon-back_s10.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    padding: 0 70px 0 12px;
+    color: transparent;
+}
+
+#button-seek-previous:focus {
+    background-image: url("h2o-icon-back-on_s10.png");
+}
+
+#button-seek-next {
+    margin-left: 50px;
+    background-image: url("h2o-icon-forward_s10.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 0 12px 0 70px;
+    color: transparent;
+}
+
+#button-seek-next:focus {
+    background-image: url("h2o-icon-forward-on_s10.png");
+}

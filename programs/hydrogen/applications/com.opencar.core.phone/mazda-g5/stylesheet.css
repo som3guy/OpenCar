@@ -1,0 +1,159 @@
+/* Dial pad styles */
+
+#container-dial-pad-main {
+	position: absolute;
+	width: 100%;
+	top: 10px;
+	margin-left: 56px;
+}
+
+#container-dial-pad {
+	position: absolute;
+	left: 150px;
+	top: 80px;
+}
+
+#container-misc-dial-pad {
+	position: absolute;
+	left: 534px;
+}
+
+#container-dial-pad-display {
+  height: 80px;
+  width: 460px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  text-align: left;
+}
+
+#container-dial-pad-main .dial-button {
+	margin: 0;
+	width: 128px;
+	height: 80px;
+	border-radius: 0;
+	font-size: 32px;
+	white-space: pre;
+}
+
+#text-view-phone-number {
+  width: 420px;
+  display: block;
+  line-height: 98px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 53px;
+}
+
+#text-view-phone-number.placeholder {
+	color: gray;
+}
+
+#dial-key-contacts {
+	display: none;
+}
+
+#container-dial-pad-main #dial-key-call {
+	height: 320px;
+	color: transparent;
+	background-image: url("images/IcnDial_dial.png"), linear-gradient(to bottom, black 0%, #545454 34%, #555759 38%, #040404 49%, black 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#container-dial-pad-main #dial-key-call:focus {
+	background-image: url("images/IcnDial_dial.png"), radial-gradient(ellipse at center, #ef3d25 0%, rgba(35, 24, 1, 0) 100%);
+}
+
+#container-dial-pad-main #dial-key-backspace {
+	color: transparent;
+	background-image: url("images/IcnDial_delete.png"), linear-gradient(to bottom, black 0%, #545454 34%, #555759 38%, #040404 49%, black 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#container-dial-pad-main #dial-key-backspace:focus {
+	background-image: url("images/IcnDial_delete.png"), radial-gradient(ellipse at center, #ef3d25 0%, rgba(35, 24, 1, 0) 100%);
+}
+
+/* Call info */
+
+#container-call-info-main {
+	position: absolute;
+	width: 100%;
+	margin: 20px;
+}
+
+#container-call-info-details {
+	left: 210px;
+	position: absolute;
+}
+
+#container-call-info-caller-image {
+	position: absolute;
+}
+
+#image-view-caller {
+	width: 200px;
+	height: 200px;
+}
+
+#text-view-call-status {
+	display: block;
+}
+
+#text-view-call-status-2 {
+	display: none;
+}
+
+#text-view-caller-name-and-duration {
+	display: block;
+}
+
+/* Button bar */
+
+.bb-button {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#bb-dial-pad .bb-button-icon {
+	background-image: url("images/IcnUmpDialpad_En.png");
+}
+
+/*
+#bb-dial-pad.bb-button-focus .bb-button-icon,
+#bb-dial-pad:hover .bb-button-icon,
+#bb-dial-pad:focus .bb-button-icon {
+	background-image: url("images/IcnUmpDialpad_Ds.png");
+}
+*/
+
+#bb-mute .bb-button-icon {
+	background-image: url("images/IcnUmpMic.png");
+}
+
+/*
+#bb-mute.bb-button-focus .bb-button-icon,
+#bb-mute:hover .bb-button-icon,
+#bb-mute:focus .bb-button-icon {
+	background-image: url("images/IcnUmpDialpad_En.png");
+}
+*/
+
+#bb-mute.on .bb-button-icon {
+	background-image: url("images/IcnUmpMuteUnmute_Mute_En.png");
+}
+
+/*
+#bb-mute.on.bb-button-focus .bb-button-icon,
+#bb-mute.on:hover .bb-button-icon,
+#bb-mute.on:focus .bb-button-icon {
+	background-image: url("images/IcnUmpMuteUnmute_Mute_Ds.png");
+}
+*/
+
+#bb-end-call .bb-button-icon {
+	background-image: url("images/IcnUmpHangup_Ds.png");
+}
+

@@ -1,0 +1,17 @@
+{
+    "uid": "oxygen",
+    "display": "OpenCar Oxygen",
+    "screen": {
+        "width": "800",
+        "height": "480"
+    },
+    "appStart" : {
+        "firstStartApplicationId" : "com.opencar.system.installed-applications"
+    },
+    "tmxInfo" : {
+        "path"      : "oxygen-tmx/tmx",
+        "csvFile"   : "oxygen.csv"
+    },
+    "capabilities": ["Touch","Directional"],
+    "description": "this is a description of the oxygen profile"
+}

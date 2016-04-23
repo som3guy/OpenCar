@@ -1,0 +1,279 @@
+@import "base";
+@import "compass/css3/images";
+
+$button-height: 80px;
+/* TODO is there a way to make this value automatic? */
+$tooltip-clearance: 43px;
+
+.#{$theme}{
+    .bb-pane {
+        width: 100%;
+        height: $button-height + $tooltip-clearance;
+        z-index: 9000;
+        overflow: hidden;
+        position: relative;
+
+        .bb-pane-body {
+            height: $button-height;
+            position: relative;
+            top: $tooltip-clearance;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+        }
+
+        .bb-pane-top {
+            position: absolute;
+            bottom: $button-height;
+            width: 100%;
+
+            /* Allow click-through to the underlying button objects */
+            pointer-events: none;
+
+            /* Matched to height of background graphic of top, if applicable */
+            background: #000;
+        }
+
+        .bb-button {
+            height: 80px;
+            flex: auto;
+            align-self: auto;
+            border: none;
+            max-width: 80px;
+        }
+
+        .bb-button[disabled="disabled"] .bb-button-icon {
+            opacity: 0.3;
+        }
+
+        .bb-tooltip-fade {
+          opacity: 0;
+          transition: opacity 1s linear 2s;
+        }
+    }
+
+    .bb-pane.bottom{
+        position: absolute;
+        bottom: 0px;
+        overflow: hidden;
+    }
+
+    .bb-button-focus {
+        /*border-color: $regular;*/
+        background-color: rgba(255,255,255,.8);
+        border-radius: 7px;
+    }
+
+    .bb-button-activate {
+        background-color: #55ccff !important;
+    }
+
+    .bb-button-icon {
+        height: 100%;
+        width: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .bb-button-divider {
+        height: 100%;
+        width: 1px;
+        margin-left: 99%;
+        margin-top: -$button-height;
+        background: #000;
+    }
+
+    /* Now Playing */
+    .bb-back-button{
+        position: absolute;
+        width: 100px;
+        left: 0;
+    }
+    .bb-back-button .bb-button-icon{
+        background-image: url(../../images/button-bar/hydrogen-back.png);
+      /*background-image: url(../../images/button-bar/icon-sprite-arrow-back.png);
+      position: absolute;
+      clip:rect(10px 60px 73px 0);
+      background-position: top 11px center;*/
+    }
+    .bb-back-button-on .bb-button-icon{
+        background-image: url(../../images/button-bar/hydrogen-back-on.png);
+    }
+/*
+    .bb-back-button.bb-button-focus {
+      border-color: black !important;
+    }
+    .bb-back-button.bb-button-focus .bb-button-icon {
+      background-position: top -49px center;
+    }
+    .bb-back-button.bb-button-activate {
+      border-color: black !important;
+    }
+    .bb-back-button.bb-button-activate .bb-button-icon {
+      background-position: top -109px center;
+    }
+*/
+    .bb-list-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-playlist.png);
+    }
+    .bb-stop-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-stop.png);
+    }
+    .bb-play-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-play.png);
+    }
+    .bb-pause-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-pause.png);
+    }
+    .bb-last-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-last.png);
+    }
+    .bb-next-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-next.png);
+    }
+    .bb-favorite-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-favorite.png);
+    }
+    .bb-favorite-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-favorite-on.png);
+    }
+    .bb-favorite-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-favorite-on.png);
+    }
+    .bb-delete-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-delete.png);
+    }
+    .bb-delete-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-delete-on.png);
+    }
+    .bb-install-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-install.png);
+    }
+    .bb-install-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-install-on.png);
+    }
+    .bb-mute-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-mute.png);
+    }
+    .bb-mute-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-mute-on.png);
+    }
+    .bb-dial-pad-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-dial-pad.png);
+    }
+    .bb-dial-pad-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-dial-pad-on.png);
+    }
+    .bb-approve-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-approve.png);
+    }
+    .bb-approve-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-approve-on.png);
+    }
+    .bb-disapprove-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-disapprove.png);
+    }
+    .bb-disapprove-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-disapprove-on.png);
+    }
+    .bb-playlist-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-playlist.png);
+    }
+    .bb-playlist-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-playlist-on.png);
+    }
+    .bb-previous-list-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-previous-list.png);
+    }
+    .bb-previous-list-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-previous-list-on.png);
+    }
+    .bb-pin-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-pin.png);
+    }
+    .bb-pin-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-pin-on.png);
+    }
+    .bb-info-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-info.png);
+    }
+    .bb-info-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-info-on.png);
+    }
+    .bb-phone-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-phone.png);
+    }
+    .bb-phone-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-phone-on.png);
+    }
+    .bb-map-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-map.png);
+    }
+    .bb-map-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-map-on.png);
+    }
+    .bb-bookmark-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-bookmark.png);
+    }
+    .bb-bookmark-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-bookmark-on.png);
+    }
+    .bb-tag-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-tag.png);
+    }
+    .bb-tag-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-tag-on.png);
+    }
+    .bb-shuffle-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-shuffle.png);
+    }
+    .bb-shuffle-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-shuffle-on.png);
+    }
+    .bb-repeat-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-repeat.png);
+    }
+    .bb-repeat-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-repeat-on.png);
+    }
+    .bb-rewind-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-rewind.png);
+    }
+    .bb-settings-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-settings.png) !important;
+    }
+    .bb-audiosettings-button .bb-button-icon {
+      background-image: url(../../images/button-bar/hydrogen-settings.png) !important;
+    }
+    .bb-settings-audio-button .bb-button-icon {
+      background-image: url(../../images/button-bar/hydrogen-settings.png) !important;
+    }
+    .bb-create-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-create.png);
+    }
+    .bb-discover-button .bb-button-icon{
+        background-image: url(../../images/button-bar/hydrogen-discover.png);
+    }
+    .bb-discover-button-on .bb-button-icon{
+        background-image: url(../../images/button-bar/hydrogen-discover-on.png);
+    }
+    .bb-results-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-previous-list.png);
+    }
+    .bb-results-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-previous-list-on.png);
+    }
+    .bb-nearby-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-pin.png);
+    }
+    .bb-nearby-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-pin-on.png);
+    }
+    .bb-call-button .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-phone.png);
+    }
+    .bb-call-button-on .bb-button-icon{
+      background-image: url(../../images/button-bar/hydrogen-phone-on.png);
+    }
+}

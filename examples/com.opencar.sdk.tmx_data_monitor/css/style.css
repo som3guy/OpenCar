@@ -1,0 +1,74 @@
+/*
+.default .oc-list-view-container.vertical:focus LI.selected .item-text {
+*/
+
+/* keep text same font size for normal and selected state */
+/* general selector for all profiles */
+.default .oc-list-view-container.vertical UL.oc-list-view LI,
+.default .oc-list-view-container.vertical:focus UL LI.selected .item-text {
+    font-size: 22px;
+    line-height: normal;
+}
+
+
+
+
+/* reset */
+.default .oc-list-view-container.vertical LI {
+    padding-left: 0;
+}
+
+.default .oc-list-view-container.vertical:focus LI.selected .item-text {
+}
+
+.default .oc-listitemview .item-text {
+    width: 35%;
+    vertical-align: middle;
+
+    line-height: normal;
+    white-space: normal;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.default .oc-listitemview .item-quantity {
+    white-space: normal;
+    vertical-align: baseline;
+    line-height: normal;
+    display: inline-block;
+    overflow: hidden;
+    padding-right: 2%;
+    text-align: right;
+    text-overflow: ellipsis;
+    width: 24%;
+}
+
+.default .oc-listitemview .item-status {
+    background: #444;
+    border: 1px solid #888;
+    display: inline-block;
+    position: relative;
+    right: 0;
+    text-align: right;
+    width: 34%;
+}
+
+.default .oc-listitemview .item-progress {
+    background: #f8f8f8;
+    width: 0;
+    transition: width .42s;
+}
+
+.default .oc-listitemview .item-progress.error {
+    background-color: red;
+}
+
+.default .oc-list-view-container UL LI .item-progress::after {
+    border: none;
+}
+
+/* some test in the template? */
+#unitSection {
+    display: none;
+}

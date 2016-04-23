@@ -1,0 +1,40 @@
+.hidden {
+    visibility: hidden;
+}
+.font-icon {
+    width: 250px;
+    line-height: 38px;
+    font-family: ding;
+    font-size: 43px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(45,137,255);
+    overflow: hidden;
+}
+.back-button-container{
+    display: none;
+}
+body.oc-module-view .oc-list-view-container.vertical ul.oc-list-view li{
+    position: static;
+    line-height: 78px;
+    font-size: 44px;
+    height: 74px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body.oc-module-view .oc-list-view-container.vertical.grid-container ul.oc-list-view.grid li {
+    font-size: 42px;
+}
+body.oc-module-view .oc-list-view-container.vertical ul.oc-list-view li.oc-listitemview .item-icon{
+    width: 45px;
+    height: 45px;
+    left: 23px;
+    top: 17px;
+}
+
+button.oc-button-neutral, button.oc-button-positive {
+    width: 50%;
+}
+

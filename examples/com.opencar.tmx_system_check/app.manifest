@@ -1,0 +1,11 @@
+{
+    "id"          : "com.opencar.tmx_system_check",
+    "name"        : "System Check",
+    "css"         : [ "stylesheets/main.css" ],
+    "controller"  : "controller.js",
+    "view"        : "view.js",
+    "permissions" : [ "Telematics.WHEN_ACTIVE" ],
+    "categoryId"  : "VEHICLE",
+    "date"        : "2014-12-09",
+    "version"     : "1.0.0"
+}

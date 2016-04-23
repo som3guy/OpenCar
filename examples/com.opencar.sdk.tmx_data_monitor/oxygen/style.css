@@ -1,0 +1,13 @@
+/* Oxygen Modifications */
+.default .oc-list-view-container.vertical .oc-listitemview .item-text {
+    xposition: relative;
+}
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-quantity {
+    font-size: 18px;
+}
+
+.default .oc-list-view-container.vertical .oc-listitemview .item-status {
+
+}
+

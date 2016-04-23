@@ -1,0 +1,42 @@
+@import "base";
+@import "compass/css3/border-radius";
+
+/* Button Styles */
+
+.#{$theme} {
+    %oc-button {
+        background: $regular;
+        border: 2px solid $active;
+        color: $active;
+        padding: 0 12px;
+        // from text view
+        display: inline-block;
+        font: #{$item-text-font-size}/60px $font-family-light;
+        font-weight: 200;
+        // end
+        @include border-radius(3px);
+    }
+
+    [data-oc-control="Button"]:not(.no-style){
+        @extend %oc-button;
+        &:disabled, &.oc-disabled{
+            opacity: 0.4;
+        }
+        &:focus:not(:disabled), &.focused:not(:disabled) {
+            color: $color-active;
+            border-color: $color-active;
+            background: $active;
+        }
+        &:active,
+        &.oc-pressed:not(:disabled),
+        &.oc-down-state:not(:disabled) {
+            color: $color-active;
+            background: $pressed;
+        }
+        &.oc-pressed:not(.focused) {
+            color: $color-inactive;
+        }
+    }
+
+}
+
