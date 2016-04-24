@@ -7,8 +7,14 @@ define(function(require) {
     // Module scope variables and functions
     //
     var telematics, view;
-    var onEngOilTemp = function(farh) {
-        view.displayEngineOilTemp(farh); 
+    var onEngOilTemp = function(engOilTemp) {
+        view.displayEngineOilTemp(engOilTemp * 1.8 + 32); 
+    };
+    var onEngOilPressure = function(engOilPressure) {
+        view.displayEngineOilPressure(engOilPressure * 0.14503773773020923); 
+    };
+    var onEngOilLife = function(engOilLife) {
+        view.displayEngineOilLife(engOilLife); 
     };
     //
     // This is the application "controller" module.
@@ -22,10 +28,15 @@ define(function(require) {
             // 
             beforeStart: function($super) {
                 telematics = new TelematicsAPI();
-                telematics.subscribe(TelematicsAPI.Event.ENG_OIL_TEMP, onEngOilTemp);
+                telematics.subscribe(TelematicsAPI.Event.ENGINE_OIL_TEMP, onEngOilTemp);
+                telematics.subscribe(TelematicsAPI.Event.ENGINE_OIL_PRESSURE, onEngOilPressure);
+                telematics.subscribe(TelematicsAPI.Event.ENGINE_OIL_LIFE_REMAINING, onEngOilLife);
                 view = this.getView();
-                telematics.getEngineOilTemp().done(function(farh) {
-                    onEngOilTemp(farh);
+                telematics.getEngineOilTemp().done(function(engOilTemp) {
+                    onEngOilTemp(engOilTemp);
+                });
+                telematics.getEngineOilPressure().done(function(engOilPressure) {
+                    onEngOilPressure(engOilPressure);
                 });
                 return $super();
             }

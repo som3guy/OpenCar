@@ -12,19 +12,6 @@ define(function(require) {
             displaySpeed: function(kph) {
                 var control = Control.getById("speedDisplay");
                 control.model.set('text', kph);
-            },
-            displayShiftPosition: function(pos) {
-                var control = Control.getById("shiftDisplay");
-                control.model.set('text', pos);
-            },
-            displayConvertibleRoofOn: function(on) {
-                var text = "Convertible Roof: "+ (on ? "Up" : "Down");
-                var control = Control.getById("roofDisplay");
-                control.model.set('text', text);
-            },
-            displayGearPosition: function(mpos) {
-                var control = Control.getById("GearDisplay");
-                control.model.set('text', mpos);
             }
         }
     );
