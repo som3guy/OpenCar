@@ -1,1 +1,8 @@
 /* Use this CSS file to define the styling for your application */
+.tpms {
+    text-align: right;
+}
+
+#tirePressureFrontRight {
+  text-align: right;
+}

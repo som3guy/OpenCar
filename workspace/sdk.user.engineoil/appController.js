@@ -11,7 +11,7 @@ define(function(require) {
         view.displayEngineOilTemp(engOilTemp * 1.8 + 32); 
     };
     var onEngOilPressure = function(engOilPressure) {
-        view.displayEngineOilPressure(engOilPressure * 0.14503773773020923); 
+        view.displayEngineOilPressure(engOilPressure * 0.14503773773020923);  //kPa to psi
     };
     var onEngOilLife = function(engOilLife) {
         view.displayEngineOilLife(engOilLife); 

@@ -1,0 +1,12 @@
+{
+    "id"          : "sdk.user.tiremonitoring",
+    "name"        : "TireMonitoring",
+    "css"         : [ "appStylesheet.css" ],
+    "controller"  : "appController.js",
+    "view"        : "appView.js",
+    "template"    : "appLayout.html",
+    "permissions" : ["Telematics.WHEN_ACTIVE"],
+    "categoryId"  : "WORKSPACE",
+    "date"        : "2016-04-23",
+    "version"     : "1.0.0"
+}
